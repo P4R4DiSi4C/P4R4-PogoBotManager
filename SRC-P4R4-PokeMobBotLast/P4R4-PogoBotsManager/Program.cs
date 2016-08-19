@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace P4R4_PogoBotsManager
@@ -17,10 +14,12 @@ namespace P4R4_PogoBotsManager
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            //Initialize the class
-            mainClass mainClass = new mainClass();
-            //Initialize the form with the class as a parameter
-            mainForm mainForm = new mainForm(mainClass);
+            //Initialize the form
+            mainForm mainForm = new mainForm();
+
+            //Initialize the class with the form as parameter
+            mainClass mainClass = new mainClass(mainForm);
+            
             //Start the app
             Application.Run(mainForm);
         }
