@@ -1,0 +1,322 @@
+Initializing Rocket logger at time 8/13/2016 5:19:08 PM...
+[17:19:08] This is your first start and the bot has generated the default config!
+[17:19:08] After pressing a key the config folder will open and this commandline will close
+Initializing Rocket logger at time 8/13/2016 5:22:30 PM...
+[17:22:31] AutoUpdater is disabled. Get the latest release from: https://github.com/PocketMobsters/PokeMobBot/releases
+ 
+[17:22:31] Logging in using account Ptc
+[17:22:33] Playing as player_582532746
+[17:22:34] Make sure Lat & Lng are right. Exit Program if not! Lat: 40.7864045643862 Lng: -73.9583481016981
+[17:22:34] ====== DisplayHighestsCP ======
+[17:22:34] >   CP/BEST/POWERED |	perfect	| LVL | NAME       | MOVE1              | MOVE2  | MoveRankVsAveType |
+[17:22:35] ====== DisplayHighestsPerfect ======
+[17:22:35] >   CP/BEST/POWERED |	perfect	| LVL | NAME       | MOVE1              | MOVE2  | MoveRankVsAveType |
+[17:22:37] [Inventory] Pokemon Stored: 0/250
+[17:22:39] Arriving to Pokestop: Jewish Museum in (143m)
+[17:22:50] (Success) | Magikarp, Lvl: 1 | CP: (10/10) | IV: 40.66% | Type: Normal | Chance: 100% | Dist: 44.04m | Used: PokeBall (49 left) | XP: 710 | Candies: 3
+[17:22:57] (Success) | NidoranF, Lvl: 1 | CP: (10/12) | IV: 39.12% | Type: Normal | Chance: 100% | Dist: 62.65m | Used: PokeBall (48 left) | XP: 660 | Candies: 3
+[17:23:26] Name: Jewish Museum XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:23:27] Arriving to Pokestop: Stone Decorations in (80m)
+[17:23:53] Name: Stone Decorations XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:23:54] Arriving to Pokestop: 13 The Corner Bookstore 13  in (100m)
+[17:24:25] Name: 13 The Corner Bookstore 13  XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:24:26] Arriving to Pokestop: Linda Horn - Antique Shop in (59m)
+[17:24:44] Name: Linda Horn - Antique Shop XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:24:45] Arriving to Pokestop: 94th Street Armory in (62m)
+[17:25:02] Name: 94th Street Armory XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:25:07] [Inventory] Pokemon Stored: 2/250
+[17:25:07] Arriving to Pokestop: Crowned Man of Madison  in (58m)
+[17:25:25] Name: Crowned Man of Madison  XP: 50, Gems: 0, Items: 4 x ItemPokeBall
+[17:25:26] Arriving to Pokestop: Ramakrishna Vivekananda Center in (51m)
+[17:25:41] Name: Ramakrishna Vivekananda Center XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:25:42] Arriving to Pokestop: Lion Ladies  in (110m)
+[17:26:16] Name: Lion Ladies  XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:26:18] Arriving to Pokestop: East 96th Street Playground in (100m)
+[17:26:40] (Success) | Rattata, Lvl: 1 | CP: (10/10) | IV: 57.49% | Type: Normal | Chance: 100% | Dist: 67.74m | Used: PokeBall (82 left) | XP: 710 | Candies: 3
+[17:26:48] Name: East 96th Street Playground XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:26:49] Arriving to Pokestop: The Woodman's Gate in (49m)
+[17:27:01] Name: The Woodman's Gate XP: 100, Gems: 0, Items: 7 x ItemPokeBall
+[17:27:05] [Inventory] Pokemon Stored: 3/250
+[17:27:06] Arriving to Pokestop: Stone Lion in (89m)
+[17:27:34] Name: Stone Lion XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:27:36] Arriving to Pokestop: Ogden Goodman House in (30m)
+[17:27:39] Name: Ogden Goodman House XP: 50, Gems: 0, Items: 5 x ItemPokeBall
+[17:27:40] Arriving to Pokestop: Angry Sheep in (100m)
+[17:28:08] (Success) | Pidgey, Lvl: 2 | CP: (25/30) | IV: 41.78% | Type: Normal | Chance: 100% | Dist: 65.09m | Used: PokeBall (99 left) | XP: 660 | Candies: 3
+[17:28:14] (Escape) | Poliwhirl, Lvl: 2 | CP: (58/59) | IV: 87.77% | Type: Normal | Chance: 60.1% | Dist: 62.67m | Used: PokeBall (113 left) | XP: 0 | 
+[17:28:18] (Success Attempt #2) | Poliwhirl, Lvl: 2 | CP: (58/59) | IV: 87.77% | Type: Normal | Chance: 60.1% | Dist: 62.67m | Used: PokeBall (112 left) | XP: 700 | Candies: 3
+[17:28:24] Name: Angry Sheep XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:28:25] Putting egg in incubator: 2.00km left
+[17:28:25] Arriving to Pokestop: In Loving Memory Of The Kiver Family in (78m)
+[17:28:49] Name: In Loving Memory Of The Kiver Family XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:28:50] Arriving to Pokestop: Bertel Thorvaldsen, Master Sculptor in (61m)
+[17:29:08] Name: Bertel Thorvaldsen, Master Sculptor XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:29:12] [Inventory] Pokemon Stored: 5/250
+[17:29:12] Arriving to Pokestop: Newbold Morris Memorial Bench in (60m)
+[17:29:30] Name: Newbold Morris Memorial Bench XP: 50, Gems: 0, Items: 4 x ItemPokeBall
+[17:29:31] Arriving to Pokestop: A Seat For My Sweet in (88m)
+[17:30:00] Name: A Seat For My Sweet XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:30:01] Arriving to Pokestop: We Were Girls Together in (76m)
+[17:30:09] (Success) | NidoranF, Lvl: 1 | CP: (10/12) | IV: 38.32% | Type: Normal | Chance: 100% | Dist: 68.70m | Used: PokeBall (127 left) | XP: 200 | Candies: 6
+[17:30:16] (Success) | Poliwag, Lvl: 1 | CP: (10/11) | IV: 45.36% | Type: Normal | Chance: 100% | Dist: 68.22m | Used: PokeBall (126 left) | XP: 710 | Candies: 6
+[17:30:24] Name: We Were Girls Together XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:30:25] Arriving to Pokestop: With Love From Your Roses in (103m)
+[17:30:57] Name: With Love From Your Roses XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:30:58] Arriving to Pokestop: Peter and Sophie Quinn in (66m)
+[17:31:20] (Success) | Eevee, Lvl: 3 | CP: (72/80) | IV: 52.60% | Type: Normal | Chance: 74.17% | Dist: 57.01m | Used: PokeBall (131 left) | XP: 660 | Candies: 3
+[17:31:24] Name: Peter and Sophie Quinn XP: 100, Gems: 0, Items: 6 x ItemPokeBall
+[17:31:28] [Inventory] Pokemon Stored: 8/250
+[17:31:28] NidoranF	- CP: 10  IV: 38.32%   [Best CP: 10  IV: 39.12%] (Candies: 7)
+[17:31:28] ====== DisplayHighestsCP ======
+[17:31:28] >   CP/BEST/POWERED |	perfect	| LVL | NAME       | MOVE1              | MOVE2  | MoveRankVsAveType |
+[17:31:28] #   72/  80/ 973 | 52.60%	 | 03 | Eevee      | TackleFast         | BodySlam      | 0
+[17:31:28] #   58/  59/1317 | 87.77%	 | 02 | Poliwhirl  | MudShotFast        | Scald         | 0
+[17:31:28] #   25/  30/ 578 | 41.78%	 | 02 | Pidgey     | TackleFast         | Twister       | 0
+[17:31:28] #   10/  10/ 513 | 57.49%	 | 01 | Rattata    | TackleFast         | Dig           | 0
+[17:31:28] #   10/  11/ 692 | 45.36%	 | 01 | Poliwag    | MudShotFast        | BodySlam      | 0
+[17:31:28] #   10/  10/ 198 | 40.66%	 | 01 | Magikarp   | SplashFast         | Struggle      | 0
+[17:31:28] #   10/  12/ 754 | 39.12%	 | 01 | NidoranFemale | BiteFast           | PoisonFang    | 0
+[17:31:29] ====== DisplayHighestsPerfect ======
+[17:31:29] >   CP/BEST/POWERED |	perfect	| LVL | NAME       | MOVE1              | MOVE2  | MoveRankVsAveType |
+[17:31:29] #   58/  59/1317 | 87.77%	 | 02 | Poliwhirl  | MudShotFast        | Scald         | 0
+[17:31:29] #   10/  10/ 513 | 57.49%	 | 01 | Rattata    | TackleFast         | Dig           | 0
+[17:31:29] #   72/  80/ 973 | 52.60%	 | 03 | Eevee      | TackleFast         | BodySlam      | 0
+[17:31:29] #   10/  11/ 692 | 45.36%	 | 01 | Poliwag    | MudShotFast        | BodySlam      | 0
+[17:31:29] #   25/  30/ 578 | 41.78%	 | 02 | Pidgey     | TackleFast         | Twister       | 0
+[17:31:29] #   10/  10/ 198 | 40.66%	 | 01 | Magikarp   | SplashFast         | Struggle      | 0
+[17:31:29] #   10/  12/ 754 | 39.12%	 | 01 | NidoranFemale | BiteFast           | PoisonFang    | 0
+[17:31:30] Arriving to Pokestop: Dr. Eugene and Geraldine, Surgeon Extraordinaire in (86m)
+[17:31:48] (Success) | Pidgey, Lvl: 4 | CP: (61/71) | IV: 46.53% | Type: Normal | Chance: 78.21% | Dist: 66.32m | Used: PokeBall (151 left) | XP: 210 | Candies: 6
+[17:31:53] (Success) | Pidgey, Lvl: 2 | CP: (23/30) | IV: 19.78% | Type: Normal | Chance: 100% | Dist: 69.90m | Used: PokeBall (150 left) | XP: 210 | Candies: 9
+[17:32:00] (Success) | NidoranF, Lvl: 2 | CP: (33/38) | IV: 39.62% | Type: Normal | Chance: 100% | Dist: 49.43m | Used: PokeBall (149 left) | XP: 160 | Candies: 10
+[17:32:06] Name: Dr. Eugene and Geraldine, Surgeon Extraordinaire XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:32:07] Arriving to Pokestop: This is Where Stella Played Ball in (70m)
+[17:32:15] (Success) | NidoranF, Lvl: 1 | CP: (10/12) | IV: 19.48% | Type: Normal | Chance: 100% | Dist: 59.25m | Used: PokeBall (151 left) | XP: 210 | Candies: 13
+[17:32:29] Name: This is Where Stella Played Ball XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:32:30] Arriving to Pokestop: Warren Alpert Pavilion in (108m)
+[17:33:04] Name: Warren Alpert Pavilion XP: 50, Gems: 0, Items: 4 x ItemPokeBall
+[17:33:06] Arriving to Pokestop: Glass Pyramids in (67m)
+[17:33:26] Name: Glass Pyramids XP: 50, Gems: 0, Items: 4 x ItemPokeBall
+[17:33:27] Arriving to Pokestop: The Colon Cancer Tunnel at Mount Sinai in (74m)
+[17:33:46] (Success) | Weedle, Lvl: 4 | CP: (33/47) | IV: 12.52% | Type: Normal | Chance: 78.21% | Dist: 63.14m | Used: PokeBall (161 left) | XP: 710 | Candies: 3
+[17:33:51] (Success) | Goldeen, Lvl: 2 | CP: (40/42) | IV: 75.56% | Type: Normal | Chance: 100% | Dist: 68.52m | Used: PokeBall (160 left) | XP: 660 | Candies: 3
+[17:33:59] Name: The Colon Cancer Tunnel at Mount Sinai XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:34:04] [Inventory] Pokemon Stored: 13/250
+[17:34:04] Pidgey	- CP: 25  IV: 41.78%   [Best CP: 61  IV: 46.53%] (Candies: 10)
+[17:34:05] Pidgey	- CP: 23  IV: 19.78%   [Best CP: 61  IV: 46.53%] (Candies: 11)
+[17:34:05] NidoranF	- CP: 10  IV: 39.12%   [Best CP: 33  IV: 39.62%] (Candies: 14)
+[17:34:06] NidoranF	- CP: 10  IV: 19.48%   [Best CP: 33  IV: 39.62%] (Candies: 15)
+[17:34:06] Arriving to Pokestop: Icahn Medical Institute in (94m)
+[17:34:35] Name: Icahn Medical Institute XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:34:36] Incubator status update: 1.55km left
+[17:34:37] Arriving to Pokestop: Gargoyles Above Le Pain in (80m)
+[17:34:42] (Success) | Rattata, Lvl: 2 | CP: (21/25) | IV: 38.15% | Type: Normal | Chance: 100% | Dist: 65.85m | Used: PokeBall (165 left) | XP: 210 | Candies: 6
+[17:34:49] (Success) | Horsea, Lvl: 4 | CP: (76/83) | IV: 68.21% | Type: Normal | Chance: 78.21% | Dist: 48.58m | Used: PokeBall (164 left) | XP: 710 | Candies: 3
+[17:34:57] (Success) | Fearow, Lvl: 1 | CP: (22/24) | IV: 59.08% | Type: Normal | Chance: 85.11% | Dist: 65.20m | Used: PokeBall (163 left) | XP: 660 | Candies: 3
+[17:35:04] (Success) | NidoranM, Lvl: 4 | CP: (77/88) | IV: 51.74% | Type: Normal | Chance: 78.21% | Dist: 60.07m | Used: PokeBall (182 left) | XP: 710 | Candies: 3
+[17:35:10] Name: Gargoyles Above Le Pain XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:35:11] Arriving to Pokestop: A Lion in Harlem in (31m)
+[17:35:14] Name: A Lion in Harlem XP: 50, Gems: 0, Items: 2 x ItemPokeBall, 1 x ItemPotion
+[17:35:16] Arriving to Pokestop: El Paso Taqueria in (93m)
+[17:35:44] Name: El Paso Taqueria XP: 50, Gems: 0, Items: 2 x ItemPokeBall, 1 x ItemPotion
+[17:35:45] Arriving to Pokestop: Park Avenue Mall (96th Street) in (101m)
+[17:36:17] Name: Park Avenue Mall (96th Street) XP: 100, Gems: 0, Items: 6 x ItemPokeBall, 1 x ItemPotion
+[17:36:21] [Inventory] Pokemon Stored: 13/250
+[17:36:22] Rattata	- CP: 21  IV: 38.15%   [Best CP: 10  IV: 57.49%] (Candies: 7)
+[17:36:22] Arriving to Pokestop: New York Public Library in (108m)
+[17:36:36] (Success) | Pidgey, Lvl: 4 | CP: (55/71) | IV: 19.99% | Type: Normal | Chance: 78.21% | Dist: 64.20m | Used: PokeBall (194 left) | XP: 160 | Candies: 14
+[17:36:48] (Success) | Zubat, Lvl: 5 | CP: (74/86) | IV: 48.43% | Type: Normal | Chance: 68.91% | Dist: 68.91m | Used: PokeBall (193 left) | XP: 660 | Candies: 3
+[17:36:57] Name: New York Public Library XP: 50, Gems: 0, Items: 4 x ItemPokeBall
+[17:36:58] Arriving to Pokestop: Saw the Light  in (87m)
+[17:37:24] Name: Saw the Light  XP: 50, Gems: 0, Items: 1 x ItemRevive, 1 x ItemPokeBall, 1 x ItemPotion
+[17:37:25] Arriving to Pokestop: Temple Orach Chaim in (89m)
+[17:37:30] (Success) | Pidgey, Lvl: 1 | CP: (10/10) | IV: 41.87% | Type: Normal | Chance: 100% | Dist: 64.08m | Used: PokeBall (197 left) | XP: 160 | Candies: 17
+[17:37:52] Name: Temple Orach Chaim XP: 50, Gems: 0, Items: 2 x ItemPokeBall, 1 x ItemPotion
+[17:37:53] Arriving to Pokestop: 96th St. Station  in (94m)
+[17:38:21] Name: 96th St. Station  XP: 50, Gems: 0, Items: 1 x ItemRevive, 2 x ItemPokeBall
+[17:38:23] Arriving to Pokestop: Food and Wine Bookstore  in (183m)
+[17:39:01] (Success) | Squirtle, Lvl: 3 | CP: (63/75) | IV: 29.50% | Type: Normal | Chance: 37.08% | Dist: 61.27m | Used: PokeBall (200 left) | XP: 710 | Candies: 3
+[17:39:23] Name: Food and Wine Bookstore  XP: 50, Gems: 0, Items: 2 x ItemRevive, 2 x ItemPokeBall, 1 x ItemPotion
+[17:39:28] [Inventory] Pokemon Stored: 16/250
+[17:39:28] Pidgey	- CP: 10  IV: 41.87%   [Best CP: 61  IV: 46.53%] (Candies: 18)
+[17:39:28] Pidgey	- CP: 55  IV: 19.99%   [Best CP: 61  IV: 46.53%] (Candies: 19)
+[17:39:29] Arriving to Pokestop: The Super   in (34m)
+[17:39:38] Name: The Super   XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:39:39] Arriving to Pokestop: Old Man at the Bottom of a Column in (109m)
+[17:40:13] Name: Old Man at the Bottom of a Column XP: 50, Gems: 0, Items: 2 x ItemPokeBall, 1 x ItemPotion
+[17:40:14] Incubator status update: 0.70km left
+[17:40:14] Arriving to Pokestop: Fighter Relief  in (59m)
+[17:40:28] (Success) | Rattata, Lvl: 3 | CP: (35/43) | IV: 37.12% | Type: Normal | Chance: 92.71% | Dist: 64.26m | Used: PokeBall (206 left) | XP: 210 | Candies: 10
+[17:40:36] Name: Fighter Relief  XP: 50, Gems: 0, Items: 2 x ItemPokeBall, 1 x ItemPotion
+[17:40:38] Arriving to Pokestop: Screaming Cat in (73m)
+[17:41:00] Name: Screaming Cat XP: 50, Gems: 0, Items: 1 x ItemRevive, 2 x ItemPokeBall
+[17:41:02] Arriving to Pokestop: Stone Breath  in (162m)
+[17:41:55] Name: Stone Breath  XP: 100, Gems: 0, Items: 1 x ItemRevive, 4 x ItemPokeBall, 1 x ItemPotion
+[17:41:59] [Inventory] Pokemon Stored: 15/250
+[17:41:59] Rattata	- CP: 35  IV: 37.12%   [Best CP: 10  IV: 57.49%] (Candies: 11)
+[17:41:59] ====== DisplayHighestsCP ======
+[17:41:59] >   CP/BEST/POWERED |	perfect	| LVL | NAME       | MOVE1              | MOVE2  | MoveRankVsAveType |
+[17:41:59] #   77/  88/ 749 | 51.74%	 | 04 | NidoranMale | PeckFast           | BodySlam      | 0
+[17:41:59] #   76/  83/ 734 | 68.21%	 | 04 | Horsea     | WaterGunFast       | BubbleBeam    | 0
+[17:41:59] #   74/  86/ 555 | 48.43%	 | 05 | Zubat      | BiteFast           | PoisonFang    | 0
+[17:42:00] #   72/  80/ 973 | 52.60%	 | 03 | Eevee      | TackleFast         | BodySlam      | 0
+[17:42:00] #   63/  75/ 854 | 29.50%	 | 03 | Squirtle   | BubbleFast         | AquaTail      | 0
+[17:42:00] #   61/  71/ 586 | 46.53%	 | 04 | Pidgey     | QuickAttackFast    | AirCutter     | 0
+[17:42:00] #   58/  59/1317 | 87.77%	 | 02 | Poliwhirl  | MudShotFast        | Scald         | 0
+[17:42:00] #   40/  42/ 917 | 75.56%	 | 02 | Goldeen    | MudShotFast        | WaterPulse    | 0
+[17:42:00] #   33/  38/ 755 | 39.62%	 | 02 | NidoranFemale | BiteFast           | BodySlam      | 0
+[17:42:00] #   33/  47/ 324 | 12.52%	 | 04 | Weedle     | PoisonStingFast    | Struggle      | 0
+[17:42:00] ====== DisplayHighestsPerfect ======
+[17:42:00] >   CP/BEST/POWERED |	perfect	| LVL | NAME       | MOVE1              | MOVE2  | MoveRankVsAveType |
+[17:42:00] #   58/  59/1317 | 87.77%	 | 02 | Poliwhirl  | MudShotFast        | Scald         | 0
+[17:42:00] #   40/  42/ 917 | 75.56%	 | 02 | Goldeen    | MudShotFast        | WaterPulse    | 0
+[17:42:00] #   76/  83/ 734 | 68.21%	 | 04 | Horsea     | WaterGunFast       | BubbleBeam    | 0
+[17:42:00] #   22/  24/1634 | 59.08%	 | 01 | Fearow     | SteelWingFast      | Twister       | 385
+[17:42:00] #   10/  10/ 513 | 57.49%	 | 01 | Rattata    | TackleFast         | Dig           | 0
+[17:42:00] #   72/  80/ 973 | 52.60%	 | 03 | Eevee      | TackleFast         | BodySlam      | 0
+[17:42:00] #   77/  88/ 749 | 51.74%	 | 04 | NidoranMale | PeckFast           | BodySlam      | 0
+[17:42:00] #   74/  86/ 555 | 48.43%	 | 05 | Zubat      | BiteFast           | PoisonFang    | 0
+[17:42:00] #   61/  71/ 586 | 46.53%	 | 04 | Pidgey     | QuickAttackFast    | AirCutter     | 0
+[17:42:00] #   10/  11/ 692 | 45.36%	 | 01 | Poliwag    | MudShotFast        | BodySlam      | 0
+[17:42:01] Arriving to Pokestop: Flower Face  in (52m)
+[17:42:16] Name: Flower Face  XP: 50, Gems: 0, Items: 1 x ItemRevive, 2 x ItemPokeBall
+[17:42:17] Arriving to Pokestop: The Brick Presbyterian Church in (91m)
+[17:42:41] (Success) | Pidgey, Lvl: 3 | CP: (38/50) | IV: 13.65% | Type: Normal | Chance: 92.71% | Dist: 32.13m | Used: PokeBall (215 left) | XP: 210 | Candies: 22
+[17:42:49] Name: The Brick Presbyterian Church XP: 50, Gems: 0, Items: 2 x ItemPokeBall, 1 x ItemPotion
+[17:42:50] Arriving to Pokestop: Birds Drinking  in (74m)
+[17:43:13] Name: Birds Drinking  XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:43:15] Arriving to Pokestop: The Old Couple Next Door in (81m)
+[17:43:40] Name: The Old Couple Next Door XP: 50, Gems: 0, Items: 1 x ItemRevive, 2 x ItemPokeBall
+[17:43:42] Arriving to Pokestop: Lion of Stone in (55m)
+[17:43:56] Name: Lion of Stone XP: 50, Gems: 0, Items: 1 x ItemRevive, 1 x ItemPokeBall, 1 x ItemPotion
+[17:44:01] [Inventory] Pokemon Stored: 15/250
+[17:44:01] Pidgey	- CP: 38  IV: 13.65%   [Best CP: 61  IV: 46.53%] (Candies: 23)
+[17:44:01] Arriving to Pokestop: Granite Oval in (111m)
+[17:44:36] Name: Granite Oval XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:44:37] Arriving to Pokestop: Trevor Day Manhattan Mural in (76m)
+[17:45:00] Name: Trevor Day Manhattan Mural XP: 50, Gems: 0, Items: 3 x ItemPokeBall, 1 x ItemPotion
+[17:45:01] Arriving to Pokestop: Trefoil Entryway in (85m)
+[17:45:15] (Success) | Pidgey, Lvl: 1 | CP: (10/10) | IV: 11.98% | Type: Normal | Chance: 100% | Dist: 49.83m | Used: PokeBall (228 left) | XP: 210 | Candies: 26
+[17:45:29] Name: Trefoil Entryway XP: 50, Gems: 0, Items: 1 x ItemRevive, 3 x ItemPokeBall
+[17:45:30] Arriving to Pokestop: Church of St Thomas More in (86m)
+[17:45:56] Name: Church of St Thomas More XP: 50, Gems: 0, Items: 2 x ItemRevive, 1 x ItemPokeBall
+[17:45:57] Incubator status update: 0.27km left
+[17:45:57] Arriving to Pokestop: Titan of Park Ave  in (107m)
+[17:46:31] Name: Titan of Park Ave  XP: 100, Gems: 0, Items: 1 x ItemRevive, 3 x ItemPokeBall, 2 x ItemPotion
+[17:46:36] [Inventory] Pokemon Stored: 15/250
+[17:46:36] Pidgey	- CP: 10  IV: 11.98%   [Best CP: 61  IV: 46.53%] (Candies: 27)
+[17:46:36] Arriving to Pokestop: Women Above Park in (60m)
+[17:46:53] Name: Women Above Park XP: 50, Gems: 0, Items: 2 x ItemRevive, 1 x ItemPokeBall
+[17:46:54] Arriving to Pokestop: Servant of 1080 in (93m)
+[17:47:23] Name: Servant of 1080 XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:47:24] Arriving to Pokestop: Sea Shapes Mosaics in (106m)
+[17:47:37] (Success) | Exeggcute, Lvl: 3 | CP: (71/81) | IV: 41.52% | Type: Normal | Chance: 92.71% | Dist: 69.99m | Used: PokeBall (238 left) | XP: 660 | Candies: 3
+[17:47:45] (Success) | Doduo, Lvl: 3 | CP: (56/63) | IV: 50.62% | Type: Normal | Chance: 92.71% | Dist: 62.35m | Used: PokeBall (252 left) | XP: 710 | Candies: 3
+[17:47:59] Name: Sea Shapes Mosaics XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:48:00] Arriving to Pokestop: Immanuel Lutheran Church in (79m)
+[17:48:23] Name: Immanuel Lutheran Church XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:48:24] Arriving to Pokestop: Hardenbergh Rhinelander Historic District in (98m)
+[17:48:55] Name: Hardenbergh Rhinelander Historic District XP: 50, Gems: 0, Items: 3 x ItemPokeBall, 1 x ItemPotion
+[17:48:58] [Inventory] Pokeballs: 261 | Greatballs: 0 | Ultraballs: 0 | Masterballs: 0 | Total: 261
+[17:48:58] [Inventory] Potions: 35 | Super Potions: 0 | Hyper Potions: 0 | Max Potions: 0 | Total: 35
+[17:48:58] [Inventory] Razz Berries: 0 | Bluk Berries: 0 | Nanab Berries: 0 | Pinap Berries: 0 | Wepar Berries: 0 | Total: 0
+[17:48:58] [Inventory] Revives: 30 | Max Revives: 0 | Total: 30
+[17:48:58] [Inventory] Incense: 3 | Cool Incense: 0 | Floral Incense: 0 | Spicy Incense: 0 | Total 3
+[17:48:58] [Inventory] Lure Modules: 0 | Lucky Eggs: 0 | Incubators: 1 | Total: 1
+[17:48:58] [Inventory] Inventory Usage: 331/350
+[17:48:58] 61x ItemPokeBall
+[17:48:59] 25x ItemPotion
+[17:49:00] 10x ItemRevive
+[17:49:03] [Inventory] Pokemon Stored: 16/250
+[17:49:03] Arriving to Pokestop: Queen of 90th Street  in (93m)
+[17:49:08] (Success) | Weedle, Lvl: 3 | CP: (25/33) | IV: 23.24% | Type: Normal | Chance: 92.71% | Dist: 69.04m | Used: PokeBall (199 left) | XP: 200 | Candies: 6
+[17:49:15] (Success) | Staryu, Lvl: 6 | CP: (149/154) | IV: 86.02% | Type: Normal | Chance: 62.29% | Dist: 61.25m | Used: PokeBall (198 left) | XP: 710 | Candies: 3
+[17:49:20] (Success) | Weedle, Lvl: 3 | CP: (27/33) | IV: 46.35% | Type: Normal | Chance: 92.71% | Dist: 62.71m | Used: PokeBall (197 left) | XP: 200 | Candies: 9
+[17:49:27] (Success) | Pidgey, Lvl: 5 | CP: (77/91) | IV: 40.86% | Type: Normal | Chance: 68.91% | Dist: 49.26m | Used: PokeBall (196 left) | XP: 160 | Candies: 30
+[17:49:35] Name: Queen of 90th Street  XP: 50, Gems: 0, Items: 2 x ItemPokeBall, 1 x ItemPotion
+[17:49:37] Arriving to Pokestop: Abstract  Chess Piece in (228m)
+[17:50:55] Name: Abstract  Chess Piece XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:50:56] Arriving to Pokestop: Synod of Bishops of the Russian Orthodox Church outside of Russia in (92m)
+[17:51:28] Name: Synod of Bishops of the Russian Orthodox Church outside of Russia XP: 50, Gems: 0, Items: 1 x ItemRevive, 1 x ItemPokeBall, 1 x ItemPotion
+[17:51:30] Arriving to Pokestop: Gold Crosses  in (25m)
+[17:51:33] Name: Gold Crosses  XP: 50, Gems: 0, Items: 1 x ItemPokeBall, 2 x ItemPotion
+[17:51:35] Arriving to Pokestop: Man with Horns in (55m)
+[17:51:40] (Success) | Goldeen, Lvl: 1 | CP: (13/13) | IV: 95.81% | Type: Normal | Chance: 100% | Dist: 67.54m | Used: PokeBall (202 left) | XP: 210 | Candies: 6
+[17:51:48] Name: Man with Horns XP: 100, Gems: 0, Items: 4 x ItemPokeBall, 2 x ItemPotion
+[17:51:49] Incubated egg has hatched: Zubat | Lvl: 3 CP: (46/47) IV: 87.08%
+[17:51:49] Putting egg in incubator: 2.00km left
+[17:51:50] Putting egg in incubator: 5.00km left
+[17:51:54] [Inventory] Pokemon Stored: 22/250
+[17:51:54] Zubat	- CP: 74  IV: 48.43%   [Best CP: 46  IV: 87.08%] (Candies: 11)
+[17:51:54] Weedle	- CP: 25  IV: 23.24%   [Best CP: 27  IV: 46.35%] (Candies: 10)
+[17:51:55] Weedle	- CP: 33  IV: 12.52%   [Best CP: 27  IV: 46.35%] (Candies: 11)
+[17:51:56] Pidgey	- CP: 77  IV: 40.86%   [Best CP: 61  IV: 46.53%] (Candies: 31)
+[17:51:56] Goldeen	- CP: 40  IV: 75.56%   [Best CP: 13  IV: 95.81%] (Candies: 7)
+[17:51:56] ====== DisplayHighestsCP ======
+[17:51:56] >   CP/BEST/POWERED |	perfect	| LVL | NAME       | MOVE1              | MOVE2  | MoveRankVsAveType |
+[17:51:56] #  149/ 154/ 912 | 86.02%	 | 06 | Staryu     | WaterGunFast       | BubbleBeam    | 0
+[17:51:56] #   77/  88/ 749 | 51.74%	 | 04 | NidoranMale | PeckFast           | BodySlam      | 0
+[17:51:56] #   76/  83/ 734 | 68.21%	 | 04 | Horsea     | WaterGunFast       | BubbleBeam    | 0
+[17:51:56] #   72/  80/ 973 | 52.60%	 | 03 | Eevee      | TackleFast         | BodySlam      | 0
+[17:51:56] #   71/  81/ 969 | 41.52%	 | 03 | Exeggcute  | ConfusionFast      | SeedBomb      | 0
+[17:51:56] #   63/  75/ 854 | 29.50%	 | 03 | Squirtle   | BubbleFast         | AquaTail      | 0
+[17:51:56] #   61/  71/ 586 | 46.53%	 | 04 | Pidgey     | QuickAttackFast    | AirCutter     | 0
+[17:51:56] #   58/  59/1317 | 87.77%	 | 02 | Poliwhirl  | MudShotFast        | Scald         | 0
+[17:51:56] #   56/  63/ 756 | 50.62%	 | 03 | Doduo      | PeckFast           | Swift         | 0
+[17:51:56] #   46/  47/ 624 | 87.08%	 | 03 | Zubat      | QuickAttackFast    | SludgeBomb    | 0
+[17:51:57] ====== DisplayHighestsPerfect ======
+[17:51:57] >   CP/BEST/POWERED |	perfect	| LVL | NAME       | MOVE1              | MOVE2  | MoveRankVsAveType |
+[17:51:57] #   13/  13/ 962 | 95.81%	 | 01 | Goldeen    | PeckFast           | WaterPulse    | 0
+[17:51:57] #   58/  59/1317 | 87.77%	 | 02 | Poliwhirl  | MudShotFast        | Scald         | 0
+[17:51:57] #   46/  47/ 624 | 87.08%	 | 03 | Zubat      | QuickAttackFast    | SludgeBomb    | 0
+[17:51:57] #  149/ 154/ 912 | 86.02%	 | 06 | Staryu     | WaterGunFast       | BubbleBeam    | 0
+[17:51:57] #   76/  83/ 734 | 68.21%	 | 04 | Horsea     | WaterGunFast       | BubbleBeam    | 0
+[17:51:57] #   22/  24/1634 | 59.08%	 | 01 | Fearow     | SteelWingFast      | Twister       | 385
+[17:51:57] #   10/  10/ 513 | 57.49%	 | 01 | Rattata    | TackleFast         | Dig           | 0
+[17:51:57] #   72/  80/ 973 | 52.60%	 | 03 | Eevee      | TackleFast         | BodySlam      | 0
+[17:51:57] #   77/  88/ 749 | 51.74%	 | 04 | NidoranMale | PeckFast           | BodySlam      | 0
+[17:51:57] #   56/  63/ 756 | 50.62%	 | 03 | Doduo      | PeckFast           | Swift         | 0
+[17:51:57] Arriving to Pokestop: Decorative Colonnade in (74m)
+[17:52:21] Name: Decorative Colonnade XP: 50, Gems: 0, Items: 4 x ItemPokeBall
+[17:52:22] Arriving to Pokestop: Hunter 9/11 Memorial Corner in (39m)
+[17:52:31] Name: Hunter 9/11 Memorial Corner XP: 50, Gems: 0, Items: 2 x ItemRevive, 1 x ItemPokeBall
+[17:52:32] Arriving to Pokestop: Moorish Entryway in (59m)
+[17:52:40] Niantic Servers unstable, throttling API Calls.
+[17:52:41] [Inventory] Pokemon Stored: 17/250
+[17:52:42] Incubator status update: 2.00km left
+[17:52:42] Incubator status update: 5.00km left
+[17:52:43] Arriving to Pokestop: Flaming Lanterns in (95m)
+[17:53:12] Name: Flaming Lanterns XP: 50, Gems: 0, Items: 1 x ItemRevive, 2 x ItemPokeBall
+[17:53:13] Arriving to Pokestop: Snack Sharing in (88m)
+[17:53:29] (Success) | NidoranM, Lvl: 5 | CP: (96/113) | IV: 35.77% | Type: Normal | Chance: 68.91% | Dist: 66.05m | Used: PokeBall (212 left) | XP: 210 | Candies: 6
+[17:53:40] Name: Snack Sharing XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:53:41] Arriving to Pokestop: New York Public Library in (68m)
+[17:54:02] Name: New York Public Library XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:54:03] Arriving to Pokestop: St Francis de Sales Church in (54m)
+[17:54:17] Name: St Francis de Sales Church XP: 50, Gems: 0, Items: 1 x ItemRevive, 3 x ItemPokeBall
+[17:54:19] Arriving to Pokestop: 96th St. Station  in (79m)
+[17:54:42] Name: 96th St. Station  XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:54:46] [Inventory] Pokemon Stored: 18/250
+[17:54:46] NidoranM	- CP: 96  IV: 35.77%   [Best CP: 77  IV: 51.74%] (Candies: 7)
+[17:54:47] Arriving to Pokestop: 'Yahkin' in (100m)
+[17:55:19] Name: 'Yahkin' XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:55:20] Arriving to Pokestop: Boulders  in (133m)
+[17:56:02] Name: Boulders  XP: 50, Gems: 0, Items: 1 x ItemRevive, 3 x ItemPokeBall
+[17:56:03] Arriving to Pokestop: Plant for the Futute in (209m)
+[17:56:55] (Success) | Rattata, Lvl: 2 | CP: (21/25) | IV: 38.29% | Type: Normal | Chance: 100% | Dist: 56.15m | Used: PokeBall (229 left) | XP: 210 | Candies: 14
+[17:57:00] (Success) | Poliwag, Lvl: 4 | CP: (71/83) | IV: 45.13% | Type: Normal | Chance: 78.21% | Dist: 68.56m | Used: PokeBall (228 left) | XP: 200 | Candies: 9
+[17:57:14] Name: Plant for the Futute XP: 50, Gems: 0, Items: 2 x ItemPokeBall, 1 x ItemPotion
+[17:57:15] Arriving to Pokestop: Green Man in Red in (290m)
+[17:57:47] (Flee) | Clefable, Lvl: 5 | CP: (291/323) | IV: 32.56% | Type: Normal | Chance: 13.78% | Dist: 23.38m | Used: PokeBall (229 left) | XP: 0 | 
+[17:58:54] Name: Green Man in Red XP: 50, Gems: 0, Items: 2 x ItemPokeBall, 1 x ItemPotion
+[17:58:55] Incubator status update: 1.51km left
+[17:58:55] Incubator status update: 4.51km left
+[17:58:56] Arriving to Pokestop: Barking Dog in (84m)
+[17:59:22] Name: Barking Dog XP: 100, Gems: 0, Items: 5 x ItemPokeBall, 1 x ItemPotion
+[17:59:26] [Inventory] Pokemon Stored: 19/250
+[17:59:26] Rattata	- CP: 21  IV: 38.29%   [Best CP: 10  IV: 57.49%] (Candies: 15)
+[17:59:27] Poliwag	- CP: 71  IV: 45.13%   [Best CP: 10  IV: 45.36%] (Candies: 10)
+[17:59:27] Arriving to Pokestop: Horse Neighbors in (52m)
+[17:59:33] (Success) | Spearow, Lvl: 6 | CP: (110/113) | IV: 91.62% | Type: Normal | Chance: 62.29% | Dist: 60.70m | Used: PokeBall (235 left) | XP: 660 | Candies: 6
+[17:59:41] Name: Horse Neighbors XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[17:59:43] Arriving to Pokestop: Wings Structure in (88m)

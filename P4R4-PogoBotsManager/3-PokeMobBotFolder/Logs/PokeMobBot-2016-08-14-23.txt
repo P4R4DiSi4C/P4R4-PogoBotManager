@@ -1,0 +1,3 @@
+Initializing Rocket logger at time 8/14/2016 11:00:18 PM...
+[23:00:18] This is your first start and the bot has generated the default config!
+[23:00:19] After pressing a key the config folder will open and this commandline will close

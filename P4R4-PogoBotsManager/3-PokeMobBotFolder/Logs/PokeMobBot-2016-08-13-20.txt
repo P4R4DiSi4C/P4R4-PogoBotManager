@@ -1,0 +1,811 @@
+[20:00:15] (Success) | Zubat, Lvl: 10.5 | CP: (150/183) | IV: 33.57% | Type: Normal | Chance: 47.34% | Dist: 52.97m | Used: PokeBall (179 left) | XP: 210 | Candies: 83
+[20:00:19] Name: Faded Mural XP: 50, Gems: 0, Items: 4 x ItemPokeBall
+[20:00:21] [Inventory] Pokeballs: 183 | Greatballs: 22 | Ultraballs: 0 | Masterballs: 0 | Total: 205
+[20:00:21] [Inventory] Potions: 1 | Super Potions: 10 | Hyper Potions: 0 | Max Potions: 0 | Total: 11
+[20:00:21] [Inventory] Razz Berries: 51 | Bluk Berries: 0 | Nanab Berries: 0 | Pinap Berries: 0 | Wepar Berries: 0 | Total: 51
+[20:00:21] [Inventory] Revives: 21 | Max Revives: 0 | Total: 21
+[20:00:21] [Inventory] Incense: 5 | Cool Incense: 0 | Floral Incense: 0 | Spicy Incense: 0 | Total 5
+[20:00:21] [Inventory] Lure Modules: 2 | Lucky Eggs: 2 | Incubators: 2 | Total: 6
+[20:00:21] [Inventory] Inventory Usage: 300/350
+[20:00:21] 5x ItemPokeBall
+[20:00:22] 1x ItemPotion
+[20:00:23] 1x ItemRevive
+[20:00:24] 1x ItemRazzBerry
+[20:00:27] [Inventory] Pokemon Stored: 44/250
+[20:00:27] Psyduck	- CP: 262  IV: 19.79%   [Best CP: 291  IV: 61.86%] (Candies: 7)
+[20:00:27] Squirtle	- CP: 272  IV: 36.95%   [Best CP: 285  IV: 95.66%] (Candies: 25)
+[20:00:28] Zubat	- CP: 150  IV: 33.57%   [Best CP: 46  IV: 87.08%] (Candies: 84)
+[20:00:28] Rattata	- CP: 87  IV: 71.06%   [Best CP: 24  IV: 88.23%] (Candies: 79)
+[20:00:29] Rattata	- CP: 10  IV: 41.79%   [Best CP: 24  IV: 88.23%] (Candies: 80)
+[20:00:29] Pidgey	- CP: 25  IV: 41.26%   [Best CP: 28  IV: 73.46%] (Candies: 118)
+[20:00:30] Krabby	- CP: 245  IV: 61.87%   [Best CP: 10  IV: 71.46%] (Candies: 11)
+[20:00:31] Weedle	- CP: 73  IV: 50.21%   [Best CP: 40  IV: 55.69%] (Candies: 63)
+[20:00:31] ====== DisplayHighestsCP ======
+[20:00:31] >   CP/BEST/POWERED |	perfect	| LVL | NAME       | MOVE1              | MOVE2  | MoveRankVsAveType |
+[20:00:31] #  318/ 341/2379 | 54.45%	 | 05 | Victreebel | AcidFast           | SolarBeam     | 207
+[20:00:31] #  291/ 317/1026 | 61.86%	 | 11 | Psyduck    | WaterGunFast       | Psybeam       | 0
+[20:00:31] #  285/ 288/1005 | 95.66%	 | 11 | Squirtle   | BubbleFast         | WaterPulse    | 0
+[20:00:31] #  199/ 210/1030 | 76.56%	 | 07 | Eevee      | TackleFast         | Dig           | 0
+[20:00:31] #  183/ 193/ 723 | 80.28%	 | 09 | Meowth     | BiteFast           | NightSlash    | 0
+[20:00:31] #  175/ 218/ 907 | 12.11%	 | 07 | Bellsprout | AcidFast           | Wrap          | 0
+[20:00:31] #  149/ 154/ 912 | 86.02%	 | 06 | Staryu     | WaterGunFast       | BubbleBeam    | 0
+[20:00:31] #  148/ 158/2008 | 61.83%	 | 03 | Pinsir     | RockSmashFast      | ViceGrip      | 448
+[20:00:31] #  137/ 143/1861 | 76.71%	 | 03 | Golbat     | BiteFast           | AirCutter     | 291
+[20:00:31] #  137/ 148/1027 | 66.07%	 | 05 | Exeggcute  | ConfusionFast      | Psychic       | 0
+[20:00:31] ====== DisplayHighestsPerfect ======
+[20:00:31] >   CP/BEST/POWERED |	perfect	| LVL | NAME       | MOVE1              | MOVE2  | MoveRankVsAveType |
+[20:00:31] #   13/  13/ 962 | 95.81%	 | 01 | Goldeen    | PeckFast           | WaterPulse    | 0
+[20:00:31] #  285/ 288/1005 | 95.66%	 | 11 | Squirtle   | BubbleFast         | WaterPulse    | 0
+[20:00:31] #  110/ 113/ 676 | 91.62%	 | 06 | Spearow    | QuickAttackFast    | AerialAce     | 0
+[20:00:31] #   16/  17/1198 | 88.71%	 | 01 | Slowpoke   | ConfusionFast      | Psyshock      | 0
+[20:00:31] #   24/  25/ 565 | 88.23%	 | 02 | Rattata    | QuickAttackFast    | Dig           | 0
+[20:00:31] #   58/  59/1317 | 87.77%	 | 02 | Poliwhirl  | MudShotFast        | Scald         | 0
+[20:00:31] #   46/  47/ 624 | 87.08%	 | 03 | Zubat      | QuickAttackFast    | SludgeBomb    | 0
+[20:00:31] #   73/  74/1663 | 86.38%	 | 02 | Porygon    | QuickAttackFast    | Psybeam       | 417
+[20:00:31] #  149/ 154/ 912 | 86.02%	 | 06 | Staryu     | WaterGunFast       | BubbleBeam    | 0
+[20:00:31] #   74/  76/1001 | 84.50%	 | 03 | Venonat    | ConfusionFast      | Psybeam       | 0
+[20:00:32] Arriving to Pokestop: Four Portrait Stone Sculptures in (60m)
+[20:00:50] Name: Four Portrait Stone Sculptures XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 2 x ItemPokeBall
+[20:00:51] Arriving to Pokestop: East Harlem Scholars Academy II in (44m)
+[20:01:03] Name: East Harlem Scholars Academy II XP: 50, Gems: 0, Items: 2 x ItemPokeBall, 1 x ItemRevive
+[20:01:04] Arriving to Pokestop: Bronze Bears in (80m)
+[20:01:27] Name: Bronze Bears XP: 50, Gems: 0, Items: 2 x ItemPokeBall, 1 x ItemRevive
+[20:01:28] Arriving to Pokestop: Graffiti Hall of Fame in (94m)
+[20:01:56] Name: Graffiti Hall of Fame XP: 50, Gems: 0, Items: 2 x ItemPokeBall, 1 x ItemRazzBerry
+[20:01:58] Incubator status update: 0.82km left
+[20:01:58] Incubator status update: 1.61km left
+[20:01:58] Incubator status update: 3.82km left
+[20:01:58] Arriving to Pokestop: Clinton Park in (97m)
+[20:02:17] (Success) | Zubat, Lvl: 4 | CP: (58/67) | IV: 53.80% | Type: Normal | Chance: 78.21% | Dist: 58.24m | Used: PokeBall (185 left) | XP: 210 | Candies: 87
+[20:02:22] (Success) | Goldeen, Lvl: 7 | CP: (175/188) | IV: 70.90% | Type: Normal | Chance: 57.27% | Dist: 66.91m | Used: PokeBall (184 left) | XP: 210 | Candies: 18
+[20:02:31] Name: Clinton Park XP: 100, Gems: 0, Items: 1 x ItemPotion, 3 x ItemPokeBall, 2 x ItemRevive
+[20:02:33] [Inventory] Pokeballs: 187 | Greatballs: 23 | Ultraballs: 0 | Masterballs: 0 | Total: 210
+[20:02:33] [Inventory] Potions: 1 | Super Potions: 10 | Hyper Potions: 0 | Max Potions: 0 | Total: 11
+[20:02:33] [Inventory] Razz Berries: 51 | Bluk Berries: 0 | Nanab Berries: 0 | Pinap Berries: 0 | Wepar Berries: 0 | Total: 51
+[20:02:33] [Inventory] Revives: 24 | Max Revives: 0 | Total: 24
+[20:02:33] [Inventory] Incense: 5 | Cool Incense: 0 | Floral Incense: 0 | Spicy Incense: 0 | Total 5
+[20:02:33] [Inventory] Lure Modules: 2 | Lucky Eggs: 2 | Incubators: 2 | Total: 6
+[20:02:33] [Inventory] Inventory Usage: 308/350
+[20:02:33] 10x ItemPokeBall
+[20:02:34] 1x ItemPotion
+[20:02:35] 4x ItemRevive
+[20:02:36] 1x ItemRazzBerry
+[20:02:39] [Inventory] Pokemon Stored: 38/250
+[20:02:39] Goldeen	- CP: 175  IV: 70.90%   [Best CP: 13  IV: 95.81%] (Candies: 19)
+[20:02:39] Zubat	- CP: 58  IV: 53.80%   [Best CP: 46  IV: 87.08%] (Candies: 88)
+[20:02:39] Arriving to Pokestop: Church of the Good Neighbor in (74m)
+[20:03:00] Name: Church of the Good Neighbor XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 2 x ItemPokeBall
+[20:03:01] Arriving to Pokestop: Saint Cecilia's Roman Catholic Church in (36m)
+[20:03:11] Name: Saint Cecilia's Roman Catholic Church XP: 50, Gems: 0, Items: 2 x ItemPokeBall, 1 x ItemRazzBerry
+[20:03:12] Arriving to Pokestop: Art Work  in (87m)
+[20:03:37] Name: Art Work  XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[20:03:38] Arriving to Pokestop: Espiritu in (108m)
+[20:04:06] (Success) | Exeggcute, Lvl: 3 | CP: (76/81) | IV: 70.19% | Type: Normal | Chance: 92.71% | Dist: 52.65m | Used: PokeBall (183 left) | XP: 210 | Candies: 14
+[20:04:14] Name: Espiritu XP: 50, Gems: 0, Items: 2 x ItemPokeBall, 1 x ItemRazzBerry
+[20:04:15] Arriving to Pokestop: Turtle Sculpture  in (45m)
+[20:04:27] Name: Turtle Sculpture  XP: 50, Gems: 0, Items: 2 x ItemGreatBall, 2 x ItemPokeBall
+[20:04:30] [Inventory] Pokeballs: 187 | Greatballs: 26 | Ultraballs: 0 | Masterballs: 0 | Total: 213
+[20:04:30] [Inventory] Potions: 0 | Super Potions: 10 | Hyper Potions: 0 | Max Potions: 0 | Total: 10
+[20:04:30] [Inventory] Razz Berries: 52 | Bluk Berries: 0 | Nanab Berries: 0 | Pinap Berries: 0 | Wepar Berries: 0 | Total: 52
+[20:04:30] [Inventory] Revives: 20 | Max Revives: 0 | Total: 20
+[20:04:30] [Inventory] Incense: 5 | Cool Incense: 0 | Floral Incense: 0 | Spicy Incense: 0 | Total 5
+[20:04:30] [Inventory] Lure Modules: 2 | Lucky Eggs: 2 | Incubators: 2 | Total: 6
+[20:04:30] [Inventory] Inventory Usage: 307/350
+[20:04:30] 13x ItemPokeBall
+[20:04:31] 2x ItemRazzBerry
+[20:04:34] [Inventory] Pokemon Stored: 37/250
+[20:04:35] Exeggcute	- CP: 137  IV: 66.07%   [Best CP: 76  IV: 70.19%] (Candies: 15)
+[20:04:35] Arriving to Pokestop: Morris and George  in (102m)
+[20:05:06] Name: Morris and George  XP: 50, Gems: 0, Items: 1 x ItemPokeBall, 1 x ItemSuperPotion, 1 x ItemRazzBerry
+[20:05:08] Arriving to Pokestop: The Spirit of East Harlem in (67m)
+[20:05:21] (Success) | Weedle, Lvl: 11 | CP: (110/141) | IV: 33.04% | Type: Normal | Chance: 45.14% | Dist: 60.86m | Used: PokeBall (174 left) | XP: 150 | Candies: 66
+[20:05:26] (Success) | Spearow, Lvl: 5 | CP: (84/92) | IV: 66.16% | Type: Normal | Chance: 68.91% | Dist: 68.75m | Used: PokeBall (173 left) | XP: 210 | Candies: 41
+[20:05:33] (Success) | Poliwag, Lvl: 6 | CP: (115/131) | IV: 53.00% | Type: Normal | Chance: 62.29% | Dist: 62.33m | Used: PokeBall (172 left) | XP: 210 | Candies: 13
+[20:05:38] (Success) | NidoranM, Lvl: 4 | CP: (74/88) | IV: 34.36% | Type: Normal | Chance: 78.21% | Dist: 63.14m | Used: PokeBall (171 left) | XP: 210 | Candies: 14
+[20:05:43] Name: The Spirit of East Harlem XP: 50, Gems: 0, Items: 1 x ItemPotion, 1 x ItemPokeBall, 1 x ItemRazzBerry
+[20:05:44] Arriving to Pokestop: Thy Will be Done in (106m)
+[20:06:12] (Success) | Staryu, Lvl: 12 | CP: (302/321) | IV: 75.69% | Type: Normal | Chance: 43.22% | Dist: 63.79m | Used: PokeBall (171 left) | XP: 210 | Candies: 30
+[20:06:20] Name: Thy Will be Done XP: 50, Gems: 0, Items: 2 x ItemPokeBall, 1 x ItemRazzBerry
+[20:06:21] Arriving to Pokestop: Pit Bull Mural  in (50m)
+[20:06:36] Name: Pit Bull Mural  XP: 50, Gems: 0, Items: 1 x ItemPotion, 1 x ItemPokeBall, 1 x ItemRevive
+[20:06:37] Arriving to Pokestop: Segunda Iglesia in (107m)
+[20:07:11] Name: Segunda Iglesia XP: 100, Gems: 0, Items: 1 x ItemGreatBall, 3 x ItemPokeBall, 1 x ItemRevive, 1 x ItemRazzBerry
+[20:07:14] [Inventory] Pokeballs: 177 | Greatballs: 27 | Ultraballs: 0 | Masterballs: 0 | Total: 204
+[20:07:14] [Inventory] Potions: 2 | Super Potions: 11 | Hyper Potions: 0 | Max Potions: 0 | Total: 13
+[20:07:14] [Inventory] Razz Berries: 54 | Bluk Berries: 0 | Nanab Berries: 0 | Pinap Berries: 0 | Wepar Berries: 0 | Total: 54
+[20:07:14] [Inventory] Revives: 22 | Max Revives: 0 | Total: 22
+[20:07:14] [Inventory] Incense: 5 | Cool Incense: 0 | Floral Incense: 0 | Spicy Incense: 0 | Total 5
+[20:07:14] [Inventory] Lure Modules: 2 | Lucky Eggs: 2 | Incubators: 2 | Total: 6
+[20:07:14] [Inventory] Inventory Usage: 305/350
+[20:07:14] 4x ItemPokeBall
+[20:07:15] 2x ItemPotion
+[20:07:16] 1x ItemSuperPotion
+[20:07:17] 2x ItemRevive
+[20:07:17] 4x ItemRazzBerry
+[20:07:20] [Inventory] Pokemon Stored: 41/250
+[20:07:20] Weedle	- CP: 110  IV: 33.04%   [Best CP: 40  IV: 55.69%] (Candies: 67)
+[20:07:21] Poliwag	- CP: 10  IV: 45.36%   [Best CP: 115  IV: 53.00%] (Candies: 14)
+[20:07:21] Staryu	- CP: 302  IV: 75.69%   [Best CP: 149  IV: 86.02%] (Candies: 31)
+[20:07:22] Spearow	- CP: 84  IV: 66.16%   [Best CP: 110  IV: 91.62%] (Candies: 42)
+[20:07:24] NidoranM	- CP: 74  IV: 34.36%   [Best CP: 77  IV: 51.74%] (Candies: 15)
+[20:07:24] Arriving to Pokestop: Church of the Holy Agony in (109m)
+[20:07:37] (Success) | Rattata, Lvl: 3 | CP: (38/43) | IV: 59.05% | Type: Normal | Chance: 92.71% | Dist: 69.64m | Used: PokeBall (172 left) | XP: 210 | Candies: 83
+[20:08:00] Name: Church of the Holy Agony XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 3 x ItemPokeBall
+[20:08:01] Arriving to Pokestop: Life Changers Church  in (129m)
+[20:08:39] (Success) | Zubat, Lvl: 12 | CP: (184/220) | IV: 41.08% | Type: Normal | Chance: 43.22% | Dist: 63.42m | Used: PokeBall (174 left) | XP: 160 | Candies: 91
+[20:08:43] (Escape) | Venonat, Lvl: 11 | CP: (305/323) | IV: 74.03% | Type: Normal | Chance: 45.14% | Dist: 63.47m | Used: PokeBall (173 left) | XP: 0 | 
+[20:08:47] (Success Attempt #2) | Venonat, Lvl: 11 | CP: (305/323) | IV: 74.03% | Type: Normal | Chance: 45.14% | Dist: 63.47m | Used: PokeBall (172 left) | XP: 210 | Candies: 14
+[20:08:54] (Success) | Jigglypuff, Lvl: 7 | CP: (163/179) | IV: 66.83% | Type: Normal | Chance: 57.27% | Dist: 64.97m | Used: PokeBall (171 left) | XP: 210 | Candies: 6
+[20:08:59] Name: Life Changers Church  XP: 50, Gems: 0, Items: 2 x ItemPokeBall, 1 x ItemRazzBerry
+[20:09:01] Incubator status update: 0.40km left
+[20:09:01] Incubator status update: 1.19km left
+[20:09:01] Incubator status update: 3.40km left
+[20:09:01] Arriving to Pokestop: The Children's Aid Society, East Harlem Center Flower Mural  in (46m)
+[20:09:15] (Success) | NidoranF, Lvl: 4 | CP: (74/91) | IV: 21.53% | Type: Normal | Chance: 78.21% | Dist: 63.98m | Used: PokeBall (172 left) | XP: 150 | Candies: 82
+[20:09:18] Name: The Children's Aid Society, East Harlem Center Flower Mural  XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 2 x ItemPokeBall
+[20:09:19] Arriving to Pokestop: Bird Artwork  in (90m)
+[20:09:38] (Success) | Zubat, Lvl: 10.5 | CP: (166/183) | IV: 65.85% | Type: Normal | Chance: 47.34% | Dist: 15.47m | Used: PokeBall (173 left) | XP: 210 | Candies: 94
+[20:09:43] (Success) | Pidgey, Lvl: 5 | CP: (76/91) | IV: 35.96% | Type: Normal | Chance: 68.91% | Dist: 53.01m | Used: PokeBall (172 left) | XP: 160 | Candies: 121
+[20:09:51] Name: Bird Artwork  XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 2 x ItemPokeBall, 1 x ItemRazzBerry
+[20:09:52] Arriving to Pokestop: Smiling Man in (105m)
+[20:10:27] Name: Smiling Man XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 2 x ItemPokeBall
+[20:10:29] [Inventory] Pokeballs: 176 | Greatballs: 31 | Ultraballs: 0 | Masterballs: 0 | Total: 207
+[20:10:29] [Inventory] Potions: 0 | Super Potions: 10 | Hyper Potions: 0 | Max Potions: 0 | Total: 10
+[20:10:29] [Inventory] Razz Berries: 52 | Bluk Berries: 0 | Nanab Berries: 0 | Pinap Berries: 0 | Wepar Berries: 0 | Total: 52
+[20:10:29] [Inventory] Revives: 20 | Max Revives: 0 | Total: 20
+[20:10:29] [Inventory] Incense: 5 | Cool Incense: 0 | Floral Incense: 0 | Spicy Incense: 0 | Total 5
+[20:10:29] [Inventory] Lure Modules: 2 | Lucky Eggs: 2 | Incubators: 2 | Total: 6
+[20:10:29] [Inventory] Inventory Usage: 301/350
+[20:10:29] 7x ItemPokeBall
+[20:10:30] 2x ItemRazzBerry
+[20:10:32] Weedle successfully for 1000xp
+[20:10:33] [Inventory] Pokemon Stored: 44/250
+[20:10:34] Jigglypuff	- CP: 102  IV: 32.64%   [Best CP: 163  IV: 66.83%] (Candies: 7)
+[20:10:34] Zubat	- CP: 166  IV: 65.85%   [Best CP: 46  IV: 87.08%] (Candies: 95)
+[20:10:35] Zubat	- CP: 184  IV: 41.08%   [Best CP: 46  IV: 87.08%] (Candies: 96)
+[20:10:35] Rattata	- CP: 38  IV: 59.05%   [Best CP: 24  IV: 88.23%] (Candies: 84)
+[20:10:36] Venonat	- CP: 305  IV: 74.03%   [Best CP: 74  IV: 84.50%] (Candies: 15)
+[20:10:37] Pidgey	- CP: 76  IV: 35.96%   [Best CP: 28  IV: 73.46%] (Candies: 122)
+[20:10:37] NidoranF	- CP: 74  IV: 21.53%   [Best CP: 33  IV: 41.69%] (Candies: 83)
+[20:10:37] ====== DisplayHighestsCP ======
+[20:10:37] >   CP/BEST/POWERED |	perfect	| LVL | NAME       | MOVE1              | MOVE2  | MoveRankVsAveType |
+[20:10:37] #  318/ 341/2379 | 54.45%	 | 05 | Victreebel | AcidFast           | SolarBeam     | 207
+[20:10:37] #  291/ 317/1026 | 61.86%	 | 11 | Psyduck    | WaterGunFast       | Psybeam       | 0
+[20:10:37] #  285/ 288/1005 | 95.66%	 | 11 | Squirtle   | BubbleFast         | WaterPulse    | 0
+[20:10:37] #  199/ 210/1030 | 76.56%	 | 07 | Eevee      | TackleFast         | Dig           | 0
+[20:10:37] #  183/ 193/ 723 | 80.28%	 | 09 | Meowth     | BiteFast           | NightSlash    | 0
+[20:10:37] #  175/ 218/ 907 | 12.11%	 | 07 | Bellsprout | AcidFast           | Wrap          | 0
+[20:10:37] #  163/ 179/ 845 | 66.83%	 | 07 | Jigglypuff | PoundFast          | PlayRough     | 0
+[20:10:37] #  149/ 154/ 912 | 86.02%	 | 06 | Staryu     | WaterGunFast       | BubbleBeam    | 0
+[20:10:37] #  148/ 158/2008 | 61.83%	 | 03 | Pinsir     | RockSmashFast      | ViceGrip      | 448
+[20:10:37] #  137/ 143/1861 | 76.71%	 | 03 | Golbat     | BiteFast           | AirCutter     | 291
+[20:10:38] ====== DisplayHighestsPerfect ======
+[20:10:38] >   CP/BEST/POWERED |	perfect	| LVL | NAME       | MOVE1              | MOVE2  | MoveRankVsAveType |
+[20:10:38] #   50/  50/ 486 | 98.36%	 | 04 | Kakuna     | PoisonStingFast    | Struggle      | 0
+[20:10:38] #   13/  13/ 962 | 95.81%	 | 01 | Goldeen    | PeckFast           | WaterPulse    | 0
+[20:10:38] #  285/ 288/1005 | 95.66%	 | 11 | Squirtle   | BubbleFast         | WaterPulse    | 0
+[20:10:38] #  110/ 113/ 676 | 91.62%	 | 06 | Spearow    | QuickAttackFast    | AerialAce     | 0
+[20:10:38] #   16/  17/1198 | 88.71%	 | 01 | Slowpoke   | ConfusionFast      | Psyshock      | 0
+[20:10:38] #   24/  25/ 565 | 88.23%	 | 02 | Rattata    | QuickAttackFast    | Dig           | 0
+[20:10:38] #   58/  59/1317 | 87.77%	 | 02 | Poliwhirl  | MudShotFast        | Scald         | 0
+[20:10:38] #   46/  47/ 624 | 87.08%	 | 03 | Zubat      | QuickAttackFast    | SludgeBomb    | 0
+[20:10:38] #   73/  74/1663 | 86.38%	 | 02 | Porygon    | QuickAttackFast    | Psybeam       | 417
+[20:10:38] #  149/ 154/ 912 | 86.02%	 | 06 | Staryu     | WaterGunFast       | BubbleBeam    | 0
+[20:10:39] Arriving to Pokestop: Become Your Dream in (133m)
+[20:11:21] Name: Become Your Dream XP: 50, Gems: 0, Items: 1 x ItemPotion, 1 x ItemPokeBall, 1 x ItemSuperPotion
+[20:11:22] Arriving to Pokestop: Church of Iglesia Cristiana  in (49m)
+[20:11:34] Name: Church of Iglesia Cristiana  XP: 50, Gems: 0, Items: 1 x ItemPotion, 1 x ItemRevive, 1 x ItemRazzBerry
+[20:11:35] Arriving to Pokestop: Gracie Playground in (128m)
+[20:12:18] Name: Gracie Playground XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 2 x ItemPokeBall
+[20:12:19] Arriving to Pokestop: Mondrian Colored Windows in (145m)
+[20:13:07] Name: Mondrian Colored Windows XP: 50, Gems: 0, Items: 4 x ItemPokeBall
+[20:13:08] Arriving to Pokestop: Mural in (39m)
+[20:13:18] Name: Mural XP: 100, Gems: 0, Items: 6 x ItemPokeBall, 1 x ItemSuperPotion
+[20:13:20] [Inventory] Pokeballs: 182 | Greatballs: 32 | Ultraballs: 0 | Masterballs: 0 | Total: 214
+[20:13:20] [Inventory] Potions: 2 | Super Potions: 12 | Hyper Potions: 0 | Max Potions: 0 | Total: 14
+[20:13:20] [Inventory] Razz Berries: 51 | Bluk Berries: 0 | Nanab Berries: 0 | Pinap Berries: 0 | Wepar Berries: 0 | Total: 51
+[20:13:20] [Inventory] Revives: 21 | Max Revives: 0 | Total: 21
+[20:13:20] [Inventory] Incense: 5 | Cool Incense: 0 | Floral Incense: 0 | Spicy Incense: 0 | Total 5
+[20:13:20] [Inventory] Lure Modules: 2 | Lucky Eggs: 2 | Incubators: 2 | Total: 6
+[20:13:20] [Inventory] Inventory Usage: 312/350
+[20:13:20] 14x ItemPokeBall
+[20:13:21] 2x ItemPotion
+[20:13:22] 2x ItemSuperPotion
+[20:13:23] 1x ItemRevive
+[20:13:23] 1x ItemRazzBerry
+[20:13:25] Kakuna successfully for 1000xp
+[20:13:27] [Inventory] Pokemon Stored: 37/250
+[20:13:27] Arriving to Pokestop: Icahn Monument in (245m)
+[20:14:09] (Success) | Ekans, Lvl: 2 | CP: (30/36) | IV: 38.29% | Type: Normal | Chance: 100% | Dist: 68.45m | Used: PokeBall (167 left) | XP: 710 | Candies: 3
+[20:14:30] (Success) | Jigglypuff, Lvl: 7 | CP: (150/179) | IV: 37.78% | Type: Normal | Chance: 57.27% | Dist: 68.34m | Used: PokeBall (166 left) | XP: 160 | Candies: 10
+[20:14:49] Name: Icahn Monument XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 1 x ItemPotion, 2 x ItemPokeBall
+[20:14:51] Arriving to Pokestop: Isaac Wallace Statue in (138m)
+[20:15:26] (Success) | Krabby, Lvl: 13 | CP: (260/294) | IV: 54.88% | Type: Normal | Chance: 41.52% | Dist: 68.47m | Used: PokeBall (167 left) | XP: 210 | Candies: 14
+[20:15:34] Name: Isaac Wallace Statue XP: 50, Gems: 0, Items: 2 x ItemPokeBall, 1 x ItemRevive, 1 x ItemRazzBerry
+[20:15:36] Putting egg in incubator: 2.00km left
+[20:15:36] Incubator status update: 0.29km left
+[20:15:36] Incubator status update: 2.50km left
+[20:15:36] Arriving to Pokestop: Sphere Sculpture in (48m)
+[20:15:48] Name: Sphere Sculpture XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 2 x ItemPotion
+[20:15:50] Arriving to Pokestop: Nathan Cummings in (42m)
+[20:16:01] Name: Nathan Cummings XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 2 x ItemPokeBall
+[20:16:03] Arriving to Pokestop: Warren Alpert Pavilion in (54m)
+[20:16:17] Name: Warren Alpert Pavilion XP: 50, Gems: 0, Items: 2 x ItemGreatBall, 1 x ItemRevive
+[20:16:19] [Inventory] Pokeballs: 171 | Greatballs: 47 | Ultraballs: 0 | Masterballs: 0 | Total: 218
+[20:16:19] [Inventory] Potions: 3 | Super Potions: 20 | Hyper Potions: 0 | Max Potions: 0 | Total: 23
+[20:16:19] [Inventory] Razz Berries: 54 | Bluk Berries: 0 | Nanab Berries: 0 | Pinap Berries: 0 | Wepar Berries: 0 | Total: 54
+[20:16:19] [Inventory] Revives: 25 | Max Revives: 0 | Total: 25
+[20:16:19] [Inventory] Incense: 5 | Cool Incense: 0 | Floral Incense: 0 | Spicy Incense: 0 | Total 5
+[20:16:19] [Inventory] Lure Modules: 2 | Lucky Eggs: 2 | Incubators: 2 | Total: 6
+[20:16:19] [Inventory] Inventory Usage: 332/350
+[20:16:20] 18x ItemPokeBall
+[20:16:20] 3x ItemPotion
+[20:16:21] 10x ItemSuperPotion
+[20:16:22] 5x ItemRevive
+[20:16:23] 4x ItemRazzBerry
+[20:16:26] [Inventory] Pokemon Stored: 40/250
+[20:16:26] Jigglypuff	- CP: 150  IV: 37.78%   [Best CP: 163  IV: 66.83%] (Candies: 11)
+[20:16:26] Krabby	- CP: 260  IV: 54.88%   [Best CP: 10  IV: 71.46%] (Candies: 15)
+[20:16:26] Arriving to Pokestop: Glass Pyramids in (81m)
+[20:16:41] (Success) | Pidgey, Lvl: 2 | CP: (25/30) | IV: 40.85% | Type: Normal | Chance: 100% | Dist: 66.22m | Used: PokeBall (152 left) | XP: 210 | Candies: 125
+[20:16:52] Name: Glass Pyramids XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[20:16:53] Arriving to Pokestop: The Colon Cancer Tunnel at Mount Sinai in (68m)
+[20:17:01] (Success) | Pidgey, Lvl: 3 | CP: (41/50) | IV: 32.07% | Type: Normal | Chance: 92.71% | Dist: 67.93m | Used: PokeBall (154 left) | XP: 210 | Candies: 128
+[20:17:14] Name: The Colon Cancer Tunnel at Mount Sinai XP: 50, Gems: 0, Items: 1 x ItemPokeBall, 1 x ItemRevive, 1 x ItemRazzBerry
+[20:17:16] Arriving to Pokestop: Icahn Medical Institute in (107m)
+[20:17:50] Name: Icahn Medical Institute XP: 50, Gems: 0, Items: 1 x ItemPotion, 2 x ItemPokeBall, 1 x ItemRazzBerry
+[20:17:51] Arriving to Pokestop: Gargoyles Above Le Pain in (78m)
+[20:18:13] Name: Gargoyles Above Le Pain XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[20:18:15] Arriving to Pokestop: A Lion in Harlem in (45m)
+[20:18:28] (Success) | Pidgey, Lvl: 11 | CP: (168/213) | IV: 21.53% | Type: Normal | Chance: 45.14% | Dist: 55.54m | Used: PokeBall (159 left) | XP: 160 | Candies: 131
+[20:18:31] Name: A Lion in Harlem XP: 50, Gems: 0, Items: 1 x ItemPotion, 2 x ItemPokeBall
+[20:18:34] [Inventory] Pokeballs: 161 | Greatballs: 47 | Ultraballs: 0 | Masterballs: 0 | Total: 208
+[20:18:34] [Inventory] Potions: 2 | Super Potions: 10 | Hyper Potions: 0 | Max Potions: 0 | Total: 12
+[20:18:34] [Inventory] Razz Berries: 52 | Bluk Berries: 0 | Nanab Berries: 0 | Pinap Berries: 0 | Wepar Berries: 0 | Total: 52
+[20:18:34] [Inventory] Revives: 21 | Max Revives: 0 | Total: 21
+[20:18:34] [Inventory] Incense: 5 | Cool Incense: 0 | Floral Incense: 0 | Spicy Incense: 0 | Total 5
+[20:18:34] [Inventory] Lure Modules: 2 | Lucky Eggs: 2 | Incubators: 1 | Total: 5
+[20:18:34] [Inventory] Inventory Usage: 304/350
+[20:18:34] 8x ItemPokeBall
+[20:18:35] 2x ItemPotion
+[20:18:36] 1x ItemRevive
+[20:18:37] 2x ItemRazzBerry
+[20:18:39] [Inventory] Pokemon Stored: 42/250
+[20:18:40] Pidgey	- CP: 25  IV: 40.85%   [Best CP: 28  IV: 73.46%] (Candies: 132)
+[20:18:40] Pidgey	- CP: 41  IV: 32.07%   [Best CP: 28  IV: 73.46%] (Candies: 133)
+[20:18:40] Pidgey	- CP: 168  IV: 21.53%   [Best CP: 28  IV: 73.46%] (Candies: 134)
+[20:18:41] Arriving to Pokestop: Saint Nicolas Patriarchal Cathedral in (76m)
+[20:18:55] (Success) | Pidgey, Lvl: 9 | CP: (143/173) | IV: 34.94% | Type: Normal | Chance: 50.05% | Dist: 67.35m | Used: PokeBall (152 left) | XP: 210 | Candies: 137
+[20:19:04] Name: Saint Nicolas Patriarchal Cathedral XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 2 x ItemPokeBall
+[20:19:05] Arriving to Pokestop: Ogden Goodman House in (109m)
+[20:19:39] Name: Ogden Goodman House XP: 50, Gems: 0, Items: 4 x ItemPokeBall
+[20:19:40] Arriving to Pokestop: Stone Lion in (40m)
+[20:19:52] Niantic Servers unstable, throttling API Calls.
+[20:19:53] [Inventory] Pokemon Stored: 40/250
+[20:19:53] Pidgey	- CP: 143  IV: 34.94%   [Best CP: 28  IV: 73.46%] (Candies: 138)
+[20:19:54] Incubated egg has hatched: Sandshrew | Lvl: 10.5 CP: (220/228) IV: 85.9%
+[20:19:54] Incubator status update: 1.55km left
+[20:19:54] Incubator status update: 2.05km left
+[20:19:56] Arriving to Pokestop: Stone Relief  in (45m)
+[20:20:08] Name: Stone Relief  XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 1 x ItemPokeBall, 1 x ItemRevive
+[20:20:09] Arriving to Pokestop: Jerome Florist Inc. Est. 1929  in (77m)
+[20:20:32] Name: Jerome Florist Inc. Est. 1929  XP: 100, Gems: 0, Items: 1 x ItemGreatBall, 1 x ItemPotion, 3 x ItemPokeBall, 1 x ItemRevive
+[20:20:33] Arriving to Pokestop: Crowned Man of Madison  in (113m)
+[20:21:09] Name: Crowned Man of Madison  XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 2 x ItemPokeBall
+[20:21:11] Arriving to Pokestop: 94th Street Armory in (56m)
+[20:21:25] Name: 94th Street Armory XP: 50, Gems: 0, Items: 1 x ItemPotion, 2 x ItemPokeBall, 1 x ItemRevive
+[20:21:26] Arriving to Pokestop: Ramakrishna Vivekananda Center in (61m)
+[20:21:43] Name: Ramakrishna Vivekananda Center XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[20:21:46] [Inventory] Pokeballs: 169 | Greatballs: 51 | Ultraballs: 0 | Masterballs: 0 | Total: 220
+[20:21:46] [Inventory] Potions: 2 | Super Potions: 10 | Hyper Potions: 0 | Max Potions: 0 | Total: 12
+[20:21:46] [Inventory] Razz Berries: 50 | Bluk Berries: 0 | Nanab Berries: 0 | Pinap Berries: 0 | Wepar Berries: 0 | Total: 50
+[20:21:46] [Inventory] Revives: 23 | Max Revives: 0 | Total: 23
+[20:21:46] [Inventory] Incense: 5 | Cool Incense: 0 | Floral Incense: 0 | Spicy Incense: 0 | Total 5
+[20:21:46] [Inventory] Lure Modules: 2 | Lucky Eggs: 2 | Incubators: 1 | Total: 5
+[20:21:46] [Inventory] Inventory Usage: 316/350
+[20:21:46] 20x ItemPokeBall
+[20:21:47] 2x ItemPotion
+[20:21:48] 3x ItemRevive
+[20:21:50] [Inventory] Pokemon Stored: 39/250
+[20:21:51] Arriving to Pokestop: Linda Horn - Antique Shop in (69m)
+[20:22:12] Name: Linda Horn - Antique Shop XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 3 x ItemPokeBall
+[20:22:13] Arriving to Pokestop: 13 The Corner Bookstore 13  in (71m)
+[20:22:33] Name: 13 The Corner Bookstore 13  XP: 50, Gems: 0, Items: 2 x ItemPokeBall, 2 x ItemRazzBerry
+[20:22:35] Arriving to Pokestop: Man with Horns in (67m)
+[20:22:53] (Success) | Weedle, Lvl: 7 | CP: (70/87) | IV: 38.82% | Type: Normal | Chance: 57.27% | Dist: 54.58m | Used: PokeBall (153 left) | XP: 200 | Candies: 20
+[20:23:01] (Success) | Squirtle, Lvl: 4 | CP: (83/105) | IV: 8.78% | Type: Normal | Chance: 31.28% | Dist: 63.53m | Used: GreatBall (51 left) | XP: 150 | Candies: 28
+[20:23:04] Name: Man with Horns XP: 50, Gems: 0, Items: 2 x ItemPokeBall, 1 x ItemRazzBerry
+[20:23:05] Arriving to Pokestop: Gold Crosses  in (36m)
+[20:23:14] Name: Gold Crosses  XP: 50, Gems: 0, Items: 2 x ItemPokeBall, 1 x ItemRazzBerry
+[20:23:15] Arriving to Pokestop: Synod of Bishops of the Russian Orthodox Church outside of Russia in (39m)
+[20:23:24] Name: Synod of Bishops of the Russian Orthodox Church outside of Russia XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[20:23:26] [Inventory] Pokeballs: 160 | Greatballs: 51 | Ultraballs: 0 | Masterballs: 0 | Total: 211
+[20:23:26] [Inventory] Potions: 0 | Super Potions: 10 | Hyper Potions: 0 | Max Potions: 0 | Total: 10
+[20:23:26] [Inventory] Razz Berries: 54 | Bluk Berries: 0 | Nanab Berries: 0 | Pinap Berries: 0 | Wepar Berries: 0 | Total: 54
+[20:23:26] [Inventory] Revives: 20 | Max Revives: 0 | Total: 20
+[20:23:26] [Inventory] Incense: 5 | Cool Incense: 0 | Floral Incense: 0 | Spicy Incense: 0 | Total 5
+[20:23:26] [Inventory] Lure Modules: 2 | Lucky Eggs: 2 | Incubators: 1 | Total: 5
+[20:23:26] [Inventory] Inventory Usage: 306/350
+[20:23:27] 11x ItemPokeBall
+[20:23:27] 4x ItemRazzBerry
+[20:23:30] [Inventory] Pokemon Stored: 41/250
+[20:23:31] Squirtle	- CP: 83  IV: 8.78%   [Best CP: 285  IV: 95.66%] (Candies: 29)
+[20:23:31] Weedle	- CP: 70  IV: 38.82%   [Best CP: 40  IV: 55.69%] (Candies: 21)
+[20:23:32] Arriving to Pokestop: Decorative Colonnade in (66m)
+[20:23:53] Name: Decorative Colonnade XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 3 x ItemPokeBall
+[20:23:54] Arriving to Pokestop: Hunter 9/11 Memorial Corner in (37m)
+[20:24:03] Name: Hunter 9/11 Memorial Corner XP: 100, Gems: 0, Items: 2 x ItemGreatBall, 1 x ItemPotion, 4 x ItemPokeBall, 1 x ItemRevive
+[20:24:04] Arriving to Pokestop: Moorish Entryway in (58m)
+[20:24:21] Name: Moorish Entryway XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 2 x ItemPokeBall
+[20:24:23] Arriving to Pokestop: Flaming Lanterns in (107m)
+[20:24:57] Name: Flaming Lanterns XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[20:24:58] Arriving to Pokestop: Saw the Light  in (76m)
+[20:25:20] Name: Saw the Light  XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[20:25:23] [Inventory] Pokeballs: 164 | Greatballs: 55 | Ultraballs: 0 | Masterballs: 0 | Total: 219
+[20:25:23] [Inventory] Potions: 1 | Super Potions: 10 | Hyper Potions: 0 | Max Potions: 0 | Total: 11
+[20:25:23] [Inventory] Razz Berries: 50 | Bluk Berries: 0 | Nanab Berries: 0 | Pinap Berries: 0 | Wepar Berries: 0 | Total: 50
+[20:25:23] [Inventory] Revives: 21 | Max Revives: 0 | Total: 21
+[20:25:23] [Inventory] Incense: 5 | Cool Incense: 0 | Floral Incense: 0 | Spicy Incense: 0 | Total 5
+[20:25:23] [Inventory] Lure Modules: 2 | Lucky Eggs: 2 | Incubators: 1 | Total: 5
+[20:25:23] [Inventory] Inventory Usage: 312/350
+[20:25:23] 19x ItemPokeBall
+[20:25:24] 1x ItemPotion
+[20:25:25] 1x ItemRevive
+[20:25:28] [Inventory] Pokemon Stored: 39/250
+[20:25:28] Arriving to Pokestop: New York Public Library in (78m)
+[20:25:33] (Success) | Zubat, Lvl: 13 | CP: (213/238) | IV: 61.58% | Type: Normal | Chance: 41.52% | Dist: 69.43m | Used: PokeBall (144 left) | XP: 210 | Candies: 99
+[20:25:53] Name: New York Public Library XP: 50, Gems: 0, Items: 1 x ItemPotion, 1 x ItemPokeBall, 2 x ItemRevive
+[20:25:54] Incubator status update: 1.12km left
+[20:25:54] Incubator status update: 1.62km left
+[20:25:54] Arriving to Pokestop: St Francis de Sales Church in (50m)
+[20:26:07] Name: St Francis de Sales Church XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 2 x ItemPokeBall
+[20:26:08] Arriving to Pokestop: 96th St. Station  in (73m)
+[20:26:31] Name: 96th St. Station  XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[20:26:32] Arriving to Pokestop: 'Yahkin' in (96m)
+[20:26:51] (Success) | NidoranF, Lvl: 7 | CP: (136/171) | IV: 15.69% | Type: Normal | Chance: 57.27% | Dist: 62.55m | Used: PokeBall (149 left) | XP: 150 | Candies: 86
+[20:27:03] Name: 'Yahkin' XP: 50, Gems: 0, Items: 4 x ItemPokeBall
+[20:27:04] Arriving to Pokestop: Boulders  in (134m)
+[20:27:48] (Flee) | Weedle, Lvl: 6 | CP: (52/74) | IV: 10.70% | Type: Normal | Chance: 62.29% | Dist: 68.47m | Used: PokeBall (152 left) | XP: 0 | 
+[20:27:51] Name: Boulders  XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 1 x ItemPokeBall, 1 x ItemRazzBerry
+[20:27:53] [Inventory] Pokeballs: 153 | Greatballs: 57 | Ultraballs: 0 | Masterballs: 0 | Total: 210
+[20:27:53] [Inventory] Potions: 1 | Super Potions: 10 | Hyper Potions: 0 | Max Potions: 0 | Total: 11
+[20:27:53] [Inventory] Razz Berries: 51 | Bluk Berries: 0 | Nanab Berries: 0 | Pinap Berries: 0 | Wepar Berries: 0 | Total: 51
+[20:27:53] [Inventory] Revives: 22 | Max Revives: 0 | Total: 22
+[20:27:53] [Inventory] Incense: 5 | Cool Incense: 0 | Floral Incense: 0 | Spicy Incense: 0 | Total 5
+[20:27:53] [Inventory] Lure Modules: 2 | Lucky Eggs: 2 | Incubators: 1 | Total: 5
+[20:27:53] [Inventory] Inventory Usage: 305/350
+[20:27:54] 10x ItemPokeBall
+[20:27:54] 1x ItemPotion
+[20:27:55] 2x ItemRevive
+[20:27:56] 1x ItemRazzBerry
+[20:27:58] [Inventory] Pokemon Stored: 41/250
+[20:27:59] Zubat	- CP: 213  IV: 61.58%   [Best CP: 46  IV: 87.08%] (Candies: 100)
+[20:28:00] NidoranF	- CP: 136  IV: 15.69%   [Best CP: 33  IV: 41.69%] (Candies: 87)
+[20:28:00] ====== DisplayHighestsCP ======
+[20:28:00] >   CP/BEST/POWERED |	perfect	| LVL | NAME       | MOVE1              | MOVE2  | MoveRankVsAveType |
+[20:28:00] #  318/ 341/2379 | 54.45%	 | 05 | Victreebel | AcidFast           | SolarBeam     | 207
+[20:28:00] #  291/ 317/1026 | 61.86%	 | 11 | Psyduck    | WaterGunFast       | Psybeam       | 0
+[20:28:00] #  285/ 288/1005 | 95.66%	 | 11 | Squirtle   | BubbleFast         | WaterPulse    | 0
+[20:28:00] #  220/ 228/ 776 | 85.90%	 | 11 | Sandshrew  | MudShotFast        | Dig           | 0
+[20:28:00] #  199/ 210/1030 | 76.56%	 | 07 | Eevee      | TackleFast         | Dig           | 0
+[20:28:00] #  183/ 193/ 723 | 80.28%	 | 09 | Meowth     | BiteFast           | NightSlash    | 0
+[20:28:00] #  175/ 218/ 907 | 12.11%	 | 07 | Bellsprout | AcidFast           | Wrap          | 0
+[20:28:00] #  163/ 179/ 845 | 66.83%	 | 07 | Jigglypuff | PoundFast          | PlayRough     | 0
+[20:28:00] #  150/ 150/1445 | 98.16%	 | 04 | Beedrill   | PoisonJabFast      | AerialAce     | 334
+[20:28:00] #  149/ 154/ 912 | 86.02%	 | 06 | Staryu     | WaterGunFast       | BubbleBeam    | 0
+[20:28:00] ====== DisplayHighestsPerfect ======
+[20:28:00] >   CP/BEST/POWERED |	perfect	| LVL | NAME       | MOVE1              | MOVE2  | MoveRankVsAveType |
+[20:28:00] #  150/ 150/1445 | 98.16%	 | 04 | Beedrill   | PoisonJabFast      | AerialAce     | 334
+[20:28:00] #   13/  13/ 962 | 95.81%	 | 01 | Goldeen    | PeckFast           | WaterPulse    | 0
+[20:28:00] #  285/ 288/1005 | 95.66%	 | 11 | Squirtle   | BubbleFast         | WaterPulse    | 0
+[20:28:00] #  110/ 113/ 676 | 91.62%	 | 06 | Spearow    | QuickAttackFast    | AerialAce     | 0
+[20:28:00] #   16/  17/1198 | 88.71%	 | 01 | Slowpoke   | ConfusionFast      | Psyshock      | 0
+[20:28:00] #   24/  25/ 565 | 88.23%	 | 02 | Rattata    | QuickAttackFast    | Dig           | 0
+[20:28:00] #   58/  59/1317 | 87.77%	 | 02 | Poliwhirl  | MudShotFast        | Scald         | 0
+[20:28:00] #   46/  47/ 624 | 87.08%	 | 03 | Zubat      | QuickAttackFast    | SludgeBomb    | 0
+[20:28:00] #   73/  74/1663 | 86.38%	 | 02 | Porygon    | QuickAttackFast    | Psybeam       | 417
+[20:28:00] #  149/ 154/ 912 | 86.02%	 | 06 | Staryu     | WaterGunFast       | BubbleBeam    | 0
+[20:28:01] Arriving to Pokestop: Stone Frog in (104m)
+[20:28:32] Name: Stone Frog XP: 50, Gems: 0, Items: 1 x ItemPotion, 3 x ItemPokeBall
+[20:28:33] Arriving to Pokestop: Tuskegee Airmen Bus Depot in (122m)
+[20:29:13] Name: Tuskegee Airmen Bus Depot XP: 100, Gems: 0, Items: 7 x ItemPokeBall
+[20:29:14] Arriving to Pokestop: Bird Scaffold Street Mural in (73m)
+[20:29:24] (Success) | Poliwag, Lvl: 1 | CP: (10/11) | IV: 50.65% | Type: Normal | Chance: 100% | Dist: 67.55m | Used: PokeBall (152 left) | XP: 200 | Candies: 17
+[20:29:29] (Success) | Zubat, Lvl: 13 | CP: (211/238) | IV: 59.14% | Type: Normal | Chance: 41.52% | Dist: 67.78m | Used: PokeBall (151 left) | XP: 210 | Candies: 103
+[20:29:37] Name: Bird Scaffold Street Mural XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[20:29:39] Arriving to Pokestop: Life Changers Church  in (78m)
+[20:29:58] (Success) | NidoranF, Lvl: 6 | CP: (126/144) | IV: 46.29% | Type: Normal | Chance: 62.29% | Dist: 65.37m | Used: PokeBall (153 left) | XP: 210 | Candies: 90
+[20:30:06] Name: Life Changers Church  XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 1 x ItemPokeBall, 1 x ItemRevive
+[20:30:07] Arriving to Pokestop: The Children's Aid Society, East Harlem Center Flower Mural  in (54m)
+[20:30:22] Name: The Children's Aid Society, East Harlem Center Flower Mural  XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 2 x ItemPokeBall
+[20:30:24] [Inventory] Pokeballs: 156 | Greatballs: 59 | Ultraballs: 0 | Masterballs: 0 | Total: 215
+[20:30:24] [Inventory] Potions: 1 | Super Potions: 10 | Hyper Potions: 0 | Max Potions: 0 | Total: 11
+[20:30:24] [Inventory] Razz Berries: 50 | Bluk Berries: 0 | Nanab Berries: 0 | Pinap Berries: 0 | Wepar Berries: 0 | Total: 50
+[20:30:24] [Inventory] Revives: 21 | Max Revives: 0 | Total: 21
+[20:30:24] [Inventory] Incense: 5 | Cool Incense: 0 | Floral Incense: 0 | Spicy Incense: 0 | Total 5
+[20:30:24] [Inventory] Lure Modules: 2 | Lucky Eggs: 2 | Incubators: 1 | Total: 5
+[20:30:24] [Inventory] Inventory Usage: 308/350
+[20:30:24] 15x ItemPokeBall
+[20:30:25] 1x ItemPotion
+[20:30:26] 1x ItemRevive
+[20:30:29] [Inventory] Pokemon Stored: 42/250
+[20:30:29] Zubat	- CP: 211  IV: 59.14%   [Best CP: 46  IV: 87.08%] (Candies: 104)
+[20:30:30] Poliwag	- CP: 10  IV: 50.65%   [Best CP: 115  IV: 53.00%] (Candies: 18)
+[20:30:30] NidoranF	- CP: 33  IV: 41.69%   [Best CP: 126  IV: 46.29%] (Candies: 91)
+[20:30:31] Arriving to Pokestop: Bird Artwork  in (90m)
+[20:31:00] Name: Bird Artwork  XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[20:31:01] Arriving to Pokestop: George Washington Carver as a Boy in (162m)
+[20:31:34] (Success) | Zubat, Lvl: 1 | CP: (10/10) | IV: 71.85% | Type: Normal | Chance: 100% | Dist: 63.43m | Used: PokeBall (143 left) | XP: 210 | Candies: 107
+[20:31:42] (Flee) | Venonat, Lvl: 6 | CP: (150/169) | IV: 47.59% | Type: Normal | Chance: 62.29% | Dist: 45.38m | Used: PokeBall (142 left) | XP: 0 | 
+[20:31:54] Name: George Washington Carver as a Boy XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 2 x ItemPokeBall
+[20:31:55] Incubator status update: 0.19km left
+[20:31:55] Incubator status update: 0.69km left
+[20:31:55] Arriving to Pokestop: Apple Tree in (69m)
+[20:32:15] Name: Apple Tree XP: 50, Gems: 0, Items: 2 x ItemPokeBall, 1 x ItemRazzBerry
+[20:32:17] Arriving to Pokestop: Icahn Monument in (74m)
+[20:32:40] Name: Icahn Monument XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 1 x ItemPokeBall, 1 x ItemRevive
+[20:32:41] Arriving to Pokestop: Flamingo Garden in (81m)
+[20:33:07] Name: Flamingo Garden XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[20:33:09] [Inventory] Pokeballs: 150 | Greatballs: 61 | Ultraballs: 0 | Masterballs: 0 | Total: 211
+[20:33:09] [Inventory] Potions: 0 | Super Potions: 10 | Hyper Potions: 0 | Max Potions: 0 | Total: 10
+[20:33:09] [Inventory] Razz Berries: 51 | Bluk Berries: 0 | Nanab Berries: 0 | Pinap Berries: 0 | Wepar Berries: 0 | Total: 51
+[20:33:09] [Inventory] Revives: 21 | Max Revives: 0 | Total: 21
+[20:33:09] [Inventory] Incense: 5 | Cool Incense: 0 | Floral Incense: 0 | Spicy Incense: 0 | Total 5
+[20:33:09] [Inventory] Lure Modules: 2 | Lucky Eggs: 2 | Incubators: 1 | Total: 5
+[20:33:09] [Inventory] Inventory Usage: 304/350
+[20:33:10] 11x ItemPokeBall
+[20:33:10] 1x ItemRevive
+[20:33:11] 1x ItemRazzBerry
+[20:33:14] [Inventory] Pokemon Stored: 40/250
+[20:33:15] Zubat	- CP: 10  IV: 71.85%   [Best CP: 46  IV: 87.08%] (Candies: 108)
+[20:33:15] Arriving to Pokestop: Painted Druid Face in (114m)
+[20:33:35] (Success) | Zubat, Lvl: 5 | CP: (75/86) | IV: 51.59% | Type: Normal | Chance: 68.91% | Dist: 59.03m | Used: PokeBall (138 left) | XP: 160 | Candies: 111
+[20:33:52] Name: Painted Druid Face XP: 50, Gems: 0, Items: 1 x ItemPotion, 2 x ItemPokeBall
+[20:33:53] Arriving to Pokestop: Redwood Mural in (77m)
+[20:34:17] Name: Redwood Mural XP: 50, Gems: 0, Items: 4 x ItemPokeBall
+[20:34:18] Arriving to Pokestop: Woman and Snake  in (86m)
+[20:34:39] (Success) | NidoranF, Lvl: 11 | CP: (225/275) | IV: 23.40% | Type: Normal | Chance: 45.14% | Dist: 65.60m | Used: PokeBall (143 left) | XP: 210 | Candies: 94
+[20:34:46] (Success) | Zubat, Lvl: 11 | CP: (178/201) | IV: 57.05% | Type: Normal | Chance: 45.14% | Dist: 59.77m | Used: PokeBall (142 left) | XP: 160 | Candies: 114
+[20:34:52] Name: Woman and Snake  XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 1 x ItemPokeBall, 1 x ItemSuperPotion
+[20:34:53] Arriving to Pokestop: Girl's Gate  in (39m)
+[20:35:01] (Success) | Venonat, Lvl: 6 | CP: (150/169) | IV: 48.53% | Type: Normal | Chance: 62.29% | Dist: 62.70m | Used: PokeBall (142 left) | XP: 210 | Candies: 18
+[20:35:07] Name: Girl's Gate  XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[20:35:08] Arriving to Pokestop: J.Marion Sims in (65m)
+[20:35:24] (Success) | Zubat, Lvl: 3 | CP: (41/47) | IV: 54.76% | Type: Normal | Chance: 92.71% | Dist: 60.59m | Used: PokeBall (144 left) | XP: 210 | Candies: 117
+[20:35:33] Name: J.Marion Sims XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 1 x ItemPotion, 1 x ItemRazzBerry
+[20:35:35] [Inventory] Pokeballs: 144 | Greatballs: 63 | Ultraballs: 0 | Masterballs: 0 | Total: 207
+[20:35:35] [Inventory] Potions: 2 | Super Potions: 11 | Hyper Potions: 0 | Max Potions: 0 | Total: 13
+[20:35:35] [Inventory] Razz Berries: 51 | Bluk Berries: 0 | Nanab Berries: 0 | Pinap Berries: 0 | Wepar Berries: 0 | Total: 51
+[20:35:35] [Inventory] Revives: 20 | Max Revives: 0 | Total: 20
+[20:35:35] [Inventory] Incense: 5 | Cool Incense: 0 | Floral Incense: 0 | Spicy Incense: 0 | Total 5
+[20:35:35] [Inventory] Lure Modules: 2 | Lucky Eggs: 2 | Incubators: 1 | Total: 5
+[20:35:35] [Inventory] Inventory Usage: 302/350
+[20:35:35] 7x ItemPokeBall
+[20:35:36] 2x ItemPotion
+[20:35:37] 1x ItemSuperPotion
+[20:35:38] 1x ItemRazzBerry
+[20:35:41] [Inventory] Pokemon Stored: 45/250
+[20:35:41] Zubat	- CP: 178  IV: 57.05%   [Best CP: 46  IV: 87.08%] (Candies: 118)
+[20:35:41] Zubat	- CP: 41  IV: 54.76%   [Best CP: 46  IV: 87.08%] (Candies: 119)
+[20:35:42] Zubat	- CP: 75  IV: 51.59%   [Best CP: 46  IV: 87.08%] (Candies: 120)
+[20:35:43] NidoranF	- CP: 225  IV: 23.40%   [Best CP: 126  IV: 46.29%] (Candies: 95)
+[20:35:43] Venonat	- CP: 150  IV: 48.53%   [Best CP: 74  IV: 84.50%] (Candies: 19)
+[20:35:43] Clefairy	- CP: 14  IV: 27.43%   [Best CP: 255  IV: 72.88%] (Candies: 9)
+[20:35:44] Arriving to Pokestop: Mural in (110m)
+[20:36:20] (Success) | Zubat, Lvl: 8 | CP: (126/144) | IV: 54.28% | Type: Normal | Chance: 53.3% | Dist: 64.82m | Used: PokeBall (136 left) | XP: 210 | Candies: 123
+[20:36:23] Name: Mural XP: 50, Gems: 0, Items: 3 x ItemPokeBall, 1 x ItemRevive
+[20:36:24] Arriving to Pokestop: Monument to Arthur Brisbane in (224m)
+[20:37:41] Name: Monument to Arthur Brisbane XP: 50, Gems: 0, Items: 1 x ItemPotion, 2 x ItemPokeBall, 1 x ItemRazzBerry
+[20:37:42] Arriving to Pokestop: Peter and Sophie Quinn in (139m)
+[20:38:00] (Success) | NidoranF, Lvl: 9 | CP: (186/223) | IV: 29.26% | Type: Normal | Chance: 50.05% | Dist: 60.45m | Used: PokeBall (140 left) | XP: 210 | Candies: 98
+[20:38:13] (Success) | NidoranF, Lvl: 3 | CP: (53/65) | IV: 22.12% | Type: Normal | Chance: 92.71% | Dist: 64.45m | Used: PokeBall (139 left) | XP: 210 | Candies: 101
+[20:38:27] Name: Peter and Sophie Quinn XP: 50, Gems: 0, Items: 4 x ItemPokeBall, 1 x ItemRazzBerry
+[20:38:28] Incubated egg has hatched: Clefairy | Lvl: 8 CP: (255/270) IV: 72.88%
+[20:38:28] Incubated egg has hatched: Oddish | Lvl: 10.5 CP: (313/328) IV: 79.15%
+[20:38:29] Putting egg in incubator: 2.00km left
+[20:38:29] Putting egg in incubator: 5.00km left
+[20:38:29] Arriving to Pokestop: With Love From Your Roses in (73m)
+[20:38:35] (Success) | Spearow, Lvl: 4 | CP: (67/71) | IV: 76.02% | Type: Normal | Chance: 78.21% | Dist: 43.56m | Used: PokeBall (142 left) | XP: 210 | Candies: 45
+[20:38:52] Name: With Love From Your Roses XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 1 x ItemPotion, 1 x ItemPokeBall
+[20:38:53] Arriving to Pokestop: We Were Girls Together in (103m)
+[20:39:17] (Success) | Pidgey, Lvl: 5 | CP: (74/91) | IV: 28.85% | Type: Normal | Chance: 68.91% | Dist: 60.92m | Used: PokeBall (142 left) | XP: 210 | Candies: 141
+[20:39:26] Name: We Were Girls Together XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 2 x ItemPokeBall
+[20:39:29] [Inventory] Pokeballs: 144 | Greatballs: 65 | Ultraballs: 0 | Masterballs: 0 | Total: 209
+[20:39:29] [Inventory] Potions: 2 | Super Potions: 10 | Hyper Potions: 0 | Max Potions: 0 | Total: 12
+[20:39:29] [Inventory] Razz Berries: 52 | Bluk Berries: 0 | Nanab Berries: 0 | Pinap Berries: 0 | Wepar Berries: 0 | Total: 52
+[20:39:29] [Inventory] Revives: 21 | Max Revives: 0 | Total: 21
+[20:39:29] [Inventory] Incense: 5 | Cool Incense: 0 | Floral Incense: 0 | Spicy Incense: 0 | Total 5
+[20:39:29] [Inventory] Lure Modules: 2 | Lucky Eggs: 2 | Incubators: 1 | Total: 5
+[20:39:29] [Inventory] Inventory Usage: 305/350
+[20:39:29] 9x ItemPokeBall
+[20:39:30] 2x ItemPotion
+[20:39:31] 1x ItemRevive
+[20:39:32] 2x ItemRazzBerry
+[20:39:35] [Inventory] Pokemon Stored: 45/250
+[20:39:35] Oddish	- CP: 44  IV: 38.77%   [Best CP: 313  IV: 79.15%] (Candies: 20)
+[20:39:35] Zubat	- CP: 126  IV: 54.28%   [Best CP: 46  IV: 87.08%] (Candies: 124)
+[20:39:36] Spearow	- CP: 67  IV: 76.02%   [Best CP: 110  IV: 91.62%] (Candies: 46)
+[20:39:37] NidoranF	- CP: 186  IV: 29.26%   [Best CP: 126  IV: 46.29%] (Candies: 102)
+[20:39:37] NidoranF	- CP: 53  IV: 22.12%   [Best CP: 126  IV: 46.29%] (Candies: 103)
+[20:39:38] Pidgey	- CP: 74  IV: 28.85%   [Best CP: 28  IV: 73.46%] (Candies: 142)
+[20:39:38] ====== DisplayHighestsCP ======
+[20:39:38] >   CP/BEST/POWERED |	perfect	| LVL | NAME       | MOVE1              | MOVE2  | MoveRankVsAveType |
+[20:39:38] #  318/ 341/2379 | 54.45%	 | 05 | Victreebel | AcidFast           | SolarBeam     | 207
+[20:39:38] #  313/ 328/1105 | 79.15%	 | 11 | Oddish     | RazorLeafFast      | SludgeBomb    | 0
+[20:39:38] #  291/ 317/1026 | 61.86%	 | 11 | Psyduck    | WaterGunFast       | Psybeam       | 0
+[20:39:38] #  285/ 288/1005 | 95.66%	 | 11 | Squirtle   | BubbleFast         | WaterPulse    | 0
+[20:39:38] #  255/ 270/1142 | 72.88%	 | 08 | Clefairy   | ZenHeadbuttFast    | DisarmingVoice | 0
+[20:39:38] #  220/ 228/ 776 | 85.90%	 | 11 | Sandshrew  | MudShotFast        | Dig           | 0
+[20:39:38] #  199/ 210/1030 | 76.56%	 | 07 | Eevee      | TackleFast         | Dig           | 0
+[20:39:38] #  183/ 193/ 723 | 80.28%	 | 09 | Meowth     | BiteFast           | NightSlash    | 0
+[20:39:38] #  175/ 218/ 907 | 12.11%	 | 07 | Bellsprout | AcidFast           | Wrap          | 0
+[20:39:38] #  163/ 179/ 845 | 66.83%	 | 07 | Jigglypuff | PoundFast          | PlayRough     | 0
+[20:39:38] ====== DisplayHighestsPerfect ======
+[20:39:38] >   CP/BEST/POWERED |	perfect	| LVL | NAME       | MOVE1              | MOVE2  | MoveRankVsAveType |
+[20:39:38] #  150/ 150/1445 | 98.16%	 | 04 | Beedrill   | PoisonJabFast      | AerialAce     | 334
+[20:39:38] #   13/  13/ 962 | 95.81%	 | 01 | Goldeen    | PeckFast           | WaterPulse    | 0
+[20:39:38] #  285/ 288/1005 | 95.66%	 | 11 | Squirtle   | BubbleFast         | WaterPulse    | 0
+[20:39:38] #  110/ 113/ 676 | 91.62%	 | 06 | Spearow    | QuickAttackFast    | AerialAce     | 0
+[20:39:38] #   16/  17/1198 | 88.71%	 | 01 | Slowpoke   | ConfusionFast      | Psyshock      | 0
+[20:39:38] #   24/  25/ 565 | 88.23%	 | 02 | Rattata    | QuickAttackFast    | Dig           | 0
+[20:39:38] #   58/  59/1317 | 87.77%	 | 02 | Poliwhirl  | MudShotFast        | Scald         | 0
+[20:39:38] #   46/  47/ 624 | 87.08%	 | 03 | Zubat      | QuickAttackFast    | SludgeBomb    | 0
+[20:39:38] #   73/  74/1663 | 86.38%	 | 02 | Porygon    | QuickAttackFast    | Psybeam       | 417
+[20:39:38] #  149/ 154/ 912 | 86.02%	 | 06 | Staryu     | WaterGunFast       | BubbleBeam    | 0
+[20:39:39] Arriving to Pokestop: Dr. Eugene and Geraldine, Surgeon Extraordinaire in (127m)
+[20:40:15] (Success) | Spearow, Lvl: 11 | CP: (198/215) | IV: 69.11% | Type: Normal | Chance: 45.14% | Dist: 67.99m | Used: PokeBall (134 left) | XP: 210 | Candies: 49
+[20:40:23] Name: Dr. Eugene and Geraldine, Surgeon Extraordinaire XP: 50, Gems: 0, Items: 2 x ItemPokeBall, 1 x ItemRazzBerry
+[20:40:24] Arriving to Pokestop: In Loving Memory Of The Kiver Family in (126m)
+[20:41:07] Name: In Loving Memory Of The Kiver Family XP: 50, Gems: 0, Items: 2 x ItemPokeBall, 1 x ItemRazzBerry
+[20:41:08] Arriving to Pokestop: Bertel Thorvaldsen, Master Sculptor in (72m)
+[20:41:28] Name: Bertel Thorvaldsen, Master Sculptor XP: 50, Gems: 0, Items: 2 x ItemGreatBall, 1 x ItemPokeBall
+[20:41:29] Arriving to Pokestop: Angry Sheep in (86m)
+[20:41:34] (Success) | NidoranF, Lvl: 3 | CP: (53/65) | IV: 23.92% | Type: Normal | Chance: 92.71% | Dist: 68.91m | Used: PokeBall (138 left) | XP: 210 | Candies: 106
+[20:41:55] (Success) | Pidgey, Lvl: 1 | CP: (10/10) | IV: 43.61% | Type: Normal | Chance: 100% | Dist: 49.32m | Used: PokeBall (137 left) | XP: 200 | Candies: 145
+[20:41:59] Name: Angry Sheep XP: 50, Gems: 0, Items: 1 x ItemPotion, 2 x ItemPokeBall
+[20:42:00] Arriving to Pokestop: The Woodman's Gate in (101m)
+[20:42:31] Name: The Woodman's Gate XP: 50, Gems: 0, Items: 2 x ItemGreatBall, 2 x ItemPokeBall
+[20:42:34] [Inventory] Pokeballs: 141 | Greatballs: 79 | Ultraballs: 0 | Masterballs: 0 | Total: 220
+[20:42:34] [Inventory] Potions: 1 | Super Potions: 20 | Hyper Potions: 0 | Max Potions: 0 | Total: 21
+[20:42:34] [Inventory] Razz Berries: 55 | Bluk Berries: 0 | Nanab Berries: 0 | Pinap Berries: 0 | Wepar Berries: 0 | Total: 55
+[20:42:34] [Inventory] Revives: 23 | Max Revives: 0 | Total: 23
+[20:42:34] [Inventory] Incense: 5 | Cool Incense: 0 | Floral Incense: 0 | Spicy Incense: 0 | Total 5
+[20:42:34] [Inventory] Lure Modules: 2 | Lucky Eggs: 2 | Incubators: 1 | Total: 5
+[20:42:34] [Inventory] Inventory Usage: 330/350
+[20:42:34] 20x ItemPokeBall
+[20:42:35] 1x ItemPotion
+[20:42:36] 10x ItemSuperPotion
+[20:42:37] 3x ItemRevive
+[20:42:38] 5x ItemRazzBerry
+[20:42:40] [Inventory] Pokemon Stored: 42/250
+[20:42:41] NidoranF	- CP: 53  IV: 23.92%   [Best CP: 126  IV: 46.29%] (Candies: 107)
+[20:42:41] Spearow	- CP: 198  IV: 69.11%   [Best CP: 110  IV: 91.62%] (Candies: 50)
+[20:42:41] Pidgey	- CP: 10  IV: 43.61%   [Best CP: 28  IV: 73.46%] (Candies: 146)
+[20:42:42] Arriving to Pokestop: East 96th Street Playground in (58m)
+[20:43:00] Name: East 96th Street Playground XP: 50, Gems: 0, Items: 1 x ItemPotion, 2 x ItemRevive
+[20:43:02] Arriving to Pokestop: Lion Ladies  in (90m)
+[20:43:23] (Success) | Venonat, Lvl: 3 | CP: (72/76) | IV: 77.59% | Type: Normal | Chance: 92.71% | Dist: 63.80m | Used: PokeBall (120 left) | XP: 210 | Candies: 22
+[20:43:32] Name: Lion Ladies  XP: 100, Gems: 0, Items: 1 x ItemPotion, 4 x ItemPokeBall, 1 x ItemRazzBerry
+[20:43:33] Arriving to Pokestop: Stone Decorations in (164m)
+[20:43:52] (Success) | Weedle, Lvl: 5 | CP: (53/60) | IV: 61.67% | Type: Normal | Chance: 68.91% | Dist: 63.69m | Used: PokeBall (123 left) | XP: 210 | Candies: 24
+[20:44:28] Name: Stone Decorations XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 3 x ItemPokeBall
+[20:44:29] Incubator status update: 1.56km left
+[20:44:29] Incubator status update: 4.56km left
+[20:44:29] Arriving to Pokestop: Jewish Museum in (73m)
+[20:44:50] Name: Jewish Museum XP: 50, Gems: 0, Items: 1 x ItemPotion, 3 x ItemPokeBall
+[20:44:51] Arriving to Pokestop: Fruit Laden Gargoyle in (38m)
+[20:45:00] Name: Fruit Laden Gargoyle XP: 50, Gems: 0, Items: 2 x ItemGreatBall, 1 x ItemPokeBall
+[20:45:03] [Inventory] Pokeballs: 130 | Greatballs: 82 | Ultraballs: 0 | Masterballs: 0 | Total: 212
+[20:45:03] [Inventory] Potions: 3 | Super Potions: 10 | Hyper Potions: 0 | Max Potions: 0 | Total: 13
+[20:45:03] [Inventory] Razz Berries: 51 | Bluk Berries: 0 | Nanab Berries: 0 | Pinap Berries: 0 | Wepar Berries: 0 | Total: 51
+[20:45:03] [Inventory] Revives: 22 | Max Revives: 0 | Total: 22
+[20:45:03] [Inventory] Incense: 5 | Cool Incense: 0 | Floral Incense: 0 | Spicy Incense: 0 | Total 5
+[20:45:03] [Inventory] Lure Modules: 2 | Lucky Eggs: 2 | Incubators: 1 | Total: 5
+[20:45:03] [Inventory] Inventory Usage: 309/350
+[20:45:03] 12x ItemPokeBall
+[20:45:04] 3x ItemPotion
+[20:45:04] 2x ItemRevive
+[20:45:05] 1x ItemRazzBerry
+[20:45:09] [Inventory] Pokemon Stored: 41/250
+[20:45:09] Venonat	- CP: 72  IV: 77.59%   [Best CP: 74  IV: 84.50%] (Candies: 23)
+[20:45:09] Weedle	- CP: 40  IV: 55.69%   [Best CP: 53  IV: 61.67%] (Candies: 25)
+[20:45:10] Arriving to Pokestop: Lion Mural in (84m)
+[20:45:36] Name: Lion Mural XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[20:45:37] Arriving to Pokestop: Consulate General of the Russian Federation  in (83m)
+[20:45:56] (Success) | Spearow, Lvl: 6 | CP: (105/113) | IV: 75.36% | Type: Normal | Chance: 62.29% | Dist: 61.63m | Used: PokeBall (120 left) | XP: 210 | Candies: 53
+[20:46:05] Name: Consulate General of the Russian Federation  XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 1 x ItemPotion, 3 x ItemPokeBall
+[20:46:06] Arriving to Pokestop: Granite Oval in (103m)
+[20:46:40] Name: Granite Oval XP: 50, Gems: 0, Items: 2 x ItemPokeBall, 1 x ItemRevive
+[20:46:41] Arriving to Pokestop: Birds Drinking  in (85m)
+[20:47:07] Name: Birds Drinking  XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[20:47:08] Arriving to Pokestop: The Brick Presbyterian Church in (86m)
+[20:47:34] Name: The Brick Presbyterian Church XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 1 x ItemPotion, 1 x ItemPokeBall
+[20:47:36] [Inventory] Pokeballs: 129 | Greatballs: 84 | Ultraballs: 0 | Masterballs: 0 | Total: 213
+[20:47:36] [Inventory] Potions: 2 | Super Potions: 10 | Hyper Potions: 0 | Max Potions: 0 | Total: 12
+[20:47:36] [Inventory] Razz Berries: 50 | Bluk Berries: 0 | Nanab Berries: 0 | Pinap Berries: 0 | Wepar Berries: 0 | Total: 50
+[20:47:36] [Inventory] Revives: 21 | Max Revives: 0 | Total: 21
+[20:47:36] [Inventory] Incense: 5 | Cool Incense: 0 | Floral Incense: 0 | Spicy Incense: 0 | Total 5
+[20:47:36] [Inventory] Lure Modules: 2 | Lucky Eggs: 2 | Incubators: 1 | Total: 5
+[20:47:36] [Inventory] Inventory Usage: 307/350
+[20:47:37] 13x ItemPokeBall
+[20:47:37] 2x ItemPotion
+[20:47:38] 1x ItemRevive
+[20:47:41] [Inventory] Pokemon Stored: 40/250
+[20:47:41] Spearow	- CP: 105  IV: 75.36%   [Best CP: 110  IV: 91.62%] (Candies: 54)
+[20:47:42] Arriving to Pokestop: Flower Face  in (95m)
+[20:47:55] (Success) | Caterpie, Lvl: 9 | CP: (77/113) | IV: 4.25% | Type: Normal | Chance: 50.05% | Dist: 55.18m | Used: PokeBall (115 left) | XP: 210 | Candies: 22
+[20:48:12] Name: Flower Face  XP: 50, Gems: 0, Items: 4 x ItemPokeBall
+[20:48:13] Arriving to Pokestop: Stone Breath  in (47m)
+[20:48:25] Name: Stone Breath  XP: 100, Gems: 0, Items: 1 x ItemPotion, 4 x ItemPokeBall, 1 x ItemRazzBerry
+[20:48:26] Arriving to Pokestop: Old Man at the Bottom of a Column in (101m)
+[20:48:58] Name: Old Man at the Bottom of a Column XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 2 x ItemPokeBall, 1 x ItemRevive
+[20:48:59] Arriving to Pokestop: Fighter Relief  in (65m)
+[20:49:16] Name: Fighter Relief  XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 1 x ItemPokeBall, 1 x ItemRevive
+[20:49:18] Arriving to Pokestop: Screaming Cat in (93m)
+[20:49:22] (Success) | Rattata, Lvl: 9 | CP: (122/148) | IV: 40.05% | Type: Normal | Chance: 50.05% | Dist: 52.64m | Used: PokeBall (125 left) | XP: 210 | Candies: 87
+[20:49:49] (Success) | Spearow, Lvl: 6 | CP: (97/113) | IV: 48.59% | Type: Normal | Chance: 62.29% | Dist: 62.34m | Used: PokeBall (124 left) | XP: 200 | Candies: 57
+[20:50:00] Niantic Servers unstable, throttling API Calls.
+[20:50:01] [Inventory] Pokemon Stored: 42/250
+[20:50:02] Rattata	- CP: 122  IV: 40.05%   [Best CP: 24  IV: 88.23%] (Candies: 88)
+[20:50:03] Caterpie	- CP: 77  IV: 4.25%   [Best CP: 16  IV: 47.91%] (Candies: 23)
+[20:50:03] Spearow	- CP: 97  IV: 48.59%   [Best CP: 110  IV: 91.62%] (Candies: 58)
+[20:50:04] [Inventory] Pokeballs: 124 | Greatballs: 86 | Ultraballs: 0 | Masterballs: 0 | Total: 210
+[20:50:04] [Inventory] Potions: 1 | Super Potions: 10 | Hyper Potions: 0 | Max Potions: 0 | Total: 11
+[20:50:04] [Inventory] Razz Berries: 51 | Bluk Berries: 0 | Nanab Berries: 0 | Pinap Berries: 0 | Wepar Berries: 0 | Total: 51
+[20:50:04] [Inventory] Revives: 22 | Max Revives: 0 | Total: 22
+[20:50:04] [Inventory] Incense: 5 | Cool Incense: 0 | Floral Incense: 0 | Spicy Incense: 0 | Total 5
+[20:50:04] [Inventory] Lure Modules: 2 | Lucky Eggs: 2 | Incubators: 1 | Total: 5
+[20:50:04] [Inventory] Inventory Usage: 305/350
+[20:50:04] 10x ItemPokeBall
+[20:50:05] 1x ItemPotion
+[20:50:06] 2x ItemRevive
+[20:50:07] 1x ItemRazzBerry
+[20:50:08] Incubator status update: 1.07km left
+[20:50:08] Incubator status update: 4.07km left
+[20:50:08] Arriving to Pokestop: Face in Doorway  in (78m)
+[20:50:32] Name: Face in Doorway  XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[20:50:33] Arriving to Pokestop: Horse Neighbors in (92m)
+[20:50:50] (Success) | Rattata, Lvl: 1 | CP: (10/10) | IV: 32.10% | Type: Normal | Chance: 100% | Dist: 50.34m | Used: PokeBall (116 left) | XP: 210 | Candies: 91
+[20:51:01] Name: Horse Neighbors XP: 50, Gems: 0, Items: 2 x ItemGreatBall, 1 x ItemRevive
+[20:51:02] Arriving to Pokestop: Barking Dog in (67m)
+[20:51:22] Name: Barking Dog XP: 50, Gems: 0, Items: 4 x ItemPokeBall
+[20:51:23] Arriving to Pokestop: Green Man in Red in (84m)
+[20:51:49] Name: Green Man in Red XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 2 x ItemPokeBall
+[20:51:50] Arriving to Pokestop: Wings Structure in (65m)
+[20:52:03] (Success) | Pinsir, Lvl: 13 | CP: (767/788) | IV: 83.66% | Type: Normal | Chance: 24.91% | Dist: 65.03m | Used: GreatBall (88 left) | XP: 210 | Candies: 6
+[20:52:12] Name: Wings Structure XP: 50, Gems: 0, Items: 1 x ItemPokeBall, 2 x ItemRazzBerry
+[20:52:14] [Inventory] Pokeballs: 123 | Greatballs: 88 | Ultraballs: 0 | Masterballs: 0 | Total: 211
+[20:52:14] [Inventory] Potions: 0 | Super Potions: 10 | Hyper Potions: 0 | Max Potions: 0 | Total: 10
+[20:52:14] [Inventory] Razz Berries: 52 | Bluk Berries: 0 | Nanab Berries: 0 | Pinap Berries: 0 | Wepar Berries: 0 | Total: 52
+[20:52:14] [Inventory] Revives: 21 | Max Revives: 0 | Total: 21
+[20:52:14] [Inventory] Incense: 5 | Cool Incense: 0 | Floral Incense: 0 | Spicy Incense: 0 | Total 5
+[20:52:14] [Inventory] Lure Modules: 2 | Lucky Eggs: 2 | Incubators: 1 | Total: 5
+[20:52:14] [Inventory] Inventory Usage: 305/350
+[20:52:14] 11x ItemPokeBall
+[20:52:15] 1x ItemRevive
+[20:52:16] 2x ItemRazzBerry
+[20:52:19] [Inventory] Pokemon Stored: 41/250
+[20:52:19] Rattata	- CP: 10  IV: 32.10%   [Best CP: 24  IV: 88.23%] (Candies: 92)
+[20:52:20] Pinsir	- CP: 148  IV: 61.83%   [Best CP: 767  IV: 83.66%] (Candies: 7)
+[20:52:20] Arriving to Pokestop: Statue Fountain  in (59m)
+[20:52:26] (Success) | Weedle, Lvl: 1 | CP: (10/10) | IV: 39.94% | Type: Normal | Chance: 100% | Dist: 59.44m | Used: PokeBall (111 left) | XP: 210 | Candies: 28
+[20:52:33] (Success) | Bellsprout, Lvl: 7 | CP: (190/218) | IV: 42.91% | Type: Normal | Chance: 57.27% | Dist: 51.73m | Used: PokeBall (110 left) | XP: 210 | Candies: 9
+[20:52:38] (Success) | Weedle, Lvl: 2 | CP: (16/19) | IV: 40.67% | Type: Normal | Chance: 100% | Dist: 55.35m | Used: PokeBall (109 left) | XP: 160 | Candies: 31
+[20:52:46] Name: Statue Fountain  XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 1 x ItemPokeBall, 1 x ItemRevive
+[20:52:47] Arriving to Pokestop: Cat with Wheelbarrow in (46m)
+[20:52:59] Name: Cat with Wheelbarrow XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 1 x ItemPokeBall, 1 x ItemRevive
+[20:53:00] Arriving to Pokestop: Pilgrim and Native in (70m)
+[20:53:20] Name: Pilgrim and Native XP: 100, Gems: 0, Items: 2 x ItemPotion, 4 x ItemPokeBall
+[20:53:22] Arriving to Pokestop: Fountain of 300 in (87m)
+[20:53:47] Name: Fountain of 300 XP: 50, Gems: 0, Items: 3 x ItemPokeBall, 1 x ItemRazzBerry
+[20:53:49] Arriving to Pokestop: 2nd Ave Subway Specials in (65m)
+[20:54:06] Name: 2nd Ave Subway Specials XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 1 x ItemPokeBall, 1 x ItemRazzBerry
+[20:54:08] [Inventory] Pokeballs: 119 | Greatballs: 91 | Ultraballs: 0 | Masterballs: 0 | Total: 210
+[20:54:08] [Inventory] Potions: 2 | Super Potions: 10 | Hyper Potions: 0 | Max Potions: 0 | Total: 12
+[20:54:08] [Inventory] Razz Berries: 52 | Bluk Berries: 0 | Nanab Berries: 0 | Pinap Berries: 0 | Wepar Berries: 0 | Total: 52
+[20:54:08] [Inventory] Revives: 22 | Max Revives: 0 | Total: 22
+[20:54:08] [Inventory] Incense: 5 | Cool Incense: 0 | Floral Incense: 0 | Spicy Incense: 0 | Total 5
+[20:54:08] [Inventory] Lure Modules: 2 | Lucky Eggs: 2 | Incubators: 1 | Total: 5
+[20:54:08] [Inventory] Inventory Usage: 307/350
+[20:54:09] 10x ItemPokeBall
+[20:54:09] 2x ItemPotion
+[20:54:10] 2x ItemRevive
+[20:54:11] 2x ItemRazzBerry
+[20:54:14] [Inventory] Pokemon Stored: 42/250
+[20:54:14] Weedle	- CP: 16  IV: 40.67%   [Best CP: 53  IV: 61.67%] (Candies: 32)
+[20:54:15] Weedle	- CP: 10  IV: 39.94%   [Best CP: 53  IV: 61.67%] (Candies: 33)
+[20:54:15] Bellsprout	- CP: 175  IV: 12.11%   [Best CP: 190  IV: 42.91%] (Candies: 10)
+[20:54:15] Arriving to Pokestop: Green Leaf Man  in (72m)
+[20:54:21] (Success) | Staryu, Lvl: 1 | CP: (11/13) | IV: 45.99% | Type: Normal | Chance: 100% | Dist: 62.64m | Used: PokeBall (108 left) | XP: 210 | Candies: 34
+[20:54:38] Name: Green Leaf Man  XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 2 x ItemPokeBall
+[20:54:39] Arriving to Pokestop: Sam Lamp  in (72m)
+[20:54:58] (Success) | Pidgey, Lvl: 7 | CP: (108/132) | IV: 32.50% | Type: Normal | Chance: 57.27% | Dist: 52.40m | Used: PokeBall (109 left) | XP: 200 | Candies: 149
+[20:55:05] (Success) | Caterpie, Lvl: 14.5 | CP: (124/177) | IV: 9.53% | Type: Normal | Chance: 40.01% | Dist: 60.11m | Used: PokeBall (108 left) | XP: 150 | Candies: 26
+[20:55:11] Name: Sam Lamp  XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 3 x ItemPokeBall
+[20:55:12] Arriving to Pokestop: Bright Red Stars in (69m)
+[20:55:32] Name: Bright Red Stars XP: 50, Gems: 0, Items: 4 x ItemPokeBall
+[20:55:34] Arriving to Pokestop: World Cup 1994 USA  in (122m)
+[20:56:13] Name: World Cup 1994 USA  XP: 50, Gems: 0, Items: 1 x ItemPotion, 2 x ItemPokeBall
+[20:56:15] Incubator status update: 0.32km left
+[20:56:15] Incubator status update: 3.32km left
+[20:56:15] Arriving to Pokestop: Promise Theater  in (115m)
+[20:56:51] (Success) | Tentacool, Lvl: 10.5 | CP: (242/258) | IV: 74.28% | Type: Normal | Chance: 47.34% | Dist: 49.49m | Used: PokeBall (116 left) | XP: 710 | Candies: 3
+[20:56:56] (Success) | Psyduck, Lvl: 9 | CP: (238/283) | IV: 26.23% | Type: Normal | Chance: 50.05% | Dist: 69.92m | Used: PokeBall (115 left) | XP: 210 | Candies: 10
+[20:57:02] Name: Promise Theater  XP: 50, Gems: 0, Items: 2 x ItemPokeBall, 1 x ItemRazzBerry
+[20:57:04] [Inventory] Pokeballs: 117 | Greatballs: 93 | Ultraballs: 0 | Masterballs: 0 | Total: 210
+[20:57:04] [Inventory] Potions: 1 | Super Potions: 10 | Hyper Potions: 0 | Max Potions: 0 | Total: 11
+[20:57:04] [Inventory] Razz Berries: 51 | Bluk Berries: 0 | Nanab Berries: 0 | Pinap Berries: 0 | Wepar Berries: 0 | Total: 51
+[20:57:04] [Inventory] Revives: 20 | Max Revives: 0 | Total: 20
+[20:57:04] [Inventory] Incense: 5 | Cool Incense: 0 | Floral Incense: 0 | Spicy Incense: 0 | Total 5
+[20:57:04] [Inventory] Lure Modules: 2 | Lucky Eggs: 2 | Incubators: 1 | Total: 5
+[20:57:04] [Inventory] Inventory Usage: 303/350
+[20:57:05] 10x ItemPokeBall
+[20:57:06] 1x ItemPotion
+[20:57:07] 1x ItemRazzBerry
+[20:57:10] [Inventory] Pokemon Stored: 44/250
+[20:57:10] Psyduck	- CP: 238  IV: 26.23%   [Best CP: 291  IV: 61.86%] (Candies: 11)
+[20:57:11] Staryu	- CP: 11  IV: 45.99%   [Best CP: 149  IV: 86.02%] (Candies: 35)
+[20:57:11] Pidgey	- CP: 108  IV: 32.50%   [Best CP: 28  IV: 73.46%] (Candies: 150)
+[20:57:11] Caterpie	- CP: 124  IV: 9.53%   [Best CP: 16  IV: 47.91%] (Candies: 27)
+[20:57:12] Arriving to Pokestop: Catman  in (66m)
+[20:57:31] Name: Catman  XP: 50, Gems: 0, Items: 2 x ItemPokeBall, 1 x ItemSuperPotion
+[20:57:33] Arriving to Pokestop: Plaque for Ruppert Park in (92m)
+[20:58:01] Name: Plaque for Ruppert Park XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 1 x ItemPokeBall, 1 x ItemRevive
+[20:58:02] Arriving to Pokestop: Round Fountain at Ruppert Park in (51m)
+[20:58:09] (Escape) | Ivysaur, Lvl: 13 | CP: (530/606) | IV: 29.78% | Type: Normal | Chance: 8.3% | Dist: 68.27m | Used: GreatBall (93 left) | XP: 0 | 
+[20:58:12] (Escape Attempt #2) | Ivysaur, Lvl: 13 | CP: (530/606) | IV: 29.78% | Type: Normal | Chance: 8.3% | Dist: 68.27m | Used: GreatBall (92 left) | XP: 0 | 
+[20:58:15] (Escape Attempt #3) | Ivysaur, Lvl: 13 | CP: (530/606) | IV: 29.78% | Type: Normal | Chance: 8.3% | Dist: 68.27m | Used: GreatBall (91 left) | XP: 0 | 
+[20:58:17] (Escape Attempt #4) | Ivysaur, Lvl: 13 | CP: (530/606) | IV: 29.78% | Type: Normal | Chance: 8.3% | Dist: 68.27m | Used: GreatBall (90 left) | XP: 0 | 
+[20:58:20] (Escape Attempt #5) | Ivysaur, Lvl: 13 | CP: (530/606) | IV: 29.78% | Type: Normal | Chance: 8.3% | Dist: 68.27m | Used: GreatBall (89 left) | XP: 0 | 
+[20:58:23] (Escape Attempt #6) | Ivysaur, Lvl: 13 | CP: (530/606) | IV: 29.78% | Type: Normal | Chance: 8.3% | Dist: 68.27m | Used: GreatBall (88 left) | XP: 0 | 
+[20:58:30] (Success) | Pidgey, Lvl: 4 | CP: (61/71) | IV: 47.46% | Type: Normal | Chance: 78.21% | Dist: 54.29m | Used: PokeBall (109 left) | XP: 210 | Candies: 153
+[20:58:33] (Escape) | Ivysaur, Lvl: 13 | CP: (530/606) | IV: 29.78% | Type: Normal | Chance: 8.3% | Dist: 59.04m | Used: GreatBall (87 left) | XP: 0 | 
+[20:58:37] (Success Attempt #2) | Ivysaur, Lvl: 13 | CP: (530/606) | IV: 29.78% | Type: Normal | Chance: 8.3% | Dist: 59.04m | Used: GreatBall (86 left) | XP: 710 | Candies: 3
+[20:58:42] Name: Round Fountain at Ruppert Park XP: 100, Gems: 0, Items: 4 x ItemPokeBall, 2 x ItemSuperPotion
+[20:58:44] Arriving to Pokestop: San Matteo Pizzeria in (44m)
+[20:58:55] Name: San Matteo Pizzeria XP: 50, Gems: 0, Items: 1 x ItemPokeBall, 1 x ItemSuperPotion, 1 x ItemRazzBerry
+[20:58:57] Arriving to Pokestop: Housing Works Thrift Shop  in (43m)
+[20:59:08] Name: Housing Works Thrift Shop  XP: 50, Gems: 0, Items: 3 x ItemPokeBall
+[20:59:11] [Inventory] Pokeballs: 117 | Greatballs: 86 | Ultraballs: 0 | Masterballs: 0 | Total: 203
+[20:59:11] [Inventory] Potions: 0 | Super Potions: 14 | Hyper Potions: 0 | Max Potions: 0 | Total: 14
+[20:59:11] [Inventory] Razz Berries: 51 | Bluk Berries: 0 | Nanab Berries: 0 | Pinap Berries: 0 | Wepar Berries: 0 | Total: 51
+[20:59:11] [Inventory] Revives: 21 | Max Revives: 0 | Total: 21
+[20:59:11] [Inventory] Incense: 5 | Cool Incense: 0 | Floral Incense: 0 | Spicy Incense: 0 | Total 5
+[20:59:11] [Inventory] Lure Modules: 2 | Lucky Eggs: 2 | Incubators: 1 | Total: 5
+[20:59:11] [Inventory] Inventory Usage: 300/350
+[20:59:11] 3x ItemPokeBall
+[20:59:12] 4x ItemSuperPotion
+[20:59:13] 1x ItemRevive
+[20:59:13] 1x ItemRazzBerry
+[20:59:16] [Inventory] Pokemon Stored: 43/250
+[20:59:17] Squirtle	- CP: 307  IV: 85.99%   [Best CP: 285  IV: 95.66%] (Candies: 40)
+[20:59:17] Pidgey	- CP: 61  IV: 47.46%   [Best CP: 28  IV: 73.46%] (Candies: 154)
+[20:59:17] ====== DisplayHighestsCP ======
+[20:59:17] >   CP/BEST/POWERED |	perfect	| LVL | NAME       | MOVE1              | MOVE2  | MoveRankVsAveType |
+[20:59:17] #  767/ 788/2081 | 83.66%	 | 13 | Pinsir     | RockSmashFast      | XScissor      | 378
+[20:59:17] #  530/ 606/1438 | 29.78%	 | 13 | Ivysaur    | VineWhipFast       | SludgeBomb    | 0
+[20:59:17] #  318/ 341/2379 | 54.45%	 | 05 | Victreebel | AcidFast           | SolarBeam     | 207
+[20:59:17] #  313/ 328/1105 | 79.15%	 | 11 | Oddish     | RazorLeafFast      | SludgeBomb    | 0
+[20:59:17] #  291/ 317/1026 | 61.86%	 | 11 | Psyduck    | WaterGunFast       | Psybeam       | 0
+[20:59:17] #  285/ 288/1005 | 95.66%	 | 11 | Squirtle   | BubbleFast         | WaterPulse    | 0
+[20:59:17] #  255/ 270/1142 | 72.88%	 | 08 | Clefairy   | ZenHeadbuttFast    | DisarmingVoice | 0
+[20:59:17] #  242/ 258/ 856 | 74.28%	 | 11 | Tentacool  | BubbleFast         | WaterPulse    | 0
+[20:59:17] #  220/ 228/ 776 | 85.90%	 | 11 | Sandshrew  | MudShotFast        | Dig           | 0
+[20:59:17] #  199/ 210/1030 | 76.56%	 | 07 | Eevee      | TackleFast         | Dig           | 0
+[20:59:18] ====== DisplayHighestsPerfect ======
+[20:59:18] >   CP/BEST/POWERED |	perfect	| LVL | NAME       | MOVE1              | MOVE2  | MoveRankVsAveType |
+[20:59:18] #  150/ 150/1445 | 98.16%	 | 04 | Beedrill   | PoisonJabFast      | AerialAce     | 334
+[20:59:18] #   13/  13/ 962 | 95.81%	 | 01 | Goldeen    | PeckFast           | WaterPulse    | 0
+[20:59:18] #  285/ 288/1005 | 95.66%	 | 11 | Squirtle   | BubbleFast         | WaterPulse    | 0
+[20:59:18] #  110/ 113/ 676 | 91.62%	 | 06 | Spearow    | QuickAttackFast    | AerialAce     | 0
+[20:59:18] #   16/  17/1198 | 88.71%	 | 01 | Slowpoke   | ConfusionFast      | Psyshock      | 0
+[20:59:18] #   24/  25/ 565 | 88.23%	 | 02 | Rattata    | QuickAttackFast    | Dig           | 0
+[20:59:18] #   58/  59/1317 | 87.77%	 | 02 | Poliwhirl  | MudShotFast        | Scald         | 0
+[20:59:18] #   46/  47/ 624 | 87.08%	 | 03 | Zubat      | QuickAttackFast    | SludgeBomb    | 0
+[20:59:18] #   73/  74/1663 | 86.38%	 | 02 | Porygon    | QuickAttackFast    | Psybeam       | 417
+[20:59:18] #  149/ 154/ 912 | 86.02%	 | 06 | Staryu     | WaterGunFast       | BubbleBeam    | 0
+[20:59:18] Arriving to Pokestop: Become Your Dream Mural in (63m)
+[20:59:36] Name: Become Your Dream Mural XP: 50, Gems: 0, Items: 4 x ItemPokeBall
+[20:59:37] Arriving to Pokestop: Stare Down  in (56m)
+[20:59:51] Name: Stare Down  XP: 50, Gems: 0, Items: 1 x ItemGreatBall, 1 x ItemPokeBall, 1 x ItemRevive
+[20:59:53] Arriving to Pokestop: Checkered Street Art  in (96m)
