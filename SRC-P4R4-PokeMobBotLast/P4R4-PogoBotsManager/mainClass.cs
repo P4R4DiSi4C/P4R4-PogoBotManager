@@ -23,22 +23,22 @@ namespace P4R4_PogoBotsManager
         public const string AUTH_FOLDER_NAME = "\\config\\auth.json";
 
         //Regex to check if user entered right acc:pw
-        Regex ptcAccReg;
-        Regex googleAccReg;
+        private Regex _ptcAccReg;
+        private Regex _googleAccReg;
         //Regex for the proxy
-        Regex proxyReg;
+        private Regex _proxyReg;
 
         //Folder where bot is
-        public string BotFolder { get; set; }
+        public string BotFolder { private get; set; }
 
         //Int to save the accs needed with a default value of -> 1
-        public int NeededAccounts { get; set; } = 1;
+        public int NeededAccounts { private get; set; } = 1;
 
         //Folder to place each bot folder
-        public string DirToPlaceFolders { get; set; }
+        public string DirToPlaceFolders { private get; set; }
 
         //Filepath to the config.json
-        public string configFilePath { get; set; } = "";
+        public string configFilePath { private get; set; } = "";
 
         //Initialize a new list to save each account
         private List<string> _verifiedAccounts;
@@ -47,7 +47,7 @@ namespace P4R4_PogoBotsManager
         private List<string> _verifiedProxies;
 
         //Initialize a new list to save each account
-        private List<string> nameFolders;
+        private List<string> _nameFolders;
 
         //Create a boolean to check if it's a custom config
         public bool CustomConfig {get; set;} = false;
@@ -60,14 +60,14 @@ namespace P4R4_PogoBotsManager
         public mainClass(mainForm mainForm)
         {
             //Set the regexes
-            ptcAccReg = new Regex(@"^[a-zA-Z0-9_çéàüèöä+]{6,16}:+(.*){6,15}$");
-            googleAccReg = new Regex(@"(\W|^)[\w.+\-]*@gmail\.com:+(.*){8,37}$");
-            proxyReg = new Regex(@"^((([^:]+):([^@]+))@)?((\d{1,3}\.){3}\d{1,3})(:(\d{1,5}))$");
+            _ptcAccReg = new Regex(@"^[a-zA-Z0-9_çéàüèöä+]{6,16}:+(.*){6,15}$");
+            _googleAccReg = new Regex(@"(\W|^)[\w.+\-]*@gmail\.com:+(.*){8,37}$");
+            _proxyReg = new Regex(@"^((([^:]+):([^@]+))@)?((\d{1,3}\.){3}\d{1,3})(:(\d{1,5}))$");
 
             //Set the new list for each lists
             _verifiedAccounts = new List<string>();
             _verifiedProxies = new List<string>();
-            nameFolders = new List<string>();
+            _nameFolders = new List<string>();
 
             //Set the mainForm
             _mainForm = mainForm;
@@ -115,7 +115,7 @@ namespace P4R4_PogoBotsManager
                         makeAuthAndRndCfg(accsPw, clearedProxiesList());
 
                         //Clear the array with the names of the created folders for each bot
-                        nameFolders.Clear();
+                        _nameFolders.Clear();
                     }
                     else
                     {
@@ -150,7 +150,7 @@ namespace P4R4_PogoBotsManager
                 Directory.CreateDirectory(DirToPlaceFolders + BOT_FOLDER_NAME + folderNb);
 
                 //Add the name of the folder to the list
-                nameFolders.Add(BOT_FOLDER_NAME + folderNb);
+                _nameFolders.Add(BOT_FOLDER_NAME + folderNb);
 
                 //Copy folder structure from bot folder
                 foreach (string sourceSubFolder in Directory.GetDirectories(BotFolder, "*", SearchOption.AllDirectories))
@@ -248,7 +248,7 @@ namespace P4R4_PogoBotsManager
             if(isAccs)
             {
                 //Assing the accs regex
-                regToCheck = googleAccReg.IsMatch(newProxAcc[i]) || ptcAccReg.IsMatch(newProxAcc[i]);
+                regToCheck = _googleAccReg.IsMatch(newProxAcc[i]) || _ptcAccReg.IsMatch(newProxAcc[i]);
 
                 //Assing the accs richtxtbox
                 richTxtBox = _mainForm.accsRichTxtBox;
@@ -269,7 +269,7 @@ namespace P4R4_PogoBotsManager
             else
             {
                 //Assign the proxies regex
-                regToCheck = proxyReg.IsMatch(newProxAcc[i]);
+                regToCheck = _proxyReg.IsMatch(newProxAcc[i]);
 
                 //Assign the proxies richtxtbox
                 richTxtBox = _mainForm.proxiesRichTxtBox;
@@ -463,14 +463,14 @@ namespace P4R4_PogoBotsManager
             _mainForm.proxiesRichTxtBox.Text = "";
 
             //Loop the number of entries in nameFolders list(Array with the name of the created folders)
-            for (int i = 0; i < nameFolders.Count(); i++)
+            for (int i = 0; i < _nameFolders.Count(); i++)
             {
                 //********MAKE AUTH FILES***************//
                 //Copy the auth.json file to each of the bot folders
-                File.WriteAllBytes(DirToPlaceFolders + nameFolders[i] + AUTH_FOLDER_NAME, Properties.Resources.auth);
+                File.WriteAllBytes(DirToPlaceFolders + _nameFolders[i] + AUTH_FOLDER_NAME, Properties.Resources.auth);
 
                 //Save the auth.json file in a string
-                string json = File.ReadAllText(DirToPlaceFolders + nameFolders[i] + AUTH_FOLDER_NAME);
+                string json = File.ReadAllText(DirToPlaceFolders + _nameFolders[i] + AUTH_FOLDER_NAME);
                 dynamic jsonObj = JsonConvert.DeserializeObject(json);
 
                 //Check wether is a google account or a PTC acc
@@ -498,14 +498,14 @@ namespace P4R4_PogoBotsManager
                 string output = JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
 
                 //Copy the file to a bot folder
-                File.WriteAllText(DirToPlaceFolders + nameFolders[i] + AUTH_FOLDER_NAME, output);
+                File.WriteAllText(DirToPlaceFolders + _nameFolders[i] + AUTH_FOLDER_NAME, output);
 
                 //******MODIFY CONFIG FILES WITH RANDOM DEVICE FINGERPRINT*******//
                 //Generate a random device
                 DeviceSettings device = new DeviceSettings();
 
                 //Save the auth.json file in a string
-                string jsonCfg = File.ReadAllText(DirToPlaceFolders + nameFolders[i] + CONFIG_FOLDER_NAME);
+                string jsonCfg = File.ReadAllText(DirToPlaceFolders + _nameFolders[i] + CONFIG_FOLDER_NAME);
                 dynamic jsonObjCfg = JsonConvert.DeserializeObject(jsonCfg);
 
                 //Set the username and password in the auth.json
@@ -527,7 +527,7 @@ namespace P4R4_PogoBotsManager
                 string outputCfg = JsonConvert.SerializeObject(jsonObjCfg, Newtonsoft.Json.Formatting.Indented);
 
                 //Copy the file to a bot folder
-                File.WriteAllText(DirToPlaceFolders + nameFolders[i] + CONFIG_FOLDER_NAME, outputCfg);
+                File.WriteAllText(DirToPlaceFolders + _nameFolders[i] + CONFIG_FOLDER_NAME, outputCfg);
             }
 
             //Write the proxies that we didn't use to the textbox
