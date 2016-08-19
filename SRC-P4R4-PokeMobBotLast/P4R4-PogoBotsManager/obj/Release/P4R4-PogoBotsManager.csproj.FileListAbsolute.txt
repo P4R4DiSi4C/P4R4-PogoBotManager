@@ -22,15 +22,3 @@ F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMobBotLast\P4R4-PogoB
 F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMobBotLast\P4R4-PogoBotsManager\obj\Release\P4R4_PogoBotsManager.mainForm.resources
 F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMobBotLast\P4R4-PogoBotsManager\obj\Release\P4R4_PogoBotsManager.Properties.Resources.resources
 F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMobBotLast\P4R4-PogoBotsManager\obj\Release\P4R4-PogoBotsManager.csproj.GenerateResource.Cache
-F:\Données\Bureau\P4R4-PogoBotsManager-Melly\1-SRC-P4R4-PokeMobBotLast\P4R4-PogoBotsManager\bin\Release\P4R4-PogoBotsManager.exe.config
-F:\Données\Bureau\P4R4-PogoBotsManager-Melly\1-SRC-P4R4-PokeMobBotLast\P4R4-PogoBotsManager\obj\Release\P4R4-PogoBotsManager.exe
-F:\Données\Bureau\P4R4-PogoBotsManager-Melly\1-SRC-P4R4-PokeMobBotLast\P4R4-PogoBotsManager\obj\Release\P4R4-PogoBotsManager.pdb
-F:\Données\Bureau\P4R4-PogoBotsManager-Melly\1-SRC-P4R4-PokeMobBotLast\P4R4-PogoBotsManager\bin\Release\P4R4-PogoBotsManager.exe
-F:\Données\Bureau\P4R4-PogoBotsManager-Melly\1-SRC-P4R4-PokeMobBotLast\P4R4-PogoBotsManager\bin\Release\P4R4-PogoBotsManager.pdb
-F:\Données\Bureau\P4R4-PogoBotsManager-Melly\1-SRC-P4R4-PokeMobBotLast\P4R4-PogoBotsManager\bin\Release\MaterialSkin.dll
-F:\Données\Bureau\P4R4-PogoBotsManager-Melly\1-SRC-P4R4-PokeMobBotLast\P4R4-PogoBotsManager\bin\Release\Newtonsoft.Json.dll
-F:\Données\Bureau\P4R4-PogoBotsManager-Melly\1-SRC-P4R4-PokeMobBotLast\P4R4-PogoBotsManager\bin\Release\Newtonsoft.Json.xml
-F:\Données\Bureau\P4R4-PogoBotsManager-Melly\1-SRC-P4R4-PokeMobBotLast\P4R4-PogoBotsManager\obj\Release\P4R4-PogoBotsManager.csprojResolveAssemblyReference.cache
-F:\Données\Bureau\P4R4-PogoBotsManager-Melly\1-SRC-P4R4-PokeMobBotLast\P4R4-PogoBotsManager\obj\Release\P4R4_PogoBotsManager.mainForm.resources
-F:\Données\Bureau\P4R4-PogoBotsManager-Melly\1-SRC-P4R4-PokeMobBotLast\P4R4-PogoBotsManager\obj\Release\P4R4_PogoBotsManager.Properties.Resources.resources
-F:\Données\Bureau\P4R4-PogoBotsManager-Melly\1-SRC-P4R4-PokeMobBotLast\P4R4-PogoBotsManager\obj\Release\P4R4-PogoBotsManager.csproj.GenerateResource.Cache

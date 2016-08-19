@@ -472,13 +472,13 @@
             // tempLab
             // 
             this.tempLab.AutoSize = true;
-            this.tempLab.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tempLab.Font = new System.Drawing.Font("Roboto", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tempLab.ForeColor = System.Drawing.Color.Red;
-            this.tempLab.Location = new System.Drawing.Point(86, 331);
+            this.tempLab.Location = new System.Drawing.Point(196, 292);
             this.tempLab.Name = "tempLab";
-            this.tempLab.Size = new System.Drawing.Size(153, 19);
+            this.tempLab.Size = new System.Drawing.Size(375, 43);
             this.tempLab.TabIndex = 23;
-            this.tempLab.Text = "TEMPORARY DESIGN";
+            this.tempLab.Text = "TEMPORARY DESIGN !";
             // 
             // creationPageTitle
             // 
