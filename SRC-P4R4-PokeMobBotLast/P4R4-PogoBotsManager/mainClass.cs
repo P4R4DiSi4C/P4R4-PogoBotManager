@@ -86,44 +86,45 @@ namespace P4R4_PogoBotsManager
             {
                 //Error for path/s missing
                 MessageBox.Show("Path/s missing !");
+                
+                //Exits the function
+                return;
+            }
+
+            //Check if the richtextbox isn't empty
+            if (_mainForm.accsRichTxtBox.Text == "")
+            {
+                //Error for empty accounts list
+                MessageBox.Show("Empty accounts list !");
+
+                //Exits the function
+                return;
+            }
+
+            //Check if the user deleted or added MANUALLY new accounts or proxies
+            verifyNewLoadedProxAcc(_mainForm.accsRichTxtBox.Lines, false, true);
+            verifyNewLoadedProxAcc(_mainForm.proxiesRichTxtBox.Lines, false, false);
+
+            //Check if the verified accounts are sufficient to match the number of folders we need to create
+            //Same thing for the proxies
+            if ((_verifiedAccounts.Count() > 0 && _verifiedAccounts.Count() >= NeededAccounts) && (_verifiedProxies.Count() > 0 && _verifiedProxies.Count() >= NeededAccounts))
+            {
+                //Call the method to create the number of needed folders
+                createFolders(Convert.ToInt32(_mainForm.nbFoldersNum.Value));
+
+                //Parse the combolist(the list of verified accs:pw)
+                string[,] accsPw = parseCombolist();
+
+                //Call the method to do the auth.json file for each bot folder with each of the accounts
+                makeAuthAndRndCfg(accsPw, clearedProxiesList());
+
+                //Clear the array with the names of the created folders for each bot
+                _nameFolders.Clear();
             }
             else
             {
-                //Check if the richtextbox isn't empty
-                if (_mainForm.accsRichTxtBox.Text == "")
-                {
-                    //Error for empty accounts list
-                    MessageBox.Show("Empty accounts list !");
-                }
-                else
-                {
-                    //Check if the user deleted or added MANUALLY new accounts or proxies
-                    verifyNewLoadedProxAcc(_mainForm.accsRichTxtBox.Lines, false, true);
-                    verifyNewLoadedProxAcc(_mainForm.proxiesRichTxtBox.Lines, false, false);
-
-                    //Check if the verified accounts are sufficient to match the number of folders we need to create
-                    //Same thing for the proxies
-                    if ((_verifiedAccounts.Count() > 0 && _verifiedAccounts.Count() >= NeededAccounts) && (_verifiedProxies.Count() > 0 && _verifiedProxies.Count() >= NeededAccounts))
-                    {
-                        //Call the method to create the number of needed folders
-                        createFolders(Convert.ToInt32(_mainForm.nbFoldersNum.Value));
-
-                        //Parse the combolist(the list of verified accs:pw)
-                        string[,] accsPw = parseCombolist();
-
-                        //Call the method to do the auth.json file for each bot folder with each of the accounts
-                        makeAuthAndRndCfg(accsPw, clearedProxiesList());
-
-                        //Clear the array with the names of the created folders for each bot
-                        _nameFolders.Clear();
-                    }
-                    else
-                    {
-                        //Error for insufficient accounts
-                        MessageBox.Show("Please, ensure you loaded/added sufficient accounts/proxies.");
-                    }
-
-                }
+                //Error for insufficient accounts
+                MessageBox.Show("Please, ensure you loaded/added sufficient accounts/proxies.");
             }
         }
 
