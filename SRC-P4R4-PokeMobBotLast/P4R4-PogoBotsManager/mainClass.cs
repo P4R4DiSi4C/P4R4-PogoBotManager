@@ -4,61 +4,77 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace P4R4_PogoBotsManager
 {
+    /// <summary>
+    /// Main class of this project
+    /// </summary>
     public class mainClass
     {
-        //Var for the form
-        private mainForm mainForm;
-
-        /// <summary>
-        /// Get and set the main form
-        /// </summary>
-        public mainForm MainForm
-        {
-            set { mainForm = value; }
-        }
+        //Reference the mainForm
+        private mainForm _mainForm;
 
         //CONSTS
-        public const string BOT_FOLDER_NAME = "\\PokeMobBot";
+        private const string BOT_FOLDER_NAME = "\\PokeMobBot";
         public const string CONFIG_FOLDER_NAME = "\\config\\config.json";
         public const string BOT_EXE_NAME = "PokeMobBot.exe";
         public const string AUTH_FOLDER_NAME = "\\config\\auth.json";
 
-        //Folder where bot is
-        public string botFolder;
+        //Regex to check if user entered right acc:pw
+        Regex ptcAccReg;
+        Regex googleAccReg;
+        //Regex for the proxy
+        Regex proxyReg;
 
-        //Int to save the accs needed
-        public int neededAccounts = 1;
+        //Folder where bot is
+        public string BotFolder { get; set; }
+
+        //Int to save the accs needed with a default value of -> 1
+        public int NeededAccounts { get; set; } = 1;
 
         //Folder to place each bot folder
-        public string dirToPlaceFolders;
+        public string DirToPlaceFolders { get; set; }
 
         //Filepath to the config.json
-        public string configFilePath = "";
-
-        //Regex to check if user entered right acc:pw
-        Regex ptcAccReg = new Regex(@"^[a-zA-Z0-9_çéàüèöä+]{6,16}:+(.*){6,15}$");
-        Regex googleAccReg = new Regex(@"(\W|^)[\w.+\-]*@gmail\.com:+(.*){8,37}$");
-
-        //Regex for the proxy
-        Regex proxyReg = new Regex(@"^((([^:]+):([^@]+))@)?((\d{1,3}\.){3}\d{1,3})(:(\d{1,5}))$");
+        public string configFilePath { get; set; } = "";
 
         //Initialize a new list to save each account
-        public List<string> verifiedAccounts = new List<string>();
+        private List<string> _verifiedAccounts;
 
         //Initialize a new list to save each proxy
-        public List<string> verifiedProxies = new List<string>();
+        private List<string> _verifiedProxies;
 
         //Initialize a new list to save each account
-        public List<string> nameFolders = new List<string>();
+        private List<string> nameFolders;
 
-        //Create constants and Array of booleans for further verifications
-        public const int BOT_FOLDER_PATH = 0;
-        public const int DIR_TO_PLACE_FOLDERS = 1;
-        public bool customConfig = false;
-        public bool[] pathBooleans = new bool[2];
+        //Create a boolean to check if it's a custom config
+        public bool CustomConfig {get; set;} = false;
+        //Create Array of booleans for further verifications
+        public bool[] PathBooleans { get; set; } = new bool[2];
+
+        /// <summary>
+        /// Default constructor of the class
+        /// </summary>
+        public mainClass(mainForm mainForm)
+        {
+            //Set the regexes
+            ptcAccReg = new Regex(@"^[a-zA-Z0-9_çéàüèöä+]{6,16}:+(.*){6,15}$");
+            googleAccReg = new Regex(@"(\W|^)[\w.+\-]*@gmail\.com:+(.*){8,37}$");
+            proxyReg = new Regex(@"^((([^:]+):([^@]+))@)?((\d{1,3}\.){3}\d{1,3})(:(\d{1,5}))$");
+
+            //Set the new list for each lists
+            _verifiedAccounts = new List<string>();
+            _verifiedProxies = new List<string>();
+            nameFolders = new List<string>();
+
+            //Set the mainForm
+            _mainForm = mainForm;
+
+            //Set this class in the mainForm
+            mainForm.MainClass = this;
+        }
 
         /// <summary>
         /// Method to start the creation when the button is clicked
@@ -66,29 +82,37 @@ namespace P4R4_PogoBotsManager
         public void startCreation()
         {
             //Call the method to check if all the path are filled
-            if (verifyPaths())
+            if (!verifyPaths())
+            {
+                //Error for path/s missing
+                MessageBox.Show("Path/s missing !");
+            }
+            else
             {
                 //Check if the richtextbox isn't empty
-                if (mainForm.accsRichTxtBox.Text != "")
+                if (_mainForm.accsRichTxtBox.Text == "")
                 {
-                    //Check if we got any manual entered account to check and add to the list
-                    verifyNewLoadedAccs(mainForm.accsRichTxtBox.Lines, false);
-
-                    //Check if we got any manual entered account to check and add to the list
-                    verifyNewLoadedProxies(mainForm.proxiesRichTxtBox.Lines, false);
+                    //Error for empty accounts list
+                    MessageBox.Show("Empty accounts list !");
+                }
+                else
+                {
+                    //Check if the user deleted or added MANUALLY new accounts or proxies
+                    verifyNewLoadedProxAcc(_mainForm.accsRichTxtBox.Lines, false, true);
+                    verifyNewLoadedProxAcc(_mainForm.proxiesRichTxtBox.Lines, false, false);
 
                     //Check if the verified accounts are sufficient to match the number of folders we need to create
                     //Same thing for the proxies
-                    if ((verifiedAccounts.Count() > 0 && verifiedAccounts.Count() >= neededAccounts) && (verifiedProxies.Count() > 0 && verifiedProxies.Count() >= neededAccounts))
+                    if ((_verifiedAccounts.Count() > 0 && _verifiedAccounts.Count() >= NeededAccounts) && (_verifiedProxies.Count() > 0 && _verifiedProxies.Count() >= NeededAccounts))
                     {
                         //Call the method to create the number of needed folders
-                        createFolders(Convert.ToInt32(mainForm.nbFoldersNum.Value));
+                        createFolders(Convert.ToInt32(_mainForm.nbFoldersNum.Value));
 
                         //Parse the combolist(the list of verified accs:pw)
                         string[,] accsPw = parseCombolist();
 
                         //Call the method to do the auth.json file for each bot folder with each of the accounts
-                        makeAuthAndRndCfg(accsPw,clearedProxiesList());
+                        makeAuthAndRndCfg(accsPw, clearedProxiesList());
 
                         //Clear the array with the names of the created folders for each bot
                         nameFolders.Clear();
@@ -98,17 +122,8 @@ namespace P4R4_PogoBotsManager
                         //Error for insufficient accounts
                         MessageBox.Show("Please, ensure you loaded/added sufficient accounts/proxies.");
                     }
+
                 }
-                else
-                {
-                    //Error for empty accounts list
-                    MessageBox.Show("Empty accounts list !");
-                }
-            }
-            else
-            {
-                //Error for path/s missing
-                MessageBox.Show("Path/s missing !");
             }
         }
 
@@ -126,33 +141,33 @@ namespace P4R4_PogoBotsManager
                 int folderNb = i;
 
                 //Check if folder exists
-                while (Directory.Exists(dirToPlaceFolders + BOT_FOLDER_NAME + folderNb))
+                while (Directory.Exists(DirToPlaceFolders + BOT_FOLDER_NAME + folderNb))
                 {
                     //Increment the counter
                     folderNb++;
                 }
                 //Create the folder
-                Directory.CreateDirectory(dirToPlaceFolders + BOT_FOLDER_NAME + folderNb);
+                Directory.CreateDirectory(DirToPlaceFolders + BOT_FOLDER_NAME + folderNb);
 
                 //Add the name of the folder to the list
                 nameFolders.Add(BOT_FOLDER_NAME + folderNb);
 
                 //Copy folder structure from bot folder
-                foreach (string sourceSubFolder in Directory.GetDirectories(botFolder, "*", SearchOption.AllDirectories))
+                foreach (string sourceSubFolder in Directory.GetDirectories(BotFolder, "*", SearchOption.AllDirectories))
                 {
                     //Create the BotX directory
-                    Directory.CreateDirectory(sourceSubFolder.Replace(botFolder, dirToPlaceFolders + BOT_FOLDER_NAME + folderNb));
+                    Directory.CreateDirectory(sourceSubFolder.Replace(BotFolder, DirToPlaceFolders + BOT_FOLDER_NAME + folderNb));
                 }
 
                 //Copy bot subfolder and files
-                foreach (string sourceFile in Directory.GetFiles(botFolder, "*", SearchOption.AllDirectories))
+                foreach (string sourceFile in Directory.GetFiles(BotFolder, "*", SearchOption.AllDirectories))
                 {
-                    string destinationFile = sourceFile.Replace(botFolder, dirToPlaceFolders + BOT_FOLDER_NAME + folderNb);
+                    string destinationFile = sourceFile.Replace(BotFolder, DirToPlaceFolders + BOT_FOLDER_NAME + folderNb);
                     File.Copy(sourceFile, destinationFile, true);
                 }
 
                 //Rename each exe by adding the counter number to the name
-                DirectoryInfo d = new DirectoryInfo(dirToPlaceFolders + BOT_FOLDER_NAME + folderNb);
+                DirectoryInfo d = new DirectoryInfo(DirToPlaceFolders + BOT_FOLDER_NAME + folderNb);
                 FileInfo[] infos = d.GetFiles(BOT_EXE_NAME);
                 foreach (FileInfo f in infos)
                 {
@@ -161,15 +176,15 @@ namespace P4R4_PogoBotsManager
                 }
 
                 //Check if the user has chosen a custom config
-                if (customConfig)
+                if (CustomConfig)
                 {
                     //Copy the config file to each folder
-                    File.Copy(configFilePath, dirToPlaceFolders + BOT_FOLDER_NAME + folderNb + CONFIG_FOLDER_NAME);
+                    File.Copy(configFilePath, DirToPlaceFolders + BOT_FOLDER_NAME + folderNb + CONFIG_FOLDER_NAME);
                 }
                 else
                 {
                     //Copy the config.json file in resources if it doesn't exists -> custom config ?
-                    File.WriteAllBytes(dirToPlaceFolders + BOT_FOLDER_NAME + folderNb + CONFIG_FOLDER_NAME, Properties.Resources.config);
+                    File.WriteAllBytes(DirToPlaceFolders + BOT_FOLDER_NAME + folderNb + CONFIG_FOLDER_NAME, Properties.Resources.config);
                 }
             }
         }
@@ -181,10 +196,10 @@ namespace P4R4_PogoBotsManager
         public bool verifyPaths()
         {
             //Loop through each boolean in the array of the path to check if we got all the needed paths
-            foreach (bool path in pathBooleans)
+            foreach (bool path in PathBooleans)
             {
                 //If one path is missing we display a messagebox and return false
-                if (path == false || (mainForm.customConfigChkBox.Checked && configFilePath == string.Empty))
+                if (path == false || (_mainForm.customConfigChkBox.Checked && configFilePath == string.Empty))
                 {
                     //Return false
                     return false;
@@ -192,7 +207,7 @@ namespace P4R4_PogoBotsManager
             }
 
             //Check if it's a customconfig and if the filepath is blank
-            if (customConfig && configFilePath == "")
+            if (CustomConfig && configFilePath == "")
             {
                 return false;
             }
@@ -202,138 +217,124 @@ namespace P4R4_PogoBotsManager
         }
 
         /// <summary>
-        /// Method to check if the new manually added/loaded accs are valid and add/display them in the list/richtextbox.
-        /// </summary>
-        /// <param name="newAccs">Get an array of string</param>
-        /// <param name="autoLoaded">Boolean to check if added manually or not</param>
-        public void verifyNewLoadedAccs(string[] newAccs, bool autoLoaded)
-        {
-            //Count to check the nb of the lines that doesn't match the format acc:pw
-            int notFormatMatchCount = 0;
-
-            //Added accounts var
-            int addedAccounts = 0;
-
-            //Loop to go through each line and add to the list
-            foreach (string line in newAccs)
-            {
-                //Check if the line match the format acc:pw
-                if (googleAccReg.IsMatch(line) || ptcAccReg.IsMatch(line))
-                {
-                    if (!autoLoaded)
-                    {
-                        checkManuallyDeleted(newAccs,true);
-                    }
-
-                    //Check if acc is a duplicate
-                    if (!checkIfAlreadyVerified(line,true))
-                    {
-                        //Add the acc to the list
-                        verifiedAccounts.Add(line);
-
-                        //Increment the addedAccounts var
-                        addedAccounts++;
-                    }
-                }
-                else
-                {
-                    //Increment the counter of not matched format accounts
-                    notFormatMatchCount++;
-                }
-            }
-
-            //Clear the richtextbox
-            mainForm.accsRichTxtBox.Text = "";
-
-            //Display the verified accs
-            foreach (string str in verifiedAccounts)
-            {
-                mainForm.accsRichTxtBox.Text += str + "\n";
-            }
-
-            //If the accs were loaded with a file we display this message
-            if (autoLoaded)
-            {
-                //Display the message with the new added accs nb
-                MessageBox.Show("New loaded accounts: " + addedAccounts);
-            }
-            else
-            {
-                //If the accs were added manually and were verified we display this message
-                if (addedAccounts > 0)
-                {
-                    //Display the message with the new added accs nb
-                    MessageBox.Show("New manually added accounts: " + addedAccounts);
-                }
-            }
-        }
-
-        /// <summary>
-        /// Method to check if the new manually added/loaded proxies are valid and add/display them in the list/richtextbox.
+        /// Method to check if the new manually added/loaded proxies/accs are valid and add/display them in the list/richtextbox.
         /// </summary>
         /// <param name="newProxies">Get an array of string</param>
         /// <param name="autoLoaded">Boolean to check if added manually or not</param>
-        public void verifyNewLoadedProxies(string[] newProxies, bool autoLoaded)
+        public void verifyNewLoadedProxAcc(string[] newProxAcc, bool autoLoaded, bool isAccs)
         {
-            //Count to check the nb of the lines that doesn't match the format acc:pw
+            //Count to check the nb of the lines that doesn't match the regex
             int notFormatMatchCount = 0;
 
-            //Added accounts var
-            int addedProxies = 0;
+            //Counter for the new added accs/proxies
+            int addedProxAcc = 0;
 
-            //Loop to go through each line and add to the list
-            foreach (string line in newProxies)
+            //String to store the message to display in the richtextbox
+            string loadedAccProx = "";
+
+            //Richtextbox to assing the corresponding richtextbox later(if it's the accs richtxtbox or the proxies one)
+            RichTextBox richTxtBox;
+
+            //List to assing the corresponding list later(if it's the accsList or the proxies ones)
+            List<string> listToUse;
+
+            //Bool to store the corresponding regex later(accs regex or proxies regex)
+            bool regToCheck;
+
+            //General counter for the loop
+            int i = 0;
+
+            //Check if we're checking accs
+            if(isAccs)
             {
-                //Check if the line match the format acc:pw
-                if (proxyReg.IsMatch(line))
+                //Assing the accs regex
+                regToCheck = googleAccReg.IsMatch(newProxAcc[i]) || ptcAccReg.IsMatch(newProxAcc[i]);
+
+                //Assing the accs richtxtbox
+                richTxtBox = _mainForm.accsRichTxtBox;
+
+                //Assign the list to use
+                listToUse = _verifiedAccounts;
+
+                //Check if the accounts are loaded or manually added to assign the corresponding message
+                if (autoLoaded)
                 {
-                    if (!autoLoaded)
-                    {
-                        checkManuallyDeleted(newProxies,false);
-                    }
-
-                    //Check if acc is a duplicate
-                    if (!checkIfAlreadyVerified(line,false))
-                    {
-                        //Add the acc to the list
-                        verifiedProxies.Add(line);
-
-                        //Increment the addedAccounts var
-                        addedProxies++;
-                    }
+                    loadedAccProx = "New loaded accounts: ";
                 }
                 else
+                {
+                    loadedAccProx = "New manually added accounts: ";
+                }
+            }
+            else
+            {
+                //Assign the proxies regex
+                regToCheck = proxyReg.IsMatch(newProxAcc[i]);
+
+                //Assign the proxies richtxtbox
+                richTxtBox = _mainForm.proxiesRichTxtBox;
+
+                //Assign the list to use
+                listToUse = _verifiedProxies;
+
+                //Check if the proxies are loaded or manually added to assign the corresponding message
+                if (autoLoaded)
+                {
+                    loadedAccProx = "New loaded proxies: ";
+                }
+                else
+                {
+                    loadedAccProx = "New manually added proxies: ";
+                }
+            }
+
+
+            //Check each line in the array of strings
+            for(i = 0; i < newProxAcc.Length;i++)
+            {
+                //Check if it matches is regex and if it's not empty
+                if(!regToCheck || newProxAcc[i] == "")
                 {
                     //Increment the counter of not matched format accounts
                     notFormatMatchCount++;
                 }
-            }
-
-            //Clear the richtextbox
-            mainForm.proxiesRichTxtBox.Text = "";
-
-            //Display the verified accs
-            foreach (string str in verifiedProxies)
-            {
-                mainForm.proxiesRichTxtBox.Text += str + "\n";
-            }
-
-            //If the accs were loaded with a file we display this message
-            if (autoLoaded)
-            {
-                //Display the message with the new added accs nb
-                MessageBox.Show("New loaded proxies: " + addedProxies);
-            }
-            else
-            {
-                //If the accs were added manually and were verified we display this message
-                if (addedProxies > 0)
+                else
                 {
-                    //Display the message with the new added accs nb
-                    MessageBox.Show("New manually added proxies: " + addedProxies);
+                    //Check if's manually added
+                    if (!autoLoaded)
+                    {
+                        //Check if the user deleted manually some proxies or accounts
+                        checkManuallyDeleted(newProxAcc, isAccs);
+                    }
+
+                    //Check if  it is a duplicate
+                    if (!checkIfAlreadyVerified(newProxAcc[i], isAccs))
+                    {
+                        //Add it to the list
+                        listToUse.Add(newProxAcc[i]);
+
+                        //Increment the counter of added proxies/accounts
+                        addedProxAcc++;
+                    }
                 }
             }
+            //Clear the corresponding richtextbox
+            richTxtBox.Clear();
+
+            //Display the final list of proxies/accounts
+            foreach (string str in listToUse)
+            {
+                richTxtBox.AppendText(str + "\n");
+            }
+
+            //Check if we added more than 0 accounts/proxies
+            if (addedProxAcc > 0)
+            {
+                //Display the message with the new added accs/proxies nb
+                MessageBox.Show(loadedAccProx + addedProxAcc);
+            }
         }
+
 
         /// <summary>
         /// Method to check if the acc or proxy is a duplicate
@@ -346,11 +347,11 @@ namespace P4R4_PogoBotsManager
             List<string> listToCheck;
             if(isAccs)
             {
-                listToCheck = verifiedAccounts;
+                listToCheck = _verifiedAccounts;
             }
             else
             {
-                listToCheck = verifiedProxies;
+                listToCheck = _verifiedProxies;
             }
 
             //Loop through the already verified accs
@@ -375,24 +376,28 @@ namespace P4R4_PogoBotsManager
         /// <returns>Return a boolean if the acc is a duplicate or not</returns>
         private void checkManuallyDeleted(string[] richTxtBoxAcc,bool isAccs)
         {
+            //List to store the corresponding list later
             List<string> listToCheck;
 
+            //Check if we're checking accounts
             if (isAccs)
             {
-                listToCheck = verifiedAccounts;
+                //Assign the corresponding list
+                listToCheck = _verifiedAccounts;
             }
             else
             {
-                listToCheck = verifiedProxies;
+                //Assign the corresponding list
+                listToCheck = _verifiedProxies;
             }
 
-            //Loop through the already verified accs
+            //Loop through the already verified accs/proxies list
             for (int i = 0; i < listToCheck.Count(); i++)
             {
-                //Check if the acc in the verifiedAccs array isn't present in the richtextbox
+                //Check if the acc in the list isn't present in the richtextbox
                 if (!Array.Exists(richTxtBoxAcc, x => x == listToCheck[i]))
                 {
-                    //remove it from the list
+                    //Remove it from the list
                     listToCheck.RemoveAt(i);
                 }
             }
@@ -404,29 +409,29 @@ namespace P4R4_PogoBotsManager
         public string[,] parseCombolist()
         {
             //Clear the richtextbox
-            mainForm.accsRichTxtBox.Text = "";
+            _mainForm.accsRichTxtBox.Clear();
 
             //Array to save each acc with it's password
-            string[,] accsPw = new string[neededAccounts, 2];
+            string[,] accsPw = new string[NeededAccounts, 2];
 
             //Loop that will loop the neededAcconts var times
-            for (int i = 0; i < neededAccounts; i++)
+            for (int i = 0; i < NeededAccounts; i++)
             {
                 //Instances a tempArray for the splitted strings
-                string[] tempArray = verifiedAccounts[0].Split(':');
+                string[] tempArray = _verifiedAccounts[0].Split(':');
 
                 //Assign the acc password with the correct index
                 accsPw[i, 0] = tempArray[0];
                 accsPw[i, 1] = tempArray[1];
 
                 //Remove it from the list(so it will only be used once)
-                verifiedAccounts.RemoveAt(0);
+                _verifiedAccounts.RemoveAt(0);
             }
 
             //Display the new verifiedAccounts list without the used accs
-            foreach (string str in verifiedAccounts)
+            foreach (string str in _verifiedAccounts)
             {
-                mainForm.accsRichTxtBox.Text += str + "\n";
+                _mainForm.accsRichTxtBox.AppendText(str + "\n");
             }
 
             return accsPw;
@@ -439,14 +444,11 @@ namespace P4R4_PogoBotsManager
         public string[] clearedProxiesList()
         {
             //Declare an array
-            string[] proxiesList = new string[neededAccounts];
+            string[] proxiesList = new string[NeededAccounts];
 
-            //Loop the nb of needed accounts var and add a proxy to the array. Delete the original proxy from his list
-            for(int i = 0; i < neededAccounts;i++)
-            {
-                proxiesList[i] = verifiedProxies[0];
-                verifiedProxies.RemoveAt(0);
-            }
+            //Get the range of proxies that we'll use, copy them to the proxiesList, then delete them from the verified proxies list
+            _verifiedProxies.CopyTo(0, proxiesList, 0, proxiesList.Length);
+            _verifiedProxies.RemoveRange(0, proxiesList.Length);
 
             return proxiesList;
         }
@@ -458,18 +460,18 @@ namespace P4R4_PogoBotsManager
         public void makeAuthAndRndCfg(string[,] accsPw,string[] proxiesList)
         {
             //Clear the proxies richtextbox
-            mainForm.proxiesRichTxtBox.Text = "";
+            _mainForm.proxiesRichTxtBox.Text = "";
 
             //Loop the number of entries in nameFolders list(Array with the name of the created folders)
             for (int i = 0; i < nameFolders.Count(); i++)
             {
                 //********MAKE AUTH FILES***************//
                 //Copy the auth.json file to each of the bot folders
-                File.WriteAllBytes(dirToPlaceFolders + nameFolders[i] + AUTH_FOLDER_NAME, Properties.Resources.auth);
+                File.WriteAllBytes(DirToPlaceFolders + nameFolders[i] + AUTH_FOLDER_NAME, Properties.Resources.auth);
 
                 //Save the auth.json file in a string
-                string json = File.ReadAllText(dirToPlaceFolders + nameFolders[i] + AUTH_FOLDER_NAME);
-                dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
+                string json = File.ReadAllText(DirToPlaceFolders + nameFolders[i] + AUTH_FOLDER_NAME);
+                dynamic jsonObj = JsonConvert.DeserializeObject(json);
 
                 //Check wether is a google account or a PTC acc
                 if (accsPw[i, 0].Contains("@gmail.com"))
@@ -493,18 +495,18 @@ namespace P4R4_PogoBotsManager
 
 
                 //Convert back to json
-                string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
+                string output = JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
 
                 //Copy the file to a bot folder
-                File.WriteAllText(dirToPlaceFolders + nameFolders[i] + AUTH_FOLDER_NAME, output);
+                File.WriteAllText(DirToPlaceFolders + nameFolders[i] + AUTH_FOLDER_NAME, output);
 
                 //******MODIFY CONFIG FILES WITH RANDOM DEVICE FINGERPRINT*******//
                 //Generate a random device
                 DeviceSettings device = new DeviceSettings();
 
                 //Save the auth.json file in a string
-                string jsonCfg = File.ReadAllText(dirToPlaceFolders + nameFolders[i] + CONFIG_FOLDER_NAME);
-                dynamic jsonObjCfg = Newtonsoft.Json.JsonConvert.DeserializeObject(jsonCfg);
+                string jsonCfg = File.ReadAllText(DirToPlaceFolders + nameFolders[i] + CONFIG_FOLDER_NAME);
+                dynamic jsonObjCfg = JsonConvert.DeserializeObject(jsonCfg);
 
                 //Set the username and password in the auth.json
                 jsonObjCfg["DeviceSettings"]["DeviceId"] = device.DeviceId;
@@ -522,16 +524,16 @@ namespace P4R4_PogoBotsManager
                 jsonObjCfg["DeviceSettings"]["FirmwareFingerprint"] = device.FirmwareFingerprint;
 
                 //Convert back to json
-                string outputCfg = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObjCfg, Newtonsoft.Json.Formatting.Indented);
+                string outputCfg = JsonConvert.SerializeObject(jsonObjCfg, Newtonsoft.Json.Formatting.Indented);
 
                 //Copy the file to a bot folder
-                File.WriteAllText(dirToPlaceFolders + nameFolders[i] + CONFIG_FOLDER_NAME, outputCfg);
+                File.WriteAllText(DirToPlaceFolders + nameFolders[i] + CONFIG_FOLDER_NAME, outputCfg);
             }
 
             //Write the proxies that we didn't use to the textbox
-            foreach (string str in verifiedProxies)
+            foreach (string str in _verifiedProxies)
             {
-                mainForm.proxiesRichTxtBox.Text += str + "\n";
+                _mainForm.proxiesRichTxtBox.Text += str + "\n";
             }
         }
     }
