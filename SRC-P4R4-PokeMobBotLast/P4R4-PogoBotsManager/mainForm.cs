@@ -206,6 +206,9 @@ namespace P4R4_PogoBotsManager
             //Check if the user clicked ok
             if (ofd.ShowDialog() == DialogResult.OK)
             {
+                //Check if the user deleted some accounts before loading new ones
+                MainClass.checkManuallyDeleted(accsRichTxtBox.Lines, true);
+
                 //Check the loaded accs from the file
                 MainClass.verifyNewLoadedProxAcc(File.ReadAllLines(ofd.FileName), true,true);
             }
@@ -226,6 +229,9 @@ namespace P4R4_PogoBotsManager
             //Check if the user clicked ok
             if (ofd.ShowDialog() == DialogResult.OK)
             {
+                //Check if the user deleted some proxies before loading new ones
+                MainClass.checkManuallyDeleted(proxiesRichTxtBox.Lines, false);
+
                 //Check the loaded accs from the file
                 MainClass.verifyNewLoadedProxAcc(File.ReadAllLines(ofd.FileName), true,false);
             }
