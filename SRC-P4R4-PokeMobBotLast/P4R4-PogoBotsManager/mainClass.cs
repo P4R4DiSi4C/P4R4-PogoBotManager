@@ -25,8 +25,9 @@ namespace P4R4_PogoBotsManager
         //Regex to check if user entered right acc:pw
         private Regex _ptcAccReg;
         private Regex _googleAccReg;
-        //Regex for the proxy
+        //Regexes for the proxies
         private Regex _proxyReg;
+        private Regex _proxyUserPwReg;
 
         //Folder where bot is
         public string BotFolder { private get; set; }
@@ -63,6 +64,7 @@ namespace P4R4_PogoBotsManager
             _ptcAccReg = new Regex(@"^[a-zA-Z0-9_çéàüèöä+]{6,16}:+(.*){6,15}$");
             _googleAccReg = new Regex(@"(\W|^)[\w.+\-]*@gmail\.com:+(.*){8,37}$");
             _proxyReg = new Regex(@"^((([^:]+):([^@]+))@)?((\d{1,3}\.){3}\d{1,3})(:(\d{1,5}))$");
+            _proxyUserPwReg = new Regex(@"^((([^:]+):([^@]+))@)?((\d{1,3}\.){3}\d{1,3})(:(\d{1,5})):+[a-zA-Z0-9_-]{5,30}:+(.*){5,30}$");
 
             //Set the new list for each lists
             _verifiedAccounts = new List<string>();
@@ -120,8 +122,11 @@ namespace P4R4_PogoBotsManager
             //Parse the combolist(the list of verified accs:pw)
             string[,] accsPw = parseCombolist();
 
+            //Filter and clear the proxieslist
+            string[,] proxiesList = clearAndFilterProxiesList();
+
             //Call the method to do the auth.json file for each bot folder with each of the accounts
-            makeAuthAndRndCfg(accsPw, clearedProxiesList());
+            makeAuthAndRndCfg(accsPw, proxiesList);
 
             //Clear the array with the names of the created folders for each bot
             _nameFolders.Clear();
@@ -269,7 +274,7 @@ namespace P4R4_PogoBotsManager
             else
             {
                 //Assign the proxies regex
-                regToCheck = _proxyReg.IsMatch(newProxAcc[i]);
+                regToCheck = _proxyReg.IsMatch(newProxAcc[i]) || _proxyUserPwReg.IsMatch(newProxAcc[i]);
 
                 //Assign the proxies richtxtbox
                 richTxtBox = _mainForm.proxiesRichTxtBox;
@@ -454,30 +459,68 @@ namespace P4R4_PogoBotsManager
         }
 
         /// <summary>
-        /// Method to clear the proxies that we will use and just keep the ones that we didn't use
+        /// Method to filter out the proxies with user:pw and withouth, and keep only the ones that we'll not use for further use.
         /// </summary>
         /// <returns>Return a list with the final proxies to use</returns>
-        public string[] clearedProxiesList()
+        public string[,] clearAndFilterProxiesList()
         {
-            //Declare an array
-            string[] proxiesList = new string[NeededAccounts];
+            //Clear the richTxtBox
+            _mainForm.proxiesRichTxtBox.Clear();
+
+            //Array to save each acc with it's password
+            string[,] proxiesWithUserPw = new string[NeededAccounts, 3];
+
+            //Declare an array to temporary place the proxies that we'll use
+            string[] tempProxiesList = new string[NeededAccounts];
 
             //Get the range of proxies that we'll use, copy them to the proxiesList, then delete them from the verified proxies list
-            _verifiedProxies.CopyTo(0, proxiesList, 0, proxiesList.Length);
-            _verifiedProxies.RemoveRange(0, proxiesList.Length);
+            _verifiedProxies.CopyTo(0, tempProxiesList, 0, tempProxiesList.Length);
+            _verifiedProxies.RemoveRange(0, tempProxiesList.Length);
 
-            return proxiesList;
+            //Counter to don't touch the "i" counter and avoid being out of index
+            int counter = 0;
+
+            //Loop that will loop the neededAcconts var times
+            for (int i = 0; i < NeededAccounts; i++)
+            {
+                //Check if the proxy has a user and pw
+                if (_proxyUserPwReg.IsMatch(tempProxiesList[i]))
+                {
+
+                    //Instances a tempArray for the splitted strings
+                    string[] tempArray = tempProxiesList[i].Split(':');
+
+                    //Assign the proxy,account and password with the correct indexes
+                    proxiesWithUserPw[counter, 0] = tempArray[0] + ":" + tempArray[1];
+                    proxiesWithUserPw[counter, 1] = tempArray[2];
+                    proxiesWithUserPw[counter, 2] = tempArray[3];
+                    counter++;
+                }
+                else
+                {
+                    //Assign the proxy and port + null to username and password(default values)
+                    proxiesWithUserPw[counter, 0] = tempProxiesList[i];
+                    proxiesWithUserPw[counter, 1] = null;
+                    proxiesWithUserPw[counter, 2] = null;
+                    counter++;
+                }
+            }
+
+            //Write the proxies that we didn't use to the textbox
+            foreach (string str in _verifiedProxies)
+            {
+                _mainForm.proxiesRichTxtBox.Text += str + "\n";
+            }
+
+            return proxiesWithUserPw;
         }
 
         /// <summary>
         /// Method used to make the auth.json file for each botfolder with each of the verified accs
         /// </summary>
         /// <param name="accsPw">Get the array with the accs and passwords</param>
-        public void makeAuthAndRndCfg(string[,] accsPw,string[] proxiesList)
+        public void makeAuthAndRndCfg(string[,] accsPw,string[,] proxiesList)
         {
-            //Clear the proxies richtextbox
-            _mainForm.proxiesRichTxtBox.Text = "";
-
             //Loop the number of entries in nameFolders list(Array with the name of the created folders)
             for (int i = 0; i < _nameFolders.Count(); i++)
             {
@@ -507,7 +550,14 @@ namespace P4R4_PogoBotsManager
 
                 //Set the proxies
                 jsonObj["UseProxy"] = true;
-                jsonObj["ProxyUri"] = "" + proxiesList[i] + "";
+                jsonObj["ProxyUri"] = "" + proxiesList[i,0] + "";
+
+                //Check if the proxies doesn't have user/pass, if they don't we'll keep the default value, if they do we set the user and pass.
+                if (proxiesList[i, 1] != null && proxiesList[i, 2] != null)
+                {
+                    jsonObj["ProxyLogin"] = "" + proxiesList[i, 1] + "";
+                    jsonObj["ProxyPass"] = "" + proxiesList[i, 2] + "";
+                }
 
 
                 //Convert back to json
@@ -544,12 +594,6 @@ namespace P4R4_PogoBotsManager
 
                 //Copy the file to a bot folder
                 File.WriteAllText(DirToPlaceFolders + _nameFolders[i] + CONFIG_FOLDER_NAME, outputCfg);
-            }
-
-            //Write the proxies that we didn't use to the textbox
-            foreach (string str in _verifiedProxies)
-            {
-                _mainForm.proxiesRichTxtBox.Text += str + "\n";
             }
         }
     }
