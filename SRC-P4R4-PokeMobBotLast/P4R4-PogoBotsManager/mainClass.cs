@@ -91,11 +91,11 @@ namespace P4R4_PogoBotsManager
                 return;
             }
 
-            //Check if the richtextbox isn't empty
-            if (_mainForm.accsRichTxtBox.Text == "")
+            //Check if the richtextboxes aren't empty
+            if (_mainForm.accsRichTxtBox.Text == "" || _mainForm.proxiesRichTxtBox.Text == "")
             {
-                //Error for empty accounts list
-                MessageBox.Show("Empty accounts list !");
+                //Error for empty accounts/proxies list
+                MessageBox.Show("Empty accounts/proxies list !");
 
                 //Exits the function
                 return;
@@ -107,25 +107,24 @@ namespace P4R4_PogoBotsManager
 
             //Check if the verified accounts are sufficient to match the number of folders we need to create
             //Same thing for the proxies
-            if ((_verifiedAccounts.Count() > 0 && _verifiedAccounts.Count() >= NeededAccounts) && (_verifiedProxies.Count() > 0 && _verifiedProxies.Count() >= NeededAccounts))
-            {
-                //Call the method to create the number of needed folders
-                createFolders(Convert.ToInt32(_mainForm.nbFoldersNum.Value));
-
-                //Parse the combolist(the list of verified accs:pw)
-                string[,] accsPw = parseCombolist();
-
-                //Call the method to do the auth.json file for each bot folder with each of the accounts
-                makeAuthAndRndCfg(accsPw, clearedProxiesList());
-
-                //Clear the array with the names of the created folders for each bot
-                _nameFolders.Clear();
-            }
-            else
+            if ((_verifiedAccounts.Count() < NeededAccounts) || (_verifiedProxies.Count() < NeededAccounts))
             {
                 //Error for insufficient accounts
                 MessageBox.Show("Please, ensure you loaded/added sufficient accounts/proxies.");
+                return;//Exits
             }
+
+            //Call the method to create the number of needed folders
+            createFolders(Convert.ToInt32(_mainForm.nbFoldersNum.Value));
+
+            //Parse the combolist(the list of verified accs:pw)
+            string[,] accsPw = parseCombolist();
+
+            //Call the method to do the auth.json file for each bot folder with each of the accounts
+            makeAuthAndRndCfg(accsPw, clearedProxiesList());
+
+            //Clear the array with the names of the created folders for each bot
+            _nameFolders.Clear();
         }
 
         /// <summary>
@@ -336,7 +335,6 @@ namespace P4R4_PogoBotsManager
             }
         }
 
-
         /// <summary>
         /// Method to check if the acc or proxy is a duplicate
         /// </summary>
@@ -345,13 +343,18 @@ namespace P4R4_PogoBotsManager
         /// <returns>Return a boolean if the acc or proxy is a duplicate or not</returns>
         public bool checkIfAlreadyVerified(string str,bool isAccs)
         {
+            //Create a list to store the correct one later
             List<string> listToCheck;
+
+            //Check if we're checking acc
             if(isAccs)
             {
+                //Assign the corresponding list
                 listToCheck = _verifiedAccounts;
             }
             else
             {
+                //Assign the corresponding list
                 listToCheck = _verifiedProxies;
             }
 
@@ -375,7 +378,7 @@ namespace P4R4_PogoBotsManager
         /// <param name="richTxtBoxAcc">Get the acc:pw string</param>
         /// <param name="isAcces">Check if we are checking accounts or proxies</param>
         /// <returns>Return a boolean if the acc is a duplicate or not</returns>
-        private void checkManuallyDeleted(string[] richTxtBoxAcc,bool isAccs)
+        public void checkManuallyDeleted(string[] richTxtBoxAcc,bool isAccs)
         {
             //List to store the corresponding list later
             List<string> listToCheck;
@@ -392,14 +395,26 @@ namespace P4R4_PogoBotsManager
                 listToCheck = _verifiedProxies;
             }
 
+            //General counter to remove from the list of acc/proxies without touching the i counter
+            int counter = 0;
+
+            //Store the size of the list we're checking
+            //When we remove an item in the list they're moved in the list, so the size of the list changes and the loop doesn't see that, so we've to store it before the loop
+            int listSize = listToCheck.Count();
+
             //Loop through the already verified accs/proxies list
-            for (int i = 0; i < listToCheck.Count(); i++)
+            for (int i = 0; i < listSize; i++)
             {
                 //Check if the acc in the list isn't present in the richtextbox
-                if (!Array.Exists(richTxtBoxAcc, x => x == listToCheck[i]))
+                if (!Array.Exists(richTxtBoxAcc, x => x == listToCheck[counter]))
                 {
                     //Remove it from the list
-                    listToCheck.RemoveAt(i);
+                    listToCheck.RemoveAt(counter);
+                }
+                else
+                {
+                    //Increment the counter
+                    counter++;
                 }
             }
         }
