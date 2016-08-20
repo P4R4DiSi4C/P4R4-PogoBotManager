@@ -1,6 +1,6 @@
-﻿namespace P4R4_PogoBotsManager
+﻿namespace P4R4_PokeMob_Creator
 {
-    partial class mainForm
+    partial class MainForm
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.foldersPage = new System.Windows.Forms.TabPage();
@@ -53,12 +54,13 @@
             this.accountsNeededLab = new System.Windows.Forms.Label();
             this.accsRichTxtBox = new System.Windows.Forms.RichTextBox();
             this.proxiesTabPage = new System.Windows.Forms.TabPage();
+            this.formatProxyLab = new System.Windows.Forms.Label();
             this.browseProxiesBtn = new MaterialSkin.Controls.MaterialRaisedButton();
             this.proxiesNeededLab = new System.Windows.Forms.Label();
             this.proxiesRichTxtBox = new System.Windows.Forms.RichTextBox();
             this.loadProxiesPageTitle = new System.Windows.Forms.Label();
             this.creationTabPage = new System.Windows.Forms.TabPage();
-            this.tempLab = new System.Windows.Forms.Label();
+            this.creationLogsRichTxtBox = new System.Windows.Forms.RichTextBox();
             this.creationPageTitle = new System.Windows.Forms.Label();
             this.createFoldersBtn = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialTabControl1.SuspendLayout();
@@ -130,9 +132,9 @@
             this.customConfigChkBox.MouseState = MaterialSkin.MouseState.HOVER;
             this.customConfigChkBox.Name = "customConfigChkBox";
             this.customConfigChkBox.Ripple = true;
-            this.customConfigChkBox.Size = new System.Drawing.Size(120, 30);
+            this.customConfigChkBox.Size = new System.Drawing.Size(203, 30);
             this.customConfigChkBox.TabIndex = 21;
-            this.customConfigChkBox.Text = "Custom config";
+            this.customConfigChkBox.Text = "Custom PokeMobBot config";
             this.customConfigChkBox.UseVisualStyleBackColor = true;
             this.customConfigChkBox.CheckedChanged += new System.EventHandler(this.customConfigChkBox_CheckedChanged);
             // 
@@ -181,7 +183,7 @@
             // 
             this.foldersDivider.BackColor = System.Drawing.Color.DarkCyan;
             this.foldersDivider.Depth = 0;
-            this.foldersDivider.Location = new System.Drawing.Point(13, 224);
+            this.foldersDivider.Location = new System.Drawing.Point(13, 222);
             this.foldersDivider.MouseState = MaterialSkin.MouseState.HOVER;
             this.foldersDivider.Name = "foldersDivider";
             this.foldersDivider.Size = new System.Drawing.Size(674, 10);
@@ -232,14 +234,14 @@
             this.cfgFilePathTxt.Depth = 0;
             this.cfgFilePathTxt.Enabled = false;
             this.cfgFilePathTxt.Hint = "";
-            this.cfgFilePathTxt.Location = new System.Drawing.Point(192, 173);
+            this.cfgFilePathTxt.Location = new System.Drawing.Point(230, 173);
             this.cfgFilePathTxt.MouseState = MaterialSkin.MouseState.HOVER;
             this.cfgFilePathTxt.Name = "cfgFilePathTxt";
             this.cfgFilePathTxt.PasswordChar = '\0';
             this.cfgFilePathTxt.SelectedText = "";
             this.cfgFilePathTxt.SelectionLength = 0;
             this.cfgFilePathTxt.SelectionStart = 0;
-            this.cfgFilePathTxt.Size = new System.Drawing.Size(453, 23);
+            this.cfgFilePathTxt.Size = new System.Drawing.Size(415, 23);
             this.cfgFilePathTxt.TabIndex = 6;
             this.cfgFilePathTxt.UseSystemPasswordChar = false;
             // 
@@ -350,11 +352,11 @@
             // browseAccsBtn
             // 
             this.browseAccsBtn.Depth = 0;
-            this.browseAccsBtn.Location = new System.Drawing.Point(566, 81);
+            this.browseAccsBtn.Location = new System.Drawing.Point(557, 85);
             this.browseAccsBtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.browseAccsBtn.Name = "browseAccsBtn";
             this.browseAccsBtn.Primary = true;
-            this.browseAccsBtn.Size = new System.Drawing.Size(118, 35);
+            this.browseAccsBtn.Size = new System.Drawing.Size(137, 35);
             this.browseAccsBtn.TabIndex = 20;
             this.browseAccsBtn.Text = "LOAD ACCOUNTS";
             this.browseAccsBtn.UseVisualStyleBackColor = true;
@@ -365,7 +367,7 @@
             this.accsTitleLab.AutoSize = true;
             this.accsTitleLab.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accsTitleLab.ForeColor = System.Drawing.Color.Black;
-            this.accsTitleLab.Location = new System.Drawing.Point(3, 15);
+            this.accsTitleLab.Location = new System.Drawing.Point(3, 8);
             this.accsTitleLab.Name = "accsTitleLab";
             this.accsTitleLab.Size = new System.Drawing.Size(223, 29);
             this.accsTitleLab.TabIndex = 17;
@@ -376,7 +378,7 @@
             this.accFormatLab.AutoSize = true;
             this.accFormatLab.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accFormatLab.ForeColor = System.Drawing.Color.Red;
-            this.accFormatLab.Location = new System.Drawing.Point(4, 44);
+            this.accFormatLab.Location = new System.Drawing.Point(4, 46);
             this.accFormatLab.Name = "accFormatLab";
             this.accFormatLab.Size = new System.Drawing.Size(204, 38);
             this.accFormatLab.TabIndex = 16;
@@ -387,7 +389,7 @@
             this.accountsNeededLab.AutoSize = true;
             this.accountsNeededLab.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accountsNeededLab.ForeColor = System.Drawing.Color.Red;
-            this.accountsNeededLab.Location = new System.Drawing.Point(562, 337);
+            this.accountsNeededLab.Location = new System.Drawing.Point(553, 337);
             this.accountsNeededLab.Name = "accountsNeededLab";
             this.accountsNeededLab.Size = new System.Drawing.Size(141, 19);
             this.accountsNeededLab.TabIndex = 2;
@@ -395,14 +397,15 @@
             // 
             // accsRichTxtBox
             // 
-            this.accsRichTxtBox.Location = new System.Drawing.Point(8, 81);
+            this.accsRichTxtBox.Location = new System.Drawing.Point(8, 85);
             this.accsRichTxtBox.Name = "accsRichTxtBox";
-            this.accsRichTxtBox.Size = new System.Drawing.Size(447, 275);
+            this.accsRichTxtBox.Size = new System.Drawing.Size(504, 271);
             this.accsRichTxtBox.TabIndex = 0;
             this.accsRichTxtBox.Text = "";
             // 
             // proxiesTabPage
             // 
+            this.proxiesTabPage.Controls.Add(this.formatProxyLab);
             this.proxiesTabPage.Controls.Add(this.browseProxiesBtn);
             this.proxiesTabPage.Controls.Add(this.proxiesNeededLab);
             this.proxiesTabPage.Controls.Add(this.proxiesRichTxtBox);
@@ -414,10 +417,21 @@
             this.proxiesTabPage.Text = "Proxies";
             this.proxiesTabPage.UseVisualStyleBackColor = true;
             // 
+            // formatProxyLab
+            // 
+            this.formatProxyLab.AutoSize = true;
+            this.formatProxyLab.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.formatProxyLab.ForeColor = System.Drawing.Color.Red;
+            this.formatProxyLab.Location = new System.Drawing.Point(4, 45);
+            this.formatProxyLab.Name = "formatProxyLab";
+            this.formatProxyLab.Size = new System.Drawing.Size(181, 38);
+            this.formatProxyLab.TabIndex = 26;
+            this.formatProxyLab.Text = "Format is: ip:port:user:pw\r\n(user:pw are not required)";
+            // 
             // browseProxiesBtn
             // 
             this.browseProxiesBtn.Depth = 0;
-            this.browseProxiesBtn.Location = new System.Drawing.Point(552, 63);
+            this.browseProxiesBtn.Location = new System.Drawing.Point(559, 84);
             this.browseProxiesBtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.browseProxiesBtn.Name = "browseProxiesBtn";
             this.browseProxiesBtn.Primary = true;
@@ -432,7 +446,7 @@
             this.proxiesNeededLab.AutoSize = true;
             this.proxiesNeededLab.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.proxiesNeededLab.ForeColor = System.Drawing.Color.Red;
-            this.proxiesNeededLab.Location = new System.Drawing.Point(548, 319);
+            this.proxiesNeededLab.Location = new System.Drawing.Point(555, 337);
             this.proxiesNeededLab.Name = "proxiesNeededLab";
             this.proxiesNeededLab.Size = new System.Drawing.Size(127, 19);
             this.proxiesNeededLab.TabIndex = 22;
@@ -440,9 +454,9 @@
             // 
             // proxiesRichTxtBox
             // 
-            this.proxiesRichTxtBox.Location = new System.Drawing.Point(13, 63);
+            this.proxiesRichTxtBox.Location = new System.Drawing.Point(8, 84);
             this.proxiesRichTxtBox.Name = "proxiesRichTxtBox";
-            this.proxiesRichTxtBox.Size = new System.Drawing.Size(487, 275);
+            this.proxiesRichTxtBox.Size = new System.Drawing.Size(504, 272);
             this.proxiesRichTxtBox.TabIndex = 21;
             this.proxiesRichTxtBox.Text = "";
             // 
@@ -451,15 +465,15 @@
             this.loadProxiesPageTitle.AutoSize = true;
             this.loadProxiesPageTitle.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loadProxiesPageTitle.ForeColor = System.Drawing.Color.Black;
-            this.loadProxiesPageTitle.Location = new System.Drawing.Point(8, 9);
+            this.loadProxiesPageTitle.Location = new System.Drawing.Point(3, 8);
             this.loadProxiesPageTitle.Name = "loadProxiesPageTitle";
-            this.loadProxiesPageTitle.Size = new System.Drawing.Size(403, 29);
+            this.loadProxiesPageTitle.Size = new System.Drawing.Size(202, 29);
             this.loadProxiesPageTitle.TabIndex = 18;
-            this.loadProxiesPageTitle.Text = "Load/add proxies and start creation:";
+            this.loadProxiesPageTitle.Text = "Load/add proxies";
             // 
             // creationTabPage
             // 
-            this.creationTabPage.Controls.Add(this.tempLab);
+            this.creationTabPage.Controls.Add(this.creationLogsRichTxtBox);
             this.creationTabPage.Controls.Add(this.creationPageTitle);
             this.creationTabPage.Controls.Add(this.createFoldersBtn);
             this.creationTabPage.Location = new System.Drawing.Point(4, 22);
@@ -469,32 +483,31 @@
             this.creationTabPage.Text = "Creation";
             this.creationTabPage.UseVisualStyleBackColor = true;
             // 
-            // tempLab
+            // creationLogsRichTxtBox
             // 
-            this.tempLab.AutoSize = true;
-            this.tempLab.Font = new System.Drawing.Font("Roboto", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tempLab.ForeColor = System.Drawing.Color.Red;
-            this.tempLab.Location = new System.Drawing.Point(196, 292);
-            this.tempLab.Name = "tempLab";
-            this.tempLab.Size = new System.Drawing.Size(375, 43);
-            this.tempLab.TabIndex = 23;
-            this.tempLab.Text = "TEMPORARY DESIGN !";
+            this.creationLogsRichTxtBox.Enabled = false;
+            this.creationLogsRichTxtBox.Location = new System.Drawing.Point(9, 41);
+            this.creationLogsRichTxtBox.Name = "creationLogsRichTxtBox";
+            this.creationLogsRichTxtBox.Size = new System.Drawing.Size(466, 306);
+            this.creationLogsRichTxtBox.TabIndex = 21;
+            this.creationLogsRichTxtBox.Text = "";
+            this.creationLogsRichTxtBox.TextChanged += new System.EventHandler(this.creationLogsRichTxtBox_TextChanged);
             // 
             // creationPageTitle
             // 
             this.creationPageTitle.AutoSize = true;
             this.creationPageTitle.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.creationPageTitle.ForeColor = System.Drawing.Color.Black;
-            this.creationPageTitle.Location = new System.Drawing.Point(85, 22);
+            this.creationPageTitle.Location = new System.Drawing.Point(3, 8);
             this.creationPageTitle.Name = "creationPageTitle";
-            this.creationPageTitle.Size = new System.Drawing.Size(584, 58);
+            this.creationPageTitle.Size = new System.Drawing.Size(164, 29);
             this.creationPageTitle.TabIndex = 20;
-            this.creationPageTitle.Text = "The program will now generate each folder with each \r\nconfig/auth file\r\n";
+            this.creationPageTitle.Text = "Start creation:";
             // 
             // createFoldersBtn
             // 
             this.createFoldersBtn.Depth = 0;
-            this.createFoldersBtn.Location = new System.Drawing.Point(287, 135);
+            this.createFoldersBtn.Location = new System.Drawing.Point(513, 182);
             this.createFoldersBtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.createFoldersBtn.Name = "createFoldersBtn";
             this.createFoldersBtn.Primary = true;
@@ -504,17 +517,18 @@
             this.createFoldersBtn.UseVisualStyleBackColor = true;
             this.createFoldersBtn.Click += new System.EventHandler(this.createFoldersBtn_Click);
             // 
-            // mainForm
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(752, 516);
             this.Controls.Add(this.materialTabSelector1);
             this.Controls.Add(this.materialTabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "mainForm";
+            this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "P4R4-PogoBotsManager";
+            this.Text = "P4R4-PokeMob-Creator";
             this.materialTabControl1.ResumeLayout(false);
             this.foldersPage.ResumeLayout(false);
             this.foldersPage.PerformLayout();
@@ -562,8 +576,9 @@
         private System.Windows.Forms.Label proxiesNeededLab;
         public System.Windows.Forms.RichTextBox proxiesRichTxtBox;
         private System.Windows.Forms.TabPage creationTabPage;
-        private System.Windows.Forms.Label tempLab;
         private System.Windows.Forms.Label creationPageTitle;
+        private System.Windows.Forms.Label formatProxyLab;
+        public System.Windows.Forms.RichTextBox creationLogsRichTxtBox;
     }
 }
 

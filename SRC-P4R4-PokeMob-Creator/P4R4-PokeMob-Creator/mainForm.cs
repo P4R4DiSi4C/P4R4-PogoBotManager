@@ -1,27 +1,28 @@
-﻿using System;
+﻿//*******ROBOT ICON MADE BY: iconsmind.com from the Noun Project*********************//
+using System;
 using System.IO;
 using System.Windows.Forms;
 
 
-namespace P4R4_PogoBotsManager
+namespace P4R4_PokeMob_Creator
 {
-    public partial class mainForm : MaterialSkin.Controls.MaterialForm
+    public partial class MainForm : MaterialSkin.Controls.MaterialForm
     {
         //Consts
         private const int DIR_TO_PLACE_FOLDERS = 1;
         private const int BOT_FOLDER_PATH = 0;
 
         /// <summary>
-        /// Property to get the mainClass
+        /// Property to get the MainClass
         /// </summary>
-        public mainClass MainClass { get; set; }
+        public MainClass MainClass { get; set; }
 
         /// <summary>
         /// Initialize main form and link the mainclass
         /// </summary>
         /// <param name="mainClass">Get the class</param>
-        public mainForm()
-        {        
+        public MainForm()
+        {
             InitializeComponent();
         }
 
@@ -49,7 +50,7 @@ namespace P4R4_PogoBotsManager
             if (fbd.ShowDialog() == DialogResult.OK)
             {
                 //Check if Bot.exe isn't present -> Invalid bot folder
-                if (!File.Exists(fbd.SelectedPath + "\\" + mainClass.BOT_EXE_NAME))
+                if (!File.Exists(fbd.SelectedPath + "\\" + MainClass.BOT_EXE_NAME))
                 {
                     //Error invalid bot folder
                     MessageBox.Show("Not a valid PokeMobBot folder !");
@@ -77,7 +78,7 @@ namespace P4R4_PogoBotsManager
                     else
                     {
                         //Check if the bot already has config and auth file
-                        if (File.Exists(fbd.SelectedPath + mainClass.CONFIG_FOLDER_NAME) || File.Exists(fbd.SelectedPath + mainClass.AUTH_FOLDER_NAME))
+                        if (File.Exists(fbd.SelectedPath + MainClass.CONFIG_FOLDER_NAME) || File.Exists(fbd.SelectedPath + MainClass.AUTH_FOLDER_NAME))
                         {
                             //Error if auth.json and config.json are already present
                             MessageBox.Show("Not a valid PokeMobBot folder. Remove: auth.json OR/AND config.json");
@@ -303,6 +304,17 @@ namespace P4R4_PogoBotsManager
                 //Set customconfig to false
                 MainClass.CustomConfig = false;
             }
+        }
+
+        /// <summary>
+        /// Method trigered when a new log is entered
+        /// </summary>
+        private void creationLogsRichTxtBox_TextChanged(object sender, EventArgs e)
+        {
+            // set the current caret position to the end
+            creationLogsRichTxtBox.SelectionStart = creationLogsRichTxtBox.Text.Length;
+            // scroll it automatically
+            creationLogsRichTxtBox.ScrollToCaret();
         }
     }
 }

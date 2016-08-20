@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace P4R4_PogoBotsManager
+namespace P4R4_PokeMob_Creator
 {
 
     /// <summary>

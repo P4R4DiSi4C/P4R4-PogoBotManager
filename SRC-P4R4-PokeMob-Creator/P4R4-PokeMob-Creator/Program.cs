@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace P4R4_PogoBotsManager
+namespace P4R4_PokeMob_Creator
 {
     static class Program
     {
@@ -15,10 +15,12 @@ namespace P4R4_PogoBotsManager
             Application.SetCompatibleTextRenderingDefault(false);
 
             //Initialize the form
-            mainForm mainForm = new mainForm();
+            MainForm mainForm = new MainForm();
+
+            //Initialize the CreationLogs
 
             //Initialize the class with the form as parameter
-            mainClass mainClass = new mainClass(mainForm);
+            MainClass mainClass = new MainClass(mainForm);
             
             //Start the app
             Application.Run(mainForm);
