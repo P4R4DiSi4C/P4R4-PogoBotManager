@@ -12,7 +12,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [P4R4DiSi4C](https://github.com/P4R4DiSi4C)
+* **David Carvalho** - *Initial work* - [P4R4DiSi4C](https://github.com/P4R4DiSi4C)
 
 
 ## License
