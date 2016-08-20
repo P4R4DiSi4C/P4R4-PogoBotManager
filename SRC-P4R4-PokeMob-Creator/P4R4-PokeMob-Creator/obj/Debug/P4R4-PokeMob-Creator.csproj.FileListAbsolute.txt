@@ -1,0 +1,23 @@
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMobBotLast\P4R4-PogoBotsManager\bin\Debug\P4R4-PokeMob-Creator.exe.config
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMobBotLast\P4R4-PogoBotsManager\obj\Debug\P4R4-PokeMob-Creator.exe
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMobBotLast\P4R4-PogoBotsManager\obj\Debug\P4R4-PokeMob-Creator.pdb
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMobBotLast\P4R4-PogoBotsManager\bin\Debug\P4R4-PokeMob-Creator.exe
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMobBotLast\P4R4-PogoBotsManager\bin\Debug\P4R4-PokeMob-Creator.pdb
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMobBotLast\P4R4-PogoBotsManager\bin\Debug\MaterialSkin.dll
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMobBotLast\P4R4-PogoBotsManager\bin\Debug\Newtonsoft.Json.dll
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMobBotLast\P4R4-PogoBotsManager\bin\Debug\Newtonsoft.Json.xml
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMobBotLast\P4R4-PogoBotsManager\obj\Debug\P4R4_PokeMob_Creator.MainForm.resources
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMobBotLast\P4R4-PogoBotsManager\obj\Debug\P4R4_PokeMob_Creator.Properties.Resources.resources
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMobBotLast\P4R4-PogoBotsManager\obj\Debug\P4R4-PokeMob-Creator.csproj.GenerateResource.Cache
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMob-Creator - Copie\P4R4-PokeMob-Creator\bin\Debug\P4R4-PokeMob-Creator.exe.config
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMob-Creator - Copie\P4R4-PokeMob-Creator\obj\Debug\P4R4-PokeMob-Creator.exe
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMob-Creator - Copie\P4R4-PokeMob-Creator\obj\Debug\P4R4-PokeMob-Creator.pdb
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMob-Creator - Copie\P4R4-PokeMob-Creator\bin\Debug\P4R4-PokeMob-Creator.exe
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMob-Creator - Copie\P4R4-PokeMob-Creator\bin\Debug\P4R4-PokeMob-Creator.pdb
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMob-Creator - Copie\P4R4-PokeMob-Creator\bin\Debug\MaterialSkin.dll
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMob-Creator - Copie\P4R4-PokeMob-Creator\bin\Debug\Newtonsoft.Json.dll
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMob-Creator - Copie\P4R4-PokeMob-Creator\bin\Debug\Newtonsoft.Json.xml
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMob-Creator - Copie\P4R4-PokeMob-Creator\obj\Debug\P4R4-PokeMob-Creator.csprojResolveAssemblyReference.cache
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMob-Creator - Copie\P4R4-PokeMob-Creator\obj\Debug\P4R4_PokeMob_Creator.MainForm.resources
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMob-Creator - Copie\P4R4-PokeMob-Creator\obj\Debug\P4R4_PokeMob_Creator.Properties.Resources.resources
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMob-Creator - Copie\P4R4-PokeMob-Creator\obj\Debug\P4R4-PokeMob-Creator.csproj.GenerateResource.Cache
