@@ -20,5 +20,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 Thanks to "Ninja" from HF for his help and precious suggestions.  
 Thanks to people in Stackoverflow  
 Thanks to the PokeMobBot Team  
-MaterialSkin Team : https://github.com/IgnaceMaes/MaterialSkin
+MaterialSkin Team : https://github.com/IgnaceMaes/MaterialSkin  
 NewtonSoft.Json : http://www.newtonsoft.com/json
