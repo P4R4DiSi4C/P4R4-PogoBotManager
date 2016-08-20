@@ -1,6 +1,7 @@
 # P4R4-PokeMob-Creator
 
 Create multiple folders of PokeMobBot with different accounts and proxies to run multiple instances in your computer.
+Generate a random device fingerprint for each config.json files created.
 
 ### Installing
 
