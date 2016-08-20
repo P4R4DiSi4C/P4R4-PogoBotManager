@@ -76,4 +76,3 @@ F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMobBotLast\P4R4-PogoB
 F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMobBotLast\P4R4-PogoBotsManager\obj\Debug\P4R4_PogoBotsManager.mainForm.resources
 F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMobBotLast\P4R4-PogoBotsManager\obj\Debug\P4R4_PogoBotsManager.Properties.Resources.resources
 F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMobBotLast\P4R4-PogoBotsManager\obj\Debug\P4R4-PogoBotsManager.csproj.GenerateResource.Cache
-F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMobBotLast\P4R4-PogoBotsManager\obj\Debug\P4R4-PogoBotsManager.csprojResolveAssemblyReference.cache
