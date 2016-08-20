@@ -42,12 +42,12 @@ namespace P4R4_PokeMob_Creator
             FirmwareTags = "test-keys"; //"build.tags";
             FirmwareType = "eng"; //"build.type"; //iOS is "iOS version"
             FirmwareFingerprint =
-            phone_item["mft"] + "/" +
-            phone_item["mft"] + "_" + phone_item["board"] + "/" +
-            RandomString(random.Next(4, 10), "0123456789abcdef") + "/" +
-            ":user/" +
-            RandomString(random.Next(4, 10), "0123456789abcdef");
-        }
+               phone_item["mft"] + "/" +
+                phone_item["mft"] + "_" + phone_item["board"] + ":" +
+                                                        RandomAndroidVersion() + "/" +
+                                                        RandomString(random.Next(4, 10), "0123456789abcdef") +
+                                                        ":user/release-keys";
+    }
 
 
         private static Random random = new Random();
@@ -55,6 +55,16 @@ namespace P4R4_PokeMob_Creator
         {
             return new string(Enumerable.Repeat(chars, length)
               .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
+
+        private static string RandomAndroidVersion()
+        {
+            //possible android versions based on PokemonGo requirements
+            List<string> possibleAndroidVersions = new List<string>() { "4.4", "4.4.1", "4.4.2", "4.4.3", "4.4.4", "5.0", "5.0.1", "5.0.2", "5.1", "5.1.1", "6.0", "6.0.1" };
+            //generate a random index to choose version
+            int index = random.Next(0, possibleAndroidVersions.Count);
+            //return random vserion
+            return possibleAndroidVersions[index];
         }
 
         public static IDictionary<string, string> RandomPhone()
