@@ -1,4 +1,4 @@
-﻿//*******ROBOT ICON MADE BY: iconsmind.com from the Noun Project*********************//
+﻿//*********************ROBOT ICON MADE BY: iconsmind.com from the Noun Project*********************//
 using System;
 using System.IO;
 using System.Windows.Forms;
