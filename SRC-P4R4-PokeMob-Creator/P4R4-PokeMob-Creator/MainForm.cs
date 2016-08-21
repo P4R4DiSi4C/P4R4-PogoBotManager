@@ -1,4 +1,5 @@
 ﻿//*******ROBOT ICON MADE BY: iconsmind.com from the Noun Project*********************//
+using P4R4_PokeMob_Creator.Classes;
 using System;
 using System.IO;
 using System.Windows.Forms;
@@ -8,24 +9,27 @@ namespace P4R4_PokeMob_Creator
 {
     public partial class MainForm : MaterialSkin.Controls.MaterialForm
     {
-        //Consts
-        private const int DIR_TO_PLACE_FOLDERS = 1;
-        private const int BOT_FOLDER_PATH = 0;
-
         /// <summary>
         /// Store the mainClass here
         /// </summary>
         private PokeMobUtils _mainClass;
 
         /// <summary>
+        /// Store the Folders class
+        /// </summary>
+        private Folders _folders;
+
+        /// <summary>
         /// Initialize main form and link the mainclass
         /// </summary>
         /// <param name="mainClass">Get the class</param>
-        public MainForm(PokeMobUtils mainClass)
+        public MainForm(PokeMobUtils mainClass,Folders folders)
         {
             InitializeComponent();
             _mainClass = mainClass;
             _mainClass.MainForm = this;
+            _folders = folders;
+            _folders.MainForm = this;
         }
 
         /// <summary>
@@ -51,60 +55,7 @@ namespace P4R4_PokeMob_Creator
             //Check if the user pressed ok
             if (fbd.ShowDialog() == DialogResult.OK)
             {
-                //Check if Bot.exe isn't present -> Invalid bot folder
-                if (!File.Exists(fbd.SelectedPath + "\\" + PokeMobUtils.BOT_EXE_NAME))
-                {
-                    //Error invalid bot folder
-                    MessageBox.Show("Not a valid PokeMobBot folder !");
-
-                    //Set the botFolder var to empty string
-                    _mainClass.BotFolder = string.Empty;
-
-                    //Set the textbox text to empty
-                    botFolderTxt.Text = "";
-                }
-                else
-                {
-                    //Check if folder Config is present
-                    if (!Directory.Exists(fbd.SelectedPath + "\\config"))
-                    {
-                        //Error for invalid bot folder
-                        MessageBox.Show("Not a valid PokeMobBot folder. Missing: Config folder");
-
-                        //Set the botFolder var to empty string
-                        _mainClass.BotFolder = string.Empty;
-
-                        //Set the textbox text to empty
-                        botFolderTxt.Text = "";
-                    }
-                    else
-                    {
-                        //Check if the bot already has config and auth file
-                        if (File.Exists(fbd.SelectedPath + PokeMobUtils.CONFIG_FOLDER_NAME) || File.Exists(fbd.SelectedPath + PokeMobUtils.AUTH_FOLDER_NAME))
-                        {
-                            //Error if auth.json and config.json are already present
-                            MessageBox.Show("Not a valid PokeMobBot folder. Remove: auth.json OR/AND config.json");
-
-                            //Set the botFolder var to empty string
-                            _mainClass.BotFolder = string.Empty;
-
-                            //Set the textbox text to empty
-                            botFolderTxt.Text = "";
-                        }
-                        else
-                        {
-                            //Get the selectedpath and set it to the variable and the textbox
-                            _mainClass.BotFolder = fbd.SelectedPath;
-                            botFolderTxt.Text = fbd.SelectedPath;
-
-                            //Switch the boolean to true
-                            _mainClass.PathBooleans[BOT_FOLDER_PATH] = true;
-
-                            //Verify if all paths are set
-                            _mainClass.verifyPaths();
-                        }
-                    }
-                }
+                _folders.CheckBotFolder(fbd.SelectedPath);
             }
         }
 

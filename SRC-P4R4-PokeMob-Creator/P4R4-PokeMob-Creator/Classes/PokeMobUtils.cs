@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using P4R4_PokeMob_Creator.Classes;
 
 namespace P4R4_PokeMob_Creator
 {
@@ -17,6 +18,11 @@ namespace P4R4_PokeMob_Creator
         /// Property to store the MainForm here
         /// </summary>
         public MainForm MainForm { get; set; }
+
+        /// <summary>
+        /// Store the Folders class
+        /// </summary>
+        private Folders _folders;
 
         //CONSTS
         private const string BOT_FOLDER_NAME = "\\PokeMobBot";
@@ -31,17 +37,8 @@ namespace P4R4_PokeMob_Creator
         private Regex _proxyReg;
         private Regex _proxyUserPwReg;
 
-        //Folder where bot is
-        public string BotFolder { private get; set; }
-
         //Int to save the accs needed with a default value of -> 1
         public int NeededAccounts { private get; set; } = 1;
-
-        //Folder to place each bot folder
-        public string DirToPlaceFolders { private get; set; }
-
-        //Filepath to the config.json
-        public string configFilePath { private get; set; } = "";
 
         //Initialize a new list to save each account
         private List<string> _verifiedAccounts;
@@ -49,18 +46,11 @@ namespace P4R4_PokeMob_Creator
         //Initialize a new list to save each proxy
         private List<string> _verifiedProxies;
 
-        //Initialize a new list to save each account
-        private List<string> _nameFolders;
-
-        //Create a boolean to check if it's a custom config
-        public bool CustomConfig {get; set;} = false;
-        //Create Array of booleans for further verifications
-        public bool[] PathBooleans { get; set; } = new bool[2];
 
         /// <summary>
         /// Default constructor of the class
         /// </summary>
-        public PokeMobUtils()
+        public PokeMobUtils(Folders folders)
         {
             //Set the regexes
             _ptcAccReg = new Regex(@"^[a-zA-Z0-9_çéàüèöä+]{6,16}:+(.*){6,15}$");
@@ -71,7 +61,9 @@ namespace P4R4_PokeMob_Creator
             //Set the new list for each lists
             _verifiedAccounts = new List<string>();
             _verifiedProxies = new List<string>();
-            _nameFolders = new List<string>();
+
+            //Store the folders class
+            _folders = folders;
         }
 
         /// <summary>
@@ -89,7 +81,7 @@ namespace P4R4_PokeMob_Creator
             logger.AppendLog("Verifying paths...");
 
             //Call the method to check if all the path are filled
-            if (!verifyPaths())
+            if (!_folders.verifyPaths())
             {
                 //Error for path/s missing
                 MessageBox.Show("Path/s missing !");
@@ -238,33 +230,6 @@ namespace P4R4_PokeMob_Creator
                     File.WriteAllBytes(DirToPlaceFolders + BOT_FOLDER_NAME + folderNb + CONFIG_FOLDER_NAME, Properties.Resources.config);
                 }
             }
-        }
-
-        /// <summary>
-        /// Method used to make the verifications we need before creating folders and files
-        /// </summary>
-        /// <returns>Return a boolean if all paths are set or not</returns>
-        public bool verifyPaths()
-        {
-            //Loop through each boolean in the array of the path to check if we got all the needed paths
-            foreach (bool path in PathBooleans)
-            {
-                //If one path is missing we display a messagebox and return false
-                if (path == false || (MainForm.customConfigChkBox.Checked && configFilePath == string.Empty))
-                {
-                    //Return false
-                    return false;
-                }
-            }
-
-            //Check if it's a customconfig and if the filepath is blank
-            if (CustomConfig && configFilePath == "")
-            {
-                return false;
-            }
-
-            //Return true
-            return true;
         }
 
         /// <summary>

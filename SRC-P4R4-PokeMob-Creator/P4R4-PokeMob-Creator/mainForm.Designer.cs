@@ -552,7 +552,7 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField cfgFilePathTxt;
         private MaterialSkin.Controls.MaterialSingleLineTextField folderToPlace;
         public System.Windows.Forms.NumericUpDown nbFoldersNum;
-        private MaterialSkin.Controls.MaterialSingleLineTextField botFolderTxt;
+        public MaterialSkin.Controls.MaterialSingleLineTextField botFolderTxt;
         private MaterialSkin.Controls.MaterialLabel dirForFoldersLab;
         private MaterialSkin.Controls.MaterialLabel necroFolderLab;
         private MaterialSkin.Controls.MaterialLabel nbFoldersLab;
