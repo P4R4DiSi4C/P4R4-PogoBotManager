@@ -308,14 +308,7 @@ namespace P4R4_PokeMob_Creator
                 listToUse = _verifiedAccounts;
 
                 //Check if the accounts are loaded or manually added to assign the corresponding message
-                if (autoLoaded)
-                {
-                    loadedAccProx = "New loaded accounts: ";
-                }
-                else
-                {
-                    loadedAccProx = "New manually added accounts: ";
-                }
+                loadedAccProx = "New"+ (autoLoaded?"loaded" : "manually added") + "accounts: ";
             }
             else
             {
@@ -329,14 +322,7 @@ namespace P4R4_PokeMob_Creator
                 listToUse = _verifiedProxies;
 
                 //Check if the proxies are loaded or manually added to assign the corresponding message
-                if (autoLoaded)
-                {
-                    loadedAccProx = "New loaded proxies: ";
-                }
-                else
-                {
-                    loadedAccProx = "New manually added proxies: ";
-                }
+                loadedAccProx = "New" + (autoLoaded ? "loaded" : "manually added") + "proxies: ";
             }
 
 
