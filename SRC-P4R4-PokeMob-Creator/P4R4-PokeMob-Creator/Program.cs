@@ -15,7 +15,7 @@ namespace P4R4_PokeMob_Creator
             Application.SetCompatibleTextRenderingDefault(false);
 
             //Initialize the class with the form as parameter
-            MainClass mainClass = new MainClass();
+            PokeMobUtils mainClass = new PokeMobUtils();
 
             //Initialize the form
             MainForm mainForm = new MainForm(mainClass);

@@ -11,7 +11,7 @@ namespace P4R4_PokeMob_Creator
     /// <summary>
     /// Main class of this project
     /// </summary>
-    public class MainClass
+    public class PokeMobUtils
     {
         /// <summary>
         /// Property to store the MainForm here
@@ -60,7 +60,7 @@ namespace P4R4_PokeMob_Creator
         /// <summary>
         /// Default constructor of the class
         /// </summary>
-        public MainClass()
+        public PokeMobUtils()
         {
             //Set the regexes
             _ptcAccReg = new Regex(@"^[a-zA-Z0-9_çéàüèöä+]{6,16}:+(.*){6,15}$");
@@ -80,13 +80,13 @@ namespace P4R4_PokeMob_Creator
         public void startCreation()
         {
             //Instanciate the logs class to append logs to the richTxtBox
-            CreationLogs logClass = new CreationLogs(MainForm);
+            Logger logger = new Logger(MainForm);
 
             //Clear the logs
-            logClass.ClearLogs();
+            logger.ClearLogs();
 
             //Add verifying paths to log
-            logClass.AppendLog("Verifying paths...");
+            logger.AppendLog("Verifying paths...");
 
             //Call the method to check if all the path are filled
             if (!verifyPaths())
@@ -95,14 +95,14 @@ namespace P4R4_PokeMob_Creator
                 MessageBox.Show("Path/s missing !");
 
                 //Clear the logs
-                logClass.ClearLogs();
+                logger.ClearLogs();
 
                 //Exits the function
                 return;
             }
 
             //Add verifications to richtextboxes to log
-            logClass.AppendLog("Verifying empties accounts/proxies lists...");
+            logger.AppendLog("Verifying empties accounts/proxies lists...");
 
             //Check if the richtextboxes aren't empty
             if (MainForm.accsRichTxtBox.Text == "" || MainForm.proxiesRichTxtBox.Text == "")
@@ -111,21 +111,21 @@ namespace P4R4_PokeMob_Creator
                 MessageBox.Show("Empty accounts/proxies list !");
 
                 //Clear the logs
-                logClass.ClearLogs();
+                logger.ClearLogs();
 
                 //Exits the function
                 return;
             }
 
             //Add verifications to manually deleted accs/proxies to log
-            logClass.AppendLog("Checking for new manually added/deleted accounts/proxies...");
+            logger.AppendLog("Checking for new manually added/deleted accounts/proxies...");
 
             //Check if the user deleted or added MANUALLY new accounts or proxies
             verifyNewLoadedProxAcc(MainForm.accsRichTxtBox.Lines, false, true);
             verifyNewLoadedProxAcc(MainForm.proxiesRichTxtBox.Lines, false, false);
 
             //Add check for sufficient accs and proxies to logs
-            logClass.AppendLog("Checking for sufficient accounts and proxies...");
+            logger.AppendLog("Checking for sufficient accounts and proxies...");
 
             //Check if the verified accounts are sufficient to match the number of folders we need to create
             //Same thing for the proxies
@@ -135,32 +135,32 @@ namespace P4R4_PokeMob_Creator
                 MessageBox.Show("Please, ensure you loaded/added sufficient accounts/proxies.");
 
                 //Clear the logs
-                logClass.ClearLogs();
+                logger.ClearLogs();
 
                 //Exits the function
                 return;
             }
 
             //Add creation of folders to logs
-            logClass.AppendLog("Creating folders...");
+            logger.AppendLog("Creating folders...");
 
             //Call the method to create the number of needed folders
-            createFolders(Convert.ToInt32(MainForm.nbFoldersNum.Value), logClass);
+            createFolders(Convert.ToInt32(MainForm.nbFoldersNum.Value), logger);
 
             //Add parsing combolists to logs
-            logClass.AppendLog("Parsing account:password list...");
+            logger.AppendLog("Parsing account:password list...");
 
             //Parse the combolist(the list of verified accs:pw)
             string[,] accsPw = parseCombolist();
 
             //Add filtering and clearing to the logs
-            logClass.AppendLog("Clearing and filtering proxies list...");
+            logger.AppendLog("Clearing and filtering proxies list...");
 
             //Filter and clear the proxieslist
             string[,] proxiesList = clearAndFilterProxiesList();
 
             //Add creation of auth and config files to the logs
-            logClass.AppendLog("Creating auth.json and config.json files for each folder...");
+            logger.AppendLog("Creating auth.json and config.json files for each folder...");
 
             //Call the method to do the auth.json file for each bot folder with each of the accounts
             makeAuthAndRndCfg(accsPw, proxiesList);
@@ -169,7 +169,7 @@ namespace P4R4_PokeMob_Creator
             _nameFolders.Clear();
 
             //Add creation done to logs
-            logClass.AppendLog("Done !");
+            logger.AppendLog("Done !");
 
             //Messagebox to alert the user of successfully creation
             MessageBox.Show("Successfully created: " + NeededAccounts + " folders !");
@@ -179,7 +179,7 @@ namespace P4R4_PokeMob_Creator
         /// Method to create the folders for the bots
         /// </summary>
         /// <param name="numberOfFolders">Get the number of folders to create</param>
-        public void createFolders(int numberOfFolders, CreationLogs logClass)
+        public void createFolders(int numberOfFolders, Logger logClass)
         {
             //Loop to create the folders required
             for (int i = 1; i <= numberOfFolders; i++)
@@ -345,7 +345,7 @@ namespace P4R4_PokeMob_Creator
                     }
 
                     //Check if  it is a duplicate
-                    if (!checkIfAlreadyVerified(newProxAcc[i], isAccs))
+                    if (!checkIfAlreadyVerified(newProxAcc[i], listToUse))
                     {
                         //Add it to the list
                         listToUse.Add(newProxAcc[i]);
@@ -378,23 +378,8 @@ namespace P4R4_PokeMob_Creator
         /// <param name="str">Get the string</param>
         /// /// <param name="isAccs">If true we check the accs list,else we check the proxies list</param>
         /// <returns>Return a boolean if the acc or proxy is a duplicate or not</returns>
-        public bool checkIfAlreadyVerified(string str,bool isAccs)
+        public bool checkIfAlreadyVerified(string str, List<string> listToCheck)
         {
-            //Create a list to store the correct one later
-            List<string> listToCheck;
-
-            //Check if we're checking acc
-            if(isAccs)
-            {
-                //Assign the corresponding list
-                listToCheck = _verifiedAccounts;
-            }
-            else
-            {
-                //Assign the corresponding list
-                listToCheck = _verifiedProxies;
-            }
-
             //Loop through the already verified accs
             for (int i = 0; i < listToCheck.Count(); i++)
             {
