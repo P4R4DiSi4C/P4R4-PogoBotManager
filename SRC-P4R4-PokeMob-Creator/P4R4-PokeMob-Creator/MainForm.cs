@@ -15,13 +15,13 @@ namespace P4R4_PokeMob_Creator
         /// <summary>
         /// Store the mainClass here
         /// </summary>
-        private MainClass _mainClass;
+        private PokeMobUtils _mainClass;
 
         /// <summary>
         /// Initialize main form and link the mainclass
         /// </summary>
         /// <param name="mainClass">Get the class</param>
-        public MainForm(MainClass mainClass)
+        public MainForm(PokeMobUtils mainClass)
         {
             InitializeComponent();
             _mainClass = mainClass;
@@ -52,7 +52,7 @@ namespace P4R4_PokeMob_Creator
             if (fbd.ShowDialog() == DialogResult.OK)
             {
                 //Check if Bot.exe isn't present -> Invalid bot folder
-                if (!File.Exists(fbd.SelectedPath + "\\" + MainClass.BOT_EXE_NAME))
+                if (!File.Exists(fbd.SelectedPath + "\\" + PokeMobUtils.BOT_EXE_NAME))
                 {
                     //Error invalid bot folder
                     MessageBox.Show("Not a valid PokeMobBot folder !");
@@ -80,7 +80,7 @@ namespace P4R4_PokeMob_Creator
                     else
                     {
                         //Check if the bot already has config and auth file
-                        if (File.Exists(fbd.SelectedPath + MainClass.CONFIG_FOLDER_NAME) || File.Exists(fbd.SelectedPath + MainClass.AUTH_FOLDER_NAME))
+                        if (File.Exists(fbd.SelectedPath + PokeMobUtils.CONFIG_FOLDER_NAME) || File.Exists(fbd.SelectedPath + PokeMobUtils.AUTH_FOLDER_NAME))
                         {
                             //Error if auth.json and config.json are already present
                             MessageBox.Show("Not a valid PokeMobBot folder. Remove: auth.json OR/AND config.json");
