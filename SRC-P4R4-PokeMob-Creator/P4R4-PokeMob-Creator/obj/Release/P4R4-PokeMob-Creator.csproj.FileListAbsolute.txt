@@ -20,3 +20,25 @@ F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMob-Creator - Copie\P
 F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMob-Creator - Copie\P4R4-PokeMob-Creator\obj\Release\P4R4_PokeMob_Creator.MainForm.resources
 F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMob-Creator - Copie\P4R4-PokeMob-Creator\obj\Release\P4R4_PokeMob_Creator.Properties.Resources.resources
 F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMob-Creator - Copie\P4R4-PokeMob-Creator\obj\Release\P4R4-PokeMob-Creator.csproj.GenerateResource.Cache
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\bin\Release\P4R4-PokeMob-Creator.exe.config
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\obj\Release\P4R4-PokeMob-Creator.exe
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\obj\Release\P4R4-PokeMob-Creator.pdb
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\bin\Release\P4R4-PokeMob-Creator.exe
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\bin\Release\P4R4-PokeMob-Creator.pdb
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\bin\Release\MaterialSkin.dll
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\bin\Release\Newtonsoft.Json.dll
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\bin\Release\Newtonsoft.Json.xml
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\obj\Release\P4R4_PokeMob_Creator.MainForm.resources
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\obj\Release\P4R4_PokeMob_Creator.Properties.Resources.resources
+F:\Données\Documents\Visual Studio 2015\Projects\P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\obj\Release\P4R4-PokeMob-Creator.csproj.GenerateResource.Cache
+F:\Données\Documents\GitHub\P4R4-PokeMob-Creator\SRC-P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\bin\Release\P4R4-PokeMob-Creator.exe.config
+F:\Données\Documents\GitHub\P4R4-PokeMob-Creator\SRC-P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\obj\Release\P4R4-PokeMob-Creator.exe
+F:\Données\Documents\GitHub\P4R4-PokeMob-Creator\SRC-P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\obj\Release\P4R4-PokeMob-Creator.pdb
+F:\Données\Documents\GitHub\P4R4-PokeMob-Creator\SRC-P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\bin\Release\P4R4-PokeMob-Creator.exe
+F:\Données\Documents\GitHub\P4R4-PokeMob-Creator\SRC-P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\bin\Release\P4R4-PokeMob-Creator.pdb
+F:\Données\Documents\GitHub\P4R4-PokeMob-Creator\SRC-P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\bin\Release\MaterialSkin.dll
+F:\Données\Documents\GitHub\P4R4-PokeMob-Creator\SRC-P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\bin\Release\Newtonsoft.Json.dll
+F:\Données\Documents\GitHub\P4R4-PokeMob-Creator\SRC-P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\bin\Release\Newtonsoft.Json.xml
+F:\Données\Documents\GitHub\P4R4-PokeMob-Creator\SRC-P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\obj\Release\P4R4_PokeMob_Creator.MainForm.resources
+F:\Données\Documents\GitHub\P4R4-PokeMob-Creator\SRC-P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\obj\Release\P4R4_PokeMob_Creator.Properties.Resources.resources
+F:\Données\Documents\GitHub\P4R4-PokeMob-Creator\SRC-P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\obj\Release\P4R4-PokeMob-Creator.csproj.GenerateResource.Cache

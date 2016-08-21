@@ -57,9 +57,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreationLogs.cs" />
+    <Compile Include="Logger.cs" />
     <Compile Include="DeviceSettings.cs" />
-    <Compile Include="MainClass.cs" />
+    <Compile Include="PokeMobUtils.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

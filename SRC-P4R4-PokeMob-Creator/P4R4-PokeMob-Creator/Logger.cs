@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace P4R4_PokeMob_Creator
 {
-    public class CreationLogs
+    public class Logger
     {
         //Reference the mainForm
         private MainForm _mainForm;
@@ -11,7 +11,7 @@ namespace P4R4_PokeMob_Creator
         /// <summary>
         /// Default constructore of this class
         /// </summary>
-        public CreationLogs(MainForm mainForm)
+        public Logger(MainForm mainForm)
         {
             //Link the form to the class
             _mainForm = mainForm;
