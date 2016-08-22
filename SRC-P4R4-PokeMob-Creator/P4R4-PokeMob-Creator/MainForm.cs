@@ -73,27 +73,7 @@ namespace P4R4_PokeMob_Creator
             //Check if the user pressed ok
             if (fbd.ShowDialog() == DialogResult.OK)
             {
-                //*************NOT NEEDED SINCE THE USER HAS TO CHOOSE AN EXISTANT FOLDER OR CREATE IT FROM THE FolderBrowserDialog***************//
-                //*************KEEP THIS CODE IF NEEDED LATER***********//
-
-                ////Check if the directory exists, if not we create it
-                //if(!Directory.Exists(fbd.SelectedPath))
-                //{
-                //    //Create the directory
-                //    Directory.CreateDirectory(fbd.SelectedPath);
-                //}
-
-                //Get the selectedpath and set it to the variable and the textbox
-                _mainClass.DirToPlaceFolders = fbd.SelectedPath;
-
-                //Set the var with the path
-                folderToPlace.Text = fbd.SelectedPath;
-
-                //Switch the boolean to true
-                _mainClass.PathBooleans[DIR_TO_PLACE_FOLDERS] = true;
-
-                //Verify if all paths are set
-                _mainClass.verifyPaths();
+                _folders.CheckFolderToPlace(fbd.SelectedPath);
             }
         }
 
@@ -115,33 +95,7 @@ namespace P4R4_PokeMob_Creator
             //Check if the user confirmed
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                //*********CHECK IF GOOD CFG FILE//
-                //Open the json config file
-                string jsonCfg = File.ReadAllText(ofd.FileName);
-                dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(jsonCfg);
-
-                //Check if its contains the DeviceSettings property
-                if(jsonObj["DeviceSettings"] != null)
-                {
-                    //Set the path to the textbox
-                    cfgFilePathTxt.Text = ofd.FileName;
-
-                    //Set the var with the path
-                    _mainClass.configFilePath = ofd.FileName;
-
-                    //Verify if all paths are set
-                    _mainClass.verifyPaths();
-                }
-                else
-                {
-                    //Set the path to the textbox
-                    cfgFilePathTxt.Text = "";
-
-                    //Set the var with the path
-                    _mainClass.configFilePath = "";
-
-                    MessageBox.Show("Invalid PokeMobBot config file !");
-                }
+                _folders.CheckCfgFile(ofd.FileName);
             }
         }
 
@@ -227,7 +181,7 @@ namespace P4R4_PokeMob_Creator
                 cfgFileBrowse.Enabled = true;
 
                 //Set customconfig to true
-                _mainClass.CustomConfig = true;
+                _folders.CustomConfig = true;
 
                 //Simulate a browse btn click
                 cfgFileBrowse_Click(sender,e);
@@ -246,7 +200,7 @@ namespace P4R4_PokeMob_Creator
                 customConfigChkBox.Checked = false;
 
                 //Set the config file path to nothing
-                _mainClass.configFilePath = "";
+                _folders.ConfigFilePath = "";
 
                 //Set the txtbox with filepath to empty
                 cfgFilePathTxt.Text = "";
@@ -255,7 +209,7 @@ namespace P4R4_PokeMob_Creator
                 cfgFileBrowse.Enabled = false;
 
                 //Set customconfig to false
-                _mainClass.CustomConfig = false;
+                _folders.CustomConfig = false;
             }
         }
 
