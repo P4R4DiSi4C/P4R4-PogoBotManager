@@ -22,11 +22,11 @@ namespace P4R4_PokeMob_Creator
         /// <summary>
         /// Initialize main form and link the mainclass
         /// </summary>
-        /// <param name="mainClass">Get the class</param>
-        public MainForm(PokeMobUtils mainClass,Folders folders)
+        /// <param name="pokeMobUtils">Get the class</param>
+        public MainForm(PokeMobUtils pokeMobUtils,Folders folders)
         {
             InitializeComponent();
-            _pokeMobUtils = mainClass;
+            _pokeMobUtils = pokeMobUtils;
             _pokeMobUtils.MainForm = this;
             _folders = folders;
             _folders.MainForm = this;

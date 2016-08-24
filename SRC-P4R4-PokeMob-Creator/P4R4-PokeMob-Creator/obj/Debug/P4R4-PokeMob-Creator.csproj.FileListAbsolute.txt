@@ -46,3 +46,7 @@ F:\Données\Documents\GitHub\P4R4-PokeMob-Creator\SRC-P4R4-PokeMob-Creator\P4R4-
 F:\Données\Documents\GitHub\P4R4-PokeMob-Creator\SRC-P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\obj\Debug\P4R4-PokeMob-Creator.csproj.GenerateResource.Cache
 C:\Users\parad\Documents\GitHub\P4R4-PokeMob-Creator\SRC-P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\bin\Debug\P4R4-PokeMob-Creator.exe.config
 F:\Github\P4R4-PokeMob-Creator\SRC-P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\bin\Debug\P4R4-PokeMob-Creator.exe.config
+F:\Github\P4R4-PokeMob-Creator\SRC-P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\obj\Debug\P4R4-PokeMob-Creator.csprojResolveAssemblyReference.cache
+F:\Github\P4R4-PokeMob-Creator\SRC-P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\obj\Debug\P4R4_PokeMob_Creator.MainForm.resources
+F:\Github\P4R4-PokeMob-Creator\SRC-P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\obj\Debug\P4R4_PokeMob_Creator.Properties.Resources.resources
+F:\Github\P4R4-PokeMob-Creator\SRC-P4R4-PokeMob-Creator\P4R4-PokeMob-Creator\obj\Debug\P4R4-PokeMob-Creator.csproj.GenerateResource.Cache
