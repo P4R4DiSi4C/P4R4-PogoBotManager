@@ -12,7 +12,7 @@ namespace P4R4_PokeMob_Creator
         /// <summary>
         /// Store the mainClass here
         /// </summary>
-        private PokeMobUtils _mainClass;
+        private PokeMobUtils _pokeMobUtils;
 
         /// <summary>
         /// Store the Folders class
@@ -26,8 +26,8 @@ namespace P4R4_PokeMob_Creator
         public MainForm(PokeMobUtils mainClass,Folders folders)
         {
             InitializeComponent();
-            _mainClass = mainClass;
-            _mainClass.MainForm = this;
+            _pokeMobUtils = mainClass;
+            _pokeMobUtils.MainForm = this;
             _folders = folders;
             _folders.MainForm = this;
         }
@@ -38,7 +38,7 @@ namespace P4R4_PokeMob_Creator
         public void createFoldersBtn_Click(object sender, EventArgs e)
         {
             //Call the method to start the creation
-            _mainClass.startCreation();
+            _pokeMobUtils.startCreation();
         }
 
         /// <summary>
@@ -115,10 +115,10 @@ namespace P4R4_PokeMob_Creator
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 //Check if the user deleted some accounts before loading new ones
-                _mainClass.checkManuallyDeleted(accsRichTxtBox.Lines, true);
+                _pokeMobUtils.checkManuallyDeleted(accsRichTxtBox.Lines, true);
 
                 //Check the loaded accs from the file
-                _mainClass.verifyNewLoadedProxAcc(File.ReadAllLines(ofd.FileName), true,true);
+                _pokeMobUtils.verifyNewLoadedProxAcc(File.ReadAllLines(ofd.FileName), true,true);
             }
         }
 
@@ -138,10 +138,10 @@ namespace P4R4_PokeMob_Creator
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 //Check if the user deleted some proxies before loading new ones
-                _mainClass.checkManuallyDeleted(proxiesRichTxtBox.Lines, false);
+                _pokeMobUtils.checkManuallyDeleted(proxiesRichTxtBox.Lines, false);
 
                 //Check the loaded accs from the file
-                _mainClass.verifyNewLoadedProxAcc(File.ReadAllLines(ofd.FileName), true,false);
+                _pokeMobUtils.verifyNewLoadedProxAcc(File.ReadAllLines(ofd.FileName), true,false);
             }
         }
 
@@ -164,7 +164,7 @@ namespace P4R4_PokeMob_Creator
             proxiesNeededLab.Text = "Proxies needed: " + Convert.ToString(Convert.ToInt32(nbFoldersNum.Value));
 
             //Update the nb of accounts needed var
-            _mainClass.NeededAccounts = Convert.ToInt32(nbFoldersNum.Value);
+            _pokeMobUtils.NeededAccounts = Convert.ToInt32(nbFoldersNum.Value);
         }
 
         /// <summary>
