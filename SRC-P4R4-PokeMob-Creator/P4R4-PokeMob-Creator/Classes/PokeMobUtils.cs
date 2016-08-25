@@ -17,7 +17,7 @@ namespace P4R4_PokeMob_Creator
         /// <summary>
         /// Property to store the MainForm here
         /// </summary>
-        public MainForm MainForm { get; set; }
+        public MainForm MainForm { private get; set; }
 
         /// <summary>
         /// Store the Folders class
@@ -188,6 +188,8 @@ namespace P4R4_PokeMob_Creator
 
             //General counter for the loop
             int i = 0;
+
+            /////////*********FAIRE TABLEAU ****************//
 
             //Check if we're checking accs
             if(isAccs)
