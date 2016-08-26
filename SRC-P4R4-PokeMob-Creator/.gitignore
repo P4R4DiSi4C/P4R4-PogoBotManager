@@ -1,14 +1,6 @@
 
 # Created by https://www.gitignore.io/api/visualstudio,c,windows
 
-# Exclude Nuget Packages folder
-!packages/
-!/packages/
-!packages/*
-!*/packages/*
-!packages/
-!*/packages/*
-
 ### C ###
 # Prerequisites
 *.d
@@ -226,7 +218,7 @@ PublishScripts/
 # NuGet Packages
 *.nupkg
 # The packages folder can be ignored because of Package Restore
-**/packages/*
+#**/packages/*
 # except build/, which is used as an MSBuild target.
 !**/packages/build/
 # Uncomment if necessary however generally it will be regenerated when needed
