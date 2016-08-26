@@ -4,6 +4,10 @@
 # Exclude Nuget Packages folder
 !packages/
 !/packages/
+!packages/*
+!*/packages/*
+!packages/
+!*/packages/*
 
 ### C ###
 # Prerequisites
