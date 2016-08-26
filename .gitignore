@@ -216,7 +216,7 @@ publish/
 PublishScripts/
 
 # NuGet Packages
-*.nupkg
+#*.nupkg
 # The packages folder can be ignored because of Package Restore
 #**/packages/*
 # except build/, which is used as an MSBuild target.
@@ -226,6 +226,8 @@ PublishScripts/
 # NuGet v3's project.json files produces more ignoreable files
 *.nuget.props
 *.nuget.targets
+
+!**/packages/*/*.dll
 
 # Microsoft Azure Build Output
 csx/
