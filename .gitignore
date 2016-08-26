@@ -2,8 +2,8 @@
 # Created by https://www.gitignore.io/api/visualstudio,c,windows
 
 # Exclude Nuget Packages folder
-!SRC-P4R4-PokeMob-Creator/packages
-!SRC-P4R4-PokeMob-Creator/packages/*
+!*/packages
+!*/packages/*
 
 
 ### C ###
