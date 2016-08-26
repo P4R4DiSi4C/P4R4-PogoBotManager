@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using P4R4_PokeMob_Creator.Classes;
 
 namespace P4R4_PokeMob_Creator
 {
@@ -16,13 +17,12 @@ namespace P4R4_PokeMob_Creator
         /// <summary>
         /// Property to store the MainForm here
         /// </summary>
-        public MainForm MainForm { get; set; }
+        public MainForm MainForm { private get; set; }
 
-        //CONSTS
-        private const string BOT_FOLDER_NAME = "\\PokeMobBot";
-        public const string CONFIG_FOLDER_NAME = "\\config\\config.json";
-        public const string BOT_EXE_NAME = "PokeMobBot.exe";
-        public const string AUTH_FOLDER_NAME = "\\config\\auth.json";
+        /// <summary>
+        /// Store the Folders class
+        /// </summary>
+        private Folders _folders;
 
         //Regex to check if user entered right acc:pw
         private Regex _ptcAccReg;
@@ -31,17 +31,8 @@ namespace P4R4_PokeMob_Creator
         private Regex _proxyReg;
         private Regex _proxyUserPwReg;
 
-        //Folder where bot is
-        public string BotFolder { private get; set; }
-
         //Int to save the accs needed with a default value of -> 1
         public int NeededAccounts { private get; set; } = 1;
-
-        //Folder to place each bot folder
-        public string DirToPlaceFolders { private get; set; }
-
-        //Filepath to the config.json
-        public string configFilePath { private get; set; } = "";
 
         //Initialize a new list to save each account
         private List<string> _verifiedAccounts;
@@ -49,18 +40,11 @@ namespace P4R4_PokeMob_Creator
         //Initialize a new list to save each proxy
         private List<string> _verifiedProxies;
 
-        //Initialize a new list to save each account
-        private List<string> _nameFolders;
-
-        //Create a boolean to check if it's a custom config
-        public bool CustomConfig {get; set;} = false;
-        //Create Array of booleans for further verifications
-        public bool[] PathBooleans { get; set; } = new bool[2];
 
         /// <summary>
         /// Default constructor of the class
         /// </summary>
-        public PokeMobUtils()
+        public PokeMobUtils(Folders folders)
         {
             //Set the regexes
             _ptcAccReg = new Regex(@"^[a-zA-Z0-9_çéàüèöä+]{6,16}:+(.*){6,15}$");
@@ -71,7 +55,9 @@ namespace P4R4_PokeMob_Creator
             //Set the new list for each lists
             _verifiedAccounts = new List<string>();
             _verifiedProxies = new List<string>();
-            _nameFolders = new List<string>();
+
+            //Store the folders class
+            _folders = folders;
         }
 
         /// <summary>
@@ -89,7 +75,7 @@ namespace P4R4_PokeMob_Creator
             logger.AppendLog("Verifying paths...");
 
             //Call the method to check if all the path are filled
-            if (!verifyPaths())
+            if (!_folders.verifyPaths())
             {
                 //Error for path/s missing
                 MessageBox.Show("Path/s missing !");
@@ -145,7 +131,7 @@ namespace P4R4_PokeMob_Creator
             logger.AppendLog("Creating folders...");
 
             //Call the method to create the number of needed folders
-            createFolders(Convert.ToInt32(MainForm.nbFoldersNum.Value), logger);
+            _folders.CreateFolders(Convert.ToInt32(MainForm.nbFoldersNum.Value), logger);
 
             //Add parsing combolists to logs
             logger.AppendLog("Parsing account:password list...");
@@ -166,105 +152,13 @@ namespace P4R4_PokeMob_Creator
             makeAuthAndRndCfg(accsPw, proxiesList);
 
             //Clear the array with the names of the created folders for each bot
-            _nameFolders.Clear();
+            _folders.nameFolders.Clear();
 
             //Add creation done to logs
             logger.AppendLog("Done !");
 
             //Messagebox to alert the user of successfully creation
             MessageBox.Show("Successfully created: " + NeededAccounts + " folders !");
-        }
-
-        /// <summary>
-        /// Method to create the folders for the bots
-        /// </summary>
-        /// <param name="numberOfFolders">Get the number of folders to create</param>
-        public void createFolders(int numberOfFolders, Logger logClass)
-        {
-            //Loop to create the folders required
-            for (int i = 1; i <= numberOfFolders; i++)
-            {
-                //Nb that will be added to the folder name if the folder already exists without broking the counter(i)
-                //So if bot1 already exists we will increment this nb until we find a name of folder that is free to use.
-                int folderNb = i;
-
-                //Check if folder exists
-                while (Directory.Exists(DirToPlaceFolders + BOT_FOLDER_NAME + folderNb))
-                {
-                    //Increment the counter
-                    folderNb++;
-                }
-                //Create the folder
-                Directory.CreateDirectory(DirToPlaceFolders + BOT_FOLDER_NAME + folderNb);
-
-                //Add an entry in the log for the created folder
-                logClass.AppendLog("Created: " + DirToPlaceFolders + BOT_FOLDER_NAME + folderNb);
-
-                //Add the name of the folder to the list
-                _nameFolders.Add(BOT_FOLDER_NAME + folderNb);
-
-                //Copy folder structure from bot folder
-                foreach (string sourceSubFolder in Directory.GetDirectories(BotFolder, "*", SearchOption.AllDirectories))
-                {
-                    //Create the BotX directory
-                    Directory.CreateDirectory(sourceSubFolder.Replace(BotFolder, DirToPlaceFolders + BOT_FOLDER_NAME + folderNb));
-                }
-
-                //Copy bot subfolder and files
-                foreach (string sourceFile in Directory.GetFiles(BotFolder, "*", SearchOption.AllDirectories))
-                {
-                    string destinationFile = sourceFile.Replace(BotFolder, DirToPlaceFolders + BOT_FOLDER_NAME + folderNb);
-                    File.Copy(sourceFile, destinationFile, true);
-                }
-
-                //Rename each exe by adding the counter number to the name
-                DirectoryInfo d = new DirectoryInfo(DirToPlaceFolders + BOT_FOLDER_NAME + folderNb);
-                FileInfo[] infos = d.GetFiles(BOT_EXE_NAME);
-                foreach (FileInfo f in infos)
-                {
-                    // Do the renaming here
-                    File.Move(f.FullName, f.Directory.FullName + BOT_FOLDER_NAME + folderNb + f.Extension);
-                }
-
-                //Check if the user has chosen a custom config
-                if (CustomConfig)
-                {
-                    //Copy the config file to each folder
-                    File.Copy(configFilePath, DirToPlaceFolders + BOT_FOLDER_NAME + folderNb + CONFIG_FOLDER_NAME);
-                }
-                else
-                {
-                    //Copy the config.json file in resources if it doesn't exists -> custom config ?
-                    File.WriteAllBytes(DirToPlaceFolders + BOT_FOLDER_NAME + folderNb + CONFIG_FOLDER_NAME, Properties.Resources.config);
-                }
-            }
-        }
-
-        /// <summary>
-        /// Method used to make the verifications we need before creating folders and files
-        /// </summary>
-        /// <returns>Return a boolean if all paths are set or not</returns>
-        public bool verifyPaths()
-        {
-            //Loop through each boolean in the array of the path to check if we got all the needed paths
-            foreach (bool path in PathBooleans)
-            {
-                //If one path is missing we display a messagebox and return false
-                if (path == false || (MainForm.customConfigChkBox.Checked && configFilePath == string.Empty))
-                {
-                    //Return false
-                    return false;
-                }
-            }
-
-            //Check if it's a customconfig and if the filepath is blank
-            if (CustomConfig && configFilePath == "")
-            {
-                return false;
-            }
-
-            //Return true
-            return true;
         }
 
         /// <summary>
@@ -294,6 +188,8 @@ namespace P4R4_PokeMob_Creator
 
             //General counter for the loop
             int i = 0;
+
+            /////////*********FAIRE TABLEAU ****************//
 
             //Check if we're checking accs
             if(isAccs)
@@ -539,14 +435,14 @@ namespace P4R4_PokeMob_Creator
         public void makeAuthAndRndCfg(string[,] accsPw,string[,] proxiesList)
         {
             //Loop the number of entries in nameFolders list(Array with the name of the created folders)
-            for (int i = 0; i < _nameFolders.Count(); i++)
+            for (int i = 0; i < _folders.nameFolders.Count(); i++)
             {
                 //********MAKE AUTH FILES***************//
                 //Copy the auth.json file to each of the bot folders
-                File.WriteAllBytes(DirToPlaceFolders + _nameFolders[i] + AUTH_FOLDER_NAME, Properties.Resources.auth);
+                File.WriteAllBytes(_folders.DirToPlaceFolders + _folders.nameFolders[i] + Folders.AUTH_FOLDER_NAME, Properties.Resources.auth);
 
                 //Save the auth.json file in a string
-                string json = File.ReadAllText(DirToPlaceFolders + _nameFolders[i] + AUTH_FOLDER_NAME);
+                string json = File.ReadAllText(_folders.DirToPlaceFolders + _folders.nameFolders[i] + Folders.AUTH_FOLDER_NAME);
                 dynamic jsonObj = JsonConvert.DeserializeObject(json);
 
                 //Check wether is a google account or a PTC acc
@@ -581,14 +477,14 @@ namespace P4R4_PokeMob_Creator
                 string output = JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
 
                 //Copy the file to a bot folder
-                File.WriteAllText(DirToPlaceFolders + _nameFolders[i] + AUTH_FOLDER_NAME, output);
+                File.WriteAllText(_folders.DirToPlaceFolders + _folders.nameFolders[i] + Folders.AUTH_FOLDER_NAME, output);
 
                 //******MODIFY CONFIG FILES WITH RANDOM DEVICE FINGERPRINT*******//
                 //Generate a random device
                 DeviceSettings device = new DeviceSettings();
 
                 //Save the auth.json file in a string
-                string jsonCfg = File.ReadAllText(DirToPlaceFolders + _nameFolders[i] + CONFIG_FOLDER_NAME);
+                string jsonCfg = File.ReadAllText(_folders.DirToPlaceFolders + _folders.nameFolders[i] + Folders.CONFIG_FOLDER_NAME);
                 dynamic jsonObjCfg = JsonConvert.DeserializeObject(jsonCfg);
 
                 //Set the username and password in the auth.json
@@ -610,7 +506,7 @@ namespace P4R4_PokeMob_Creator
                 string outputCfg = JsonConvert.SerializeObject(jsonObjCfg, Newtonsoft.Json.Formatting.Indented);
 
                 //Copy the file to a bot folder
-                File.WriteAllText(DirToPlaceFolders + _nameFolders[i] + CONFIG_FOLDER_NAME, outputCfg);
+                File.WriteAllText(_folders.DirToPlaceFolders + _folders.nameFolders[i] + Folders.CONFIG_FOLDER_NAME, outputCfg);
             }
         }
     }

@@ -549,10 +549,10 @@
         private MaterialSkin.Controls.MaterialTabControl materialTabControl1;
         private System.Windows.Forms.TabPage foldersPage;
         private System.Windows.Forms.TabPage accsPage;
-        private MaterialSkin.Controls.MaterialSingleLineTextField cfgFilePathTxt;
-        private MaterialSkin.Controls.MaterialSingleLineTextField folderToPlace;
+        public MaterialSkin.Controls.MaterialSingleLineTextField cfgFilePathTxt;
+        public MaterialSkin.Controls.MaterialSingleLineTextField folderToPlace;
         public System.Windows.Forms.NumericUpDown nbFoldersNum;
-        private MaterialSkin.Controls.MaterialSingleLineTextField botFolderTxt;
+        public MaterialSkin.Controls.MaterialSingleLineTextField botFolderTxt;
         private MaterialSkin.Controls.MaterialLabel dirForFoldersLab;
         private MaterialSkin.Controls.MaterialLabel necroFolderLab;
         private MaterialSkin.Controls.MaterialLabel nbFoldersLab;

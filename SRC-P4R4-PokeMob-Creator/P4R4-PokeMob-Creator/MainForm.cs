@@ -1,4 +1,5 @@
 ﻿//*******ROBOT ICON MADE BY: iconsmind.com from the Noun Project*********************//
+using P4R4_PokeMob_Creator.Classes;
 using System;
 using System.IO;
 using System.Windows.Forms;
@@ -8,24 +9,27 @@ namespace P4R4_PokeMob_Creator
 {
     public partial class MainForm : MaterialSkin.Controls.MaterialForm
     {
-        //Consts
-        private const int DIR_TO_PLACE_FOLDERS = 1;
-        private const int BOT_FOLDER_PATH = 0;
-
         /// <summary>
         /// Store the mainClass here
         /// </summary>
-        private PokeMobUtils _mainClass;
+        private PokeMobUtils _pokeMobUtils;
+
+        /// <summary>
+        /// Store the Folders class
+        /// </summary>
+        private Folders _folders;
 
         /// <summary>
         /// Initialize main form and link the mainclass
         /// </summary>
-        /// <param name="mainClass">Get the class</param>
-        public MainForm(PokeMobUtils mainClass)
+        /// <param name="pokeMobUtils">Get the class</param>
+        public MainForm(PokeMobUtils pokeMobUtils,Folders folders)
         {
             InitializeComponent();
-            _mainClass = mainClass;
-            _mainClass.MainForm = this;
+            _pokeMobUtils = pokeMobUtils;
+            _pokeMobUtils.MainForm = this;
+            _folders = folders;
+            _folders.MainForm = this;
         }
 
         /// <summary>
@@ -34,7 +38,7 @@ namespace P4R4_PokeMob_Creator
         public void createFoldersBtn_Click(object sender, EventArgs e)
         {
             //Call the method to start the creation
-            _mainClass.startCreation();
+            _pokeMobUtils.startCreation();
         }
 
         /// <summary>
@@ -51,60 +55,7 @@ namespace P4R4_PokeMob_Creator
             //Check if the user pressed ok
             if (fbd.ShowDialog() == DialogResult.OK)
             {
-                //Check if Bot.exe isn't present -> Invalid bot folder
-                if (!File.Exists(fbd.SelectedPath + "\\" + PokeMobUtils.BOT_EXE_NAME))
-                {
-                    //Error invalid bot folder
-                    MessageBox.Show("Not a valid PokeMobBot folder !");
-
-                    //Set the botFolder var to empty string
-                    _mainClass.BotFolder = string.Empty;
-
-                    //Set the textbox text to empty
-                    botFolderTxt.Text = "";
-                }
-                else
-                {
-                    //Check if folder Config is present
-                    if (!Directory.Exists(fbd.SelectedPath + "\\config"))
-                    {
-                        //Error for invalid bot folder
-                        MessageBox.Show("Not a valid PokeMobBot folder. Missing: Config folder");
-
-                        //Set the botFolder var to empty string
-                        _mainClass.BotFolder = string.Empty;
-
-                        //Set the textbox text to empty
-                        botFolderTxt.Text = "";
-                    }
-                    else
-                    {
-                        //Check if the bot already has config and auth file
-                        if (File.Exists(fbd.SelectedPath + PokeMobUtils.CONFIG_FOLDER_NAME) || File.Exists(fbd.SelectedPath + PokeMobUtils.AUTH_FOLDER_NAME))
-                        {
-                            //Error if auth.json and config.json are already present
-                            MessageBox.Show("Not a valid PokeMobBot folder. Remove: auth.json OR/AND config.json");
-
-                            //Set the botFolder var to empty string
-                            _mainClass.BotFolder = string.Empty;
-
-                            //Set the textbox text to empty
-                            botFolderTxt.Text = "";
-                        }
-                        else
-                        {
-                            //Get the selectedpath and set it to the variable and the textbox
-                            _mainClass.BotFolder = fbd.SelectedPath;
-                            botFolderTxt.Text = fbd.SelectedPath;
-
-                            //Switch the boolean to true
-                            _mainClass.PathBooleans[BOT_FOLDER_PATH] = true;
-
-                            //Verify if all paths are set
-                            _mainClass.verifyPaths();
-                        }
-                    }
-                }
+                _folders.CheckBotFolder(fbd.SelectedPath);
             }
         }
 
@@ -122,27 +73,7 @@ namespace P4R4_PokeMob_Creator
             //Check if the user pressed ok
             if (fbd.ShowDialog() == DialogResult.OK)
             {
-                //*************NOT NEEDED SINCE THE USER HAS TO CHOOSE AN EXISTANT FOLDER OR CREATE IT FROM THE FolderBrowserDialog***************//
-                //*************KEEP THIS CODE IF NEEDED LATER***********//
-
-                ////Check if the directory exists, if not we create it
-                //if(!Directory.Exists(fbd.SelectedPath))
-                //{
-                //    //Create the directory
-                //    Directory.CreateDirectory(fbd.SelectedPath);
-                //}
-
-                //Get the selectedpath and set it to the variable and the textbox
-                _mainClass.DirToPlaceFolders = fbd.SelectedPath;
-
-                //Set the var with the path
-                folderToPlace.Text = fbd.SelectedPath;
-
-                //Switch the boolean to true
-                _mainClass.PathBooleans[DIR_TO_PLACE_FOLDERS] = true;
-
-                //Verify if all paths are set
-                _mainClass.verifyPaths();
+                _folders.CheckFolderToPlace(fbd.SelectedPath);
             }
         }
 
@@ -164,33 +95,7 @@ namespace P4R4_PokeMob_Creator
             //Check if the user confirmed
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                //*********CHECK IF GOOD CFG FILE//
-                //Open the json config file
-                string jsonCfg = File.ReadAllText(ofd.FileName);
-                dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(jsonCfg);
-
-                //Check if its contains the DeviceSettings property
-                if(jsonObj["DeviceSettings"] != null)
-                {
-                    //Set the path to the textbox
-                    cfgFilePathTxt.Text = ofd.FileName;
-
-                    //Set the var with the path
-                    _mainClass.configFilePath = ofd.FileName;
-
-                    //Verify if all paths are set
-                    _mainClass.verifyPaths();
-                }
-                else
-                {
-                    //Set the path to the textbox
-                    cfgFilePathTxt.Text = "";
-
-                    //Set the var with the path
-                    _mainClass.configFilePath = "";
-
-                    MessageBox.Show("Invalid PokeMobBot config file !");
-                }
+                _folders.CheckCfgFile(ofd.FileName);
             }
         }
 
@@ -210,10 +115,10 @@ namespace P4R4_PokeMob_Creator
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 //Check if the user deleted some accounts before loading new ones
-                _mainClass.checkManuallyDeleted(accsRichTxtBox.Lines, true);
+                _pokeMobUtils.checkManuallyDeleted(accsRichTxtBox.Lines, true);
 
                 //Check the loaded accs from the file
-                _mainClass.verifyNewLoadedProxAcc(File.ReadAllLines(ofd.FileName), true,true);
+                _pokeMobUtils.verifyNewLoadedProxAcc(File.ReadAllLines(ofd.FileName), true,true);
             }
         }
 
@@ -233,10 +138,10 @@ namespace P4R4_PokeMob_Creator
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 //Check if the user deleted some proxies before loading new ones
-                _mainClass.checkManuallyDeleted(proxiesRichTxtBox.Lines, false);
+                _pokeMobUtils.checkManuallyDeleted(proxiesRichTxtBox.Lines, false);
 
                 //Check the loaded accs from the file
-                _mainClass.verifyNewLoadedProxAcc(File.ReadAllLines(ofd.FileName), true,false);
+                _pokeMobUtils.verifyNewLoadedProxAcc(File.ReadAllLines(ofd.FileName), true,false);
             }
         }
 
@@ -259,7 +164,7 @@ namespace P4R4_PokeMob_Creator
             proxiesNeededLab.Text = "Proxies needed: " + Convert.ToString(Convert.ToInt32(nbFoldersNum.Value));
 
             //Update the nb of accounts needed var
-            _mainClass.NeededAccounts = Convert.ToInt32(nbFoldersNum.Value);
+            _pokeMobUtils.NeededAccounts = Convert.ToInt32(nbFoldersNum.Value);
         }
 
         /// <summary>
@@ -276,7 +181,7 @@ namespace P4R4_PokeMob_Creator
                 cfgFileBrowse.Enabled = true;
 
                 //Set customconfig to true
-                _mainClass.CustomConfig = true;
+                _folders.CustomConfig = true;
 
                 //Simulate a browse btn click
                 cfgFileBrowse_Click(sender,e);
@@ -295,7 +200,7 @@ namespace P4R4_PokeMob_Creator
                 customConfigChkBox.Checked = false;
 
                 //Set the config file path to nothing
-                _mainClass.configFilePath = "";
+                _folders.ConfigFilePath = "";
 
                 //Set the txtbox with filepath to empty
                 cfgFilePathTxt.Text = "";
@@ -304,7 +209,7 @@ namespace P4R4_PokeMob_Creator
                 cfgFileBrowse.Enabled = false;
 
                 //Set customconfig to false
-                _mainClass.CustomConfig = false;
+                _folders.CustomConfig = false;
             }
         }
 
