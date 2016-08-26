@@ -1,11 +1,6 @@
 
 # Created by https://www.gitignore.io/api/visualstudio,c,windows
 
-# Exclude Nuget Packages folder
-!SRC-P4R4-PokeMob-Creator/packages
-!SRC-P4R4-PokeMob-Creator/packages/*
-
-
 ### C ###
 # Prerequisites
 *.d
@@ -221,9 +216,9 @@ publish/
 PublishScripts/
 
 # NuGet Packages
-*.nupkg
+#*.nupkg
 # The packages folder can be ignored because of Package Restore
-**/packages/*
+#**/packages/*
 # except build/, which is used as an MSBuild target.
 !**/packages/build/
 # Uncomment if necessary however generally it will be regenerated when needed
@@ -231,6 +226,8 @@ PublishScripts/
 # NuGet v3's project.json files produces more ignoreable files
 *.nuget.props
 *.nuget.targets
+
+!**/packages/*/*.dll
 
 # Microsoft Azure Build Output
 csx/
