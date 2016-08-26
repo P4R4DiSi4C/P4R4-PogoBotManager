@@ -2,8 +2,8 @@
 # Created by https://www.gitignore.io/api/visualstudio,c,windows
 
 # Exclude Nuget Packages folder
-!*/packages
-!*/packages/*
+!packages
+!packages/*
 
 
 ### C ###
