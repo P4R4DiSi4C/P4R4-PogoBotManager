@@ -10,7 +10,7 @@ namespace P4R4_PokeMob_Creator
     public partial class MainForm : MaterialSkin.Controls.MaterialForm
     {
         /// <summary>
-        /// Store the mainClass here
+        /// Store the "main" class here
         /// </summary>
         private PokeMobUtils _pokeMobUtils;
 
@@ -20,16 +20,50 @@ namespace P4R4_PokeMob_Creator
         private Folders _folders;
 
         /// <summary>
-        /// Initialize main form and link the mainclass
+        /// Store the accounts class
         /// </summary>
-        /// <param name="pokeMobUtils">Get the class</param>
-        public MainForm(PokeMobUtils pokeMobUtils,Folders folders)
+        private Accounts _accounts;
+
+        /// <summary>
+        /// Store the proxies class
+        /// </summary>
+        private Proxies _proxies;
+
+        /// <summary>
+        /// Property for the accs richtextbox
+        /// </summary>
+        internal RichTextBox _accsRichTxtBox { get { return accsRichTxtBox; } }
+
+        /// <summary>
+        /// Property for the proxies richtextbox
+        /// </summary>
+        internal RichTextBox _proxiesRichTxtBox { get { return proxiesRichTxtBox; } }
+
+        /// <summary>
+        /// Store the nb of needed accounts
+        /// </summary>
+        private int _neededAccounts = 1;
+
+        /// <summary>
+        /// Initialize main form and link the required classes
+        /// </summary>
+        /// <param name="pokeMobUtils">Get the "main" class</param>
+        /// <param name="folders">Get the folders class</param>
+        /// <param name="accounts">Get the accounts class</param>
+        /// <param name="proxies">Get the proxies class</param>
+        public MainForm(PokeMobUtils pokeMobUtils,Folders folders,Accounts accounts,Proxies proxies)
         {
             InitializeComponent();
+
+            //Link each class
             _pokeMobUtils = pokeMobUtils;
             _pokeMobUtils.MainForm = this;
             _folders = folders;
             _folders.MainForm = this;
+            _accounts = accounts;
+            _accounts.MainForm = this;
+            _proxies = proxies;
+            _proxies.MainForm = this;
         }
 
         /// <summary>
@@ -115,10 +149,10 @@ namespace P4R4_PokeMob_Creator
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 //Check if the user deleted some accounts before loading new ones
-                _pokeMobUtils.checkManuallyDeleted(accsRichTxtBox.Lines, true);
+                _pokeMobUtils.checkManuallyDeleted(accsRichTxtBox.Lines, _accounts._verifiedAccounts);
 
                 //Check the loaded accs from the file
-                _pokeMobUtils.verifyNewLoadedProxAcc(File.ReadAllLines(ofd.FileName), true,true);
+                _accounts.verifyNewLoadedAccs(File.ReadAllLines(ofd.FileName), true);
             }
         }
 
@@ -138,10 +172,10 @@ namespace P4R4_PokeMob_Creator
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 //Check if the user deleted some proxies before loading new ones
-                _pokeMobUtils.checkManuallyDeleted(proxiesRichTxtBox.Lines, false);
+                _pokeMobUtils.checkManuallyDeleted(proxiesRichTxtBox.Lines, _proxies._verifiedProxies);
 
                 //Check the loaded accs from the file
-                _pokeMobUtils.verifyNewLoadedProxAcc(File.ReadAllLines(ofd.FileName), true,false);
+                _proxies.verifyNewLoadedProxies(File.ReadAllLines(ofd.FileName), true);
             }
         }
 
@@ -164,7 +198,7 @@ namespace P4R4_PokeMob_Creator
             proxiesNeededLab.Text = "Proxies needed: " + Convert.ToString(Convert.ToInt32(nbFoldersNum.Value));
 
             //Update the nb of accounts needed var
-            _pokeMobUtils.NeededAccounts = Convert.ToInt32(nbFoldersNum.Value);
+            _neededAccounts = Convert.ToInt32(nbFoldersNum.Value);
         }
 
         /// <summary>
@@ -223,5 +257,72 @@ namespace P4R4_PokeMob_Creator
             // scroll it automatically
             creationLogsRichTxtBox.ScrollToCaret();
         }
+
+
+        #region PUBLIC ACCESSOR METHODS
+
+        /// <summary>
+        /// Method to set a text to the cfgfilepath
+        /// </summary>
+        /// <param name="text">Get the text to input</param>
+        public void SetCfgFilePathText(string text)
+        {
+            cfgFilePathTxt.Text = text;
+        }
+
+        /// <summary>
+        /// Method to set a text to the foldertoplacetxt box
+        /// </summary>
+        /// <param name="text">Get the text to input</param>
+        public void SetFolderToPlaceTxt(string text)
+        {
+            folderToPlace.Text = text;
+        }
+
+        /// <summary>
+        /// Method to return the nb of folder to create
+        /// </summary>
+        /// <returns></returns>
+        public int RequiredAccs()
+        {
+            return _neededAccounts;
+        }
+
+        /// <summary>
+        /// Method to set the text of the botfolder textbox
+        /// </summary>
+        /// <param name="text">Get the text to input</param>
+        public void SetBotFolderTxt(string text)
+        {
+            botFolderTxt.Text = text;
+        }
+
+        /// <summary>
+        /// Method to check if customconfig is checked or not
+        /// </summary>
+        /// <returns></returns>
+        public bool IsCustomConfig()
+        {
+            if (customConfigChkBox.Checked)
+                return true;
+            else
+                return false;
+        }
+
+        /// <summary>
+        /// Method to append or clear logs
+        /// </summary>
+        /// <param name="textToAppend">Gets the textToAppend</param>
+        /// <param name="toClear">Check if it's to clear the logs</param>
+        public void CreationLogsActions(string textToAppend,bool toClear)
+        {
+            //Check if we clear or append text
+            if (toClear)
+                creationLogsRichTxtBox.Clear();
+            else
+                creationLogsRichTxtBox.AppendText(textToAppend);
+        }
+
+        #endregion   
     }
 }

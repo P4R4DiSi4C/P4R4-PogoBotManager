@@ -19,11 +19,17 @@ namespace P4R4_PokeMob_Creator
             Folders folders = new Folders();
 
             //Initialize the class with the form as parameter
-            PokeMobUtils mainClass = new PokeMobUtils(folders);
+            PokeMobUtils pokeMobUtils = new PokeMobUtils(folders);
+
+            //Initialize accounts class
+            Accounts accounts = new Accounts(pokeMobUtils);
+
+            //Initialize proxies class
+            Proxies proxies = new Proxies(pokeMobUtils);
 
             //Initialize the form
-            MainForm mainForm = new MainForm(mainClass,folders);
-            
+            MainForm mainForm = new MainForm(pokeMobUtils,folders,accounts,proxies);
+
             //Start the app
             Application.Run(mainForm);
         }

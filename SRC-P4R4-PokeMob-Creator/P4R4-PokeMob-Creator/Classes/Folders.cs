@@ -63,7 +63,7 @@ namespace P4R4_PokeMob_Creator.Classes
                 BotFolder = string.Empty;
 
                 //Set the textbox text to empty
-                MainForm.botFolderTxt.Text = "";
+                MainForm.SetBotFolderTxt("");
             }
             else
             {
@@ -77,7 +77,7 @@ namespace P4R4_PokeMob_Creator.Classes
                     BotFolder = string.Empty;
 
                     //Set the textbox text to empty
-                    MainForm.botFolderTxt.Text = "";
+                    MainForm.SetBotFolderTxt("");
                 }
                 else
                 {
@@ -91,13 +91,13 @@ namespace P4R4_PokeMob_Creator.Classes
                         BotFolder = string.Empty;
 
                         //Set the textbox text to empty
-                        MainForm.botFolderTxt.Text = "";
+                        MainForm.SetBotFolderTxt("");
                     }
                     else
                     {
                         //Get the selectedpath and set it to the variable and the textbox
                         BotFolder = path;
-                        MainForm.botFolderTxt.Text = path;
+                        MainForm.SetBotFolderTxt(path);
 
                         //Switch the boolean to true
                         PathBooleans[BOT_FOLDER_PATH] = true;
@@ -119,7 +119,7 @@ namespace P4R4_PokeMob_Creator.Classes
             DirToPlaceFolders = path;
 
             //Set the var with the path
-            MainForm.folderToPlace.Text = path;
+            MainForm.SetFolderToPlaceTxt(path);
 
             //Switch the boolean to true
             PathBooleans[DIR_TO_PLACE_FOLDERS] = true;
@@ -139,7 +139,7 @@ namespace P4R4_PokeMob_Creator.Classes
             if (jsonObj["DeviceSettings"] != null)
             {
                 //Set the path to the textbox
-                MainForm.cfgFilePathTxt.Text = path;
+                MainForm.SetCfgFilePathText(path);
 
                 //Set the var with the path
                 ConfigFilePath = path;
@@ -150,7 +150,7 @@ namespace P4R4_PokeMob_Creator.Classes
             else
             {
                 //Set the path to the textbox
-                MainForm.cfgFilePathTxt.Text = "";
+                MainForm.SetCfgFilePathText("");
 
                 //Set the var with the path
                 ConfigFilePath = "";
@@ -169,7 +169,7 @@ namespace P4R4_PokeMob_Creator.Classes
             foreach (bool path in PathBooleans)
             {
                 //If one path is missing we display a messagebox and return false
-                if (path == false || (MainForm.customConfigChkBox.Checked && ConfigFilePath == string.Empty))
+                if (path == false || (MainForm.IsCustomConfig() && ConfigFilePath == string.Empty))
                 {
                     //Return false
                     return false;
