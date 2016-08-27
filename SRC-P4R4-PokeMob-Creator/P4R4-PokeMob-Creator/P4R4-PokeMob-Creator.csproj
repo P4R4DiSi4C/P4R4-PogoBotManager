@@ -57,10 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Accounts.cs" />
     <Compile Include="Classes\Folders.cs" />
     <Compile Include="Classes\Logger.cs" />
     <Compile Include="Classes\DeviceSettings.cs" />
     <Compile Include="Classes\PokeMobUtils.cs" />
+    <Compile Include="Classes\Proxies.cs" />
     <Compile Include="MainForm.cs" />
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
