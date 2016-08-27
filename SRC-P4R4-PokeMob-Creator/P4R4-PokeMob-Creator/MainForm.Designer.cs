@@ -549,24 +549,24 @@
         private MaterialSkin.Controls.MaterialTabControl materialTabControl1;
         private System.Windows.Forms.TabPage foldersPage;
         private System.Windows.Forms.TabPage accsPage;
-        public MaterialSkin.Controls.MaterialSingleLineTextField cfgFilePathTxt;
-        public MaterialSkin.Controls.MaterialSingleLineTextField folderToPlace;
-        public System.Windows.Forms.NumericUpDown nbFoldersNum;
-        public MaterialSkin.Controls.MaterialSingleLineTextField botFolderTxt;
+        private MaterialSkin.Controls.MaterialSingleLineTextField cfgFilePathTxt;
+        private MaterialSkin.Controls.MaterialSingleLineTextField folderToPlace;
+        private System.Windows.Forms.NumericUpDown nbFoldersNum;
+        private MaterialSkin.Controls.MaterialSingleLineTextField botFolderTxt;
         private MaterialSkin.Controls.MaterialLabel dirForFoldersLab;
         private MaterialSkin.Controls.MaterialLabel necroFolderLab;
         private MaterialSkin.Controls.MaterialLabel nbFoldersLab;
         private MaterialSkin.Controls.MaterialRaisedButton cfgFileBrowse;
         private MaterialSkin.Controls.MaterialRaisedButton folderToPlaceBtn;
         private MaterialSkin.Controls.MaterialRaisedButton botFolderBrowseBtn;
-        public System.Windows.Forms.RichTextBox accsRichTxtBox;
+        private System.Windows.Forms.RichTextBox accsRichTxtBox;
         private System.Windows.Forms.Label accountsNeededLab;
         private MaterialSkin.Controls.MaterialDivider foldersDivider;
         private System.Windows.Forms.Label accFormatLab;
         private System.Windows.Forms.Label accsTitleLab;
         private System.Windows.Forms.Label folderToCreateTitleLab;
         private System.Windows.Forms.Label foldersTitleLab;
-        public MaterialSkin.Controls.MaterialCheckBox customConfigChkBox;
+        private MaterialSkin.Controls.MaterialCheckBox customConfigChkBox;
         private MaterialSkin.Controls.MaterialCheckBox defaultConfigChkBox;
         private MaterialSkin.Controls.MaterialRaisedButton browseAccsBtn;
         private System.Windows.Forms.TabPage proxiesTabPage;
@@ -574,11 +574,11 @@
         private MaterialSkin.Controls.MaterialRaisedButton createFoldersBtn;
         private MaterialSkin.Controls.MaterialRaisedButton browseProxiesBtn;
         private System.Windows.Forms.Label proxiesNeededLab;
-        public System.Windows.Forms.RichTextBox proxiesRichTxtBox;
+        private System.Windows.Forms.RichTextBox proxiesRichTxtBox;
         private System.Windows.Forms.TabPage creationTabPage;
         private System.Windows.Forms.Label creationPageTitle;
         private System.Windows.Forms.Label formatProxyLab;
-        public System.Windows.Forms.RichTextBox creationLogsRichTxtBox;
+        private System.Windows.Forms.RichTextBox creationLogsRichTxtBox;
     }
 }
 

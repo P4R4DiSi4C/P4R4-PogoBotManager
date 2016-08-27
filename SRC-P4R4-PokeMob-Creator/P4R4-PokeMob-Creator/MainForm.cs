@@ -20,6 +20,16 @@ namespace P4R4_PokeMob_Creator
         private Folders _folders;
 
         /// <summary>
+        /// Property for the accs richtextbox
+        /// </summary>
+        internal RichTextBox _accsRichTxtBox { get { return accsRichTxtBox; } }
+
+        /// <summary>
+        /// Property for the proxies richtextbox
+        /// </summary>
+        internal RichTextBox _proxiesRichTxtBox { get { return proxiesRichTxtBox; } }
+
+        /// <summary>
         /// Initialize main form and link the mainclass
         /// </summary>
         /// <param name="pokeMobUtils">Get the class</param>
@@ -222,6 +232,67 @@ namespace P4R4_PokeMob_Creator
             creationLogsRichTxtBox.SelectionStart = creationLogsRichTxtBox.Text.Length;
             // scroll it automatically
             creationLogsRichTxtBox.ScrollToCaret();
+        }
+
+        /// <summary>
+        /// Method to set a text to the cfgfilepath
+        /// </summary>
+        /// <param name="text">Get the text to input</param>
+        public void SetCfgFilePathText(string text)
+        {
+            cfgFilePathTxt.Text = text;
+        }
+
+        /// <summary>
+        /// Method to set a text to the foldertoplacetxt box
+        /// </summary>
+        /// <param name="text">Get the text to input</param>
+        public void SetFolderToPlaceTxt(string text)
+        {
+            folderToPlace.Text = text;
+        }
+
+        /// <summary>
+        /// Method to return the nb of folder to create
+        /// </summary>
+        /// <returns></returns>
+        public int GetNbFolders()
+        {
+            return Convert.ToInt32(nbFoldersNum.Value);
+        }
+
+        /// <summary>
+        /// Method to set the text of the botfolder textbox
+        /// </summary>
+        /// <param name="text">Get the text to input</param>
+        public void SetBotFolderTxt(string text)
+        {
+            botFolderTxt.Text = text;
+        }
+
+        /// <summary>
+        /// Method to check if customconfig is checked or not
+        /// </summary>
+        /// <returns></returns>
+        public bool IsCustomConfig()
+        {
+            if (customConfigChkBox.Checked)
+                return true;
+            else
+                return false;
+        }
+
+        /// <summary>
+        /// Method to append or clear logs
+        /// </summary>
+        /// <param name="textToAppend">Gets the textToAppend</param>
+        /// <param name="toClear">Check if it's to clear the logs</param>
+        public void CreationLogsActions(string textToAppend,bool toClear)
+        {
+            if (toClear)
+                creationLogsRichTxtBox.Clear();
+            else
+                creationLogsRichTxtBox.AppendText(textToAppend);
         }
     }
 }

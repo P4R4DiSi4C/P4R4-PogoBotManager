@@ -91,7 +91,7 @@ namespace P4R4_PokeMob_Creator
             logger.AppendLog("Verifying empties accounts/proxies lists...");
 
             //Check if the richtextboxes aren't empty
-            if (MainForm.accsRichTxtBox.Text == "" || MainForm.proxiesRichTxtBox.Text == "")
+            if (MainForm._accsRichTxtBox.Text == "" || MainForm._proxiesRichTxtBox.Text == "")
             {
                 //Error for empty accounts/proxies list
                 MessageBox.Show("Empty accounts/proxies list !");
@@ -107,8 +107,8 @@ namespace P4R4_PokeMob_Creator
             logger.AppendLog("Checking for new manually added/deleted accounts/proxies...");
 
             //Check if the user deleted or added MANUALLY new accounts or proxies
-            verifyNewLoadedProxAcc(MainForm.accsRichTxtBox.Lines, false, true);
-            verifyNewLoadedProxAcc(MainForm.proxiesRichTxtBox.Lines, false, false);
+            verifyNewLoadedProxAcc(MainForm._accsRichTxtBox.Lines, false, true);
+            verifyNewLoadedProxAcc(MainForm._proxiesRichTxtBox.Lines, false, false);
 
             //Add check for sufficient accs and proxies to logs
             logger.AppendLog("Checking for sufficient accounts and proxies...");
@@ -131,7 +131,7 @@ namespace P4R4_PokeMob_Creator
             logger.AppendLog("Creating folders...");
 
             //Call the method to create the number of needed folders
-            _folders.CreateFolders(Convert.ToInt32(MainForm.nbFoldersNum.Value), logger);
+            _folders.CreateFolders(MainForm.GetNbFolders(), logger);
 
             //Add parsing combolists to logs
             logger.AppendLog("Parsing account:password list...");
@@ -198,7 +198,7 @@ namespace P4R4_PokeMob_Creator
                 regToCheck = _googleAccReg.IsMatch(newProxAcc[i]) || _ptcAccReg.IsMatch(newProxAcc[i]);
 
                 //Assing the accs richtxtbox
-                richTxtBox = MainForm.accsRichTxtBox;
+                richTxtBox = MainForm._accsRichTxtBox;
 
                 //Assign the list to use
                 listToUse = _verifiedAccounts;
@@ -212,7 +212,7 @@ namespace P4R4_PokeMob_Creator
                 regToCheck = _proxyReg.IsMatch(newProxAcc[i]) || _proxyUserPwReg.IsMatch(newProxAcc[i]);
 
                 //Assign the proxies richtxtbox
-                richTxtBox = MainForm.proxiesRichTxtBox;
+                richTxtBox = MainForm._proxiesRichTxtBox;
 
                 //Assign the list to use
                 listToUse = _verifiedProxies;
@@ -343,7 +343,7 @@ namespace P4R4_PokeMob_Creator
         public string[,] parseCombolist()
         {
             //Clear the richtextbox
-            MainForm.accsRichTxtBox.Clear();
+            MainForm._accsRichTxtBox.Clear();
 
             //Array to save each acc with it's password
             string[,] accsPw = new string[NeededAccounts, 2];
@@ -365,7 +365,7 @@ namespace P4R4_PokeMob_Creator
             //Display the new verifiedAccounts list without the used accs
             foreach (string str in _verifiedAccounts)
             {
-                MainForm.accsRichTxtBox.AppendText(str + "\n");
+                MainForm._accsRichTxtBox.AppendText(str + "\n");
             }
 
             return accsPw;
@@ -378,7 +378,7 @@ namespace P4R4_PokeMob_Creator
         public string[,] clearAndFilterProxiesList()
         {
             //Clear the richTxtBox
-            MainForm.proxiesRichTxtBox.Clear();
+            MainForm._proxiesRichTxtBox.Clear();
 
             //Array to save each acc with it's password
             string[,] proxiesWithUserPw = new string[NeededAccounts, 3];
@@ -422,7 +422,7 @@ namespace P4R4_PokeMob_Creator
             //Write the proxies that we didn't use to the textbox
             foreach (string str in _verifiedProxies)
             {
-                MainForm.proxiesRichTxtBox.Text += str + "\n";
+                MainForm._proxiesRichTxtBox.Text += str + "\n";
             }
 
             return proxiesWithUserPw;

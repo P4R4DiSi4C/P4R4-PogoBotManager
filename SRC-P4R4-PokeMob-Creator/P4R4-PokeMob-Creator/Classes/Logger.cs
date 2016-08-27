@@ -23,7 +23,7 @@ namespace P4R4_PokeMob_Creator
         /// <param name="logText"></param>
         public void AppendLog(string logText)
         {
-            _mainForm.creationLogsRichTxtBox.AppendText(logText + "\n");
+            _mainForm.CreationLogsActions(logText + "\n",false);
         }
 
         /// <summary>
@@ -31,7 +31,7 @@ namespace P4R4_PokeMob_Creator
         /// </summary>
         public void ClearLogs()
         {
-            _mainForm.creationLogsRichTxtBox.Clear();
+            _mainForm.CreationLogsActions("", true);
         }
     }
 }
