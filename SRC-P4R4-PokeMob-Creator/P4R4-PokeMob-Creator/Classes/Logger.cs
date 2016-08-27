@@ -1,6 +1,4 @@
 ﻿
-using System.Collections.Generic;
-
 namespace P4R4_PokeMob_Creator
 {
     public class Logger

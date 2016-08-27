@@ -10,7 +10,7 @@ namespace P4R4_PokeMob_Creator
     public partial class MainForm : MaterialSkin.Controls.MaterialForm
     {
         /// <summary>
-        /// Store the mainClass here
+        /// Store the "main" class here
         /// </summary>
         private PokeMobUtils _pokeMobUtils;
 
@@ -18,6 +18,16 @@ namespace P4R4_PokeMob_Creator
         /// Store the Folders class
         /// </summary>
         private Folders _folders;
+
+        /// <summary>
+        /// Store the accounts class
+        /// </summary>
+        private Accounts _accounts;
+
+        /// <summary>
+        /// Store the proxies class
+        /// </summary>
+        private Proxies _proxies;
 
         /// <summary>
         /// Property for the accs richtextbox
@@ -30,16 +40,30 @@ namespace P4R4_PokeMob_Creator
         internal RichTextBox _proxiesRichTxtBox { get { return proxiesRichTxtBox; } }
 
         /// <summary>
-        /// Initialize main form and link the mainclass
+        /// Store the nb of needed accounts
         /// </summary>
-        /// <param name="pokeMobUtils">Get the class</param>
-        public MainForm(PokeMobUtils pokeMobUtils,Folders folders)
+        private int _neededAccounts = 1;
+
+        /// <summary>
+        /// Initialize main form and link the required classes
+        /// </summary>
+        /// <param name="pokeMobUtils">Get the "main" class</param>
+        /// <param name="folders">Get the folders class</param>
+        /// <param name="accounts">Get the accounts class</param>
+        /// <param name="proxies">Get the proxies class</param>
+        public MainForm(PokeMobUtils pokeMobUtils,Folders folders,Accounts accounts,Proxies proxies)
         {
             InitializeComponent();
+
+            //Link each class
             _pokeMobUtils = pokeMobUtils;
             _pokeMobUtils.MainForm = this;
             _folders = folders;
             _folders.MainForm = this;
+            _accounts = accounts;
+            _accounts.MainForm = this;
+            _proxies = proxies;
+            _proxies.MainForm = this;
         }
 
         /// <summary>
@@ -125,10 +149,10 @@ namespace P4R4_PokeMob_Creator
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 //Check if the user deleted some accounts before loading new ones
-                _pokeMobUtils.checkManuallyDeleted(accsRichTxtBox.Lines, true);
+                _pokeMobUtils.checkManuallyDeleted(accsRichTxtBox.Lines, _accounts._verifiedAccounts);
 
                 //Check the loaded accs from the file
-                _pokeMobUtils.verifyNewLoadedProxAcc(File.ReadAllLines(ofd.FileName), true,true);
+                _accounts.verifyNewLoadedAccs(File.ReadAllLines(ofd.FileName), true);
             }
         }
 
@@ -148,10 +172,10 @@ namespace P4R4_PokeMob_Creator
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 //Check if the user deleted some proxies before loading new ones
-                _pokeMobUtils.checkManuallyDeleted(proxiesRichTxtBox.Lines, false);
+                _pokeMobUtils.checkManuallyDeleted(proxiesRichTxtBox.Lines, _proxies._verifiedProxies);
 
                 //Check the loaded accs from the file
-                _pokeMobUtils.verifyNewLoadedProxAcc(File.ReadAllLines(ofd.FileName), true,false);
+                _proxies.verifyNewLoadedProxies(File.ReadAllLines(ofd.FileName), true);
             }
         }
 
@@ -174,7 +198,7 @@ namespace P4R4_PokeMob_Creator
             proxiesNeededLab.Text = "Proxies needed: " + Convert.ToString(Convert.ToInt32(nbFoldersNum.Value));
 
             //Update the nb of accounts needed var
-            _pokeMobUtils.NeededAccounts = Convert.ToInt32(nbFoldersNum.Value);
+            _neededAccounts = Convert.ToInt32(nbFoldersNum.Value);
         }
 
         /// <summary>
@@ -234,6 +258,9 @@ namespace P4R4_PokeMob_Creator
             creationLogsRichTxtBox.ScrollToCaret();
         }
 
+
+        #region PUBLIC ACCESSOR METHODS
+
         /// <summary>
         /// Method to set a text to the cfgfilepath
         /// </summary>
@@ -256,9 +283,9 @@ namespace P4R4_PokeMob_Creator
         /// Method to return the nb of folder to create
         /// </summary>
         /// <returns></returns>
-        public int GetNbFolders()
+        public int RequiredAccs()
         {
-            return Convert.ToInt32(nbFoldersNum.Value);
+            return _neededAccounts;
         }
 
         /// <summary>
@@ -289,10 +316,13 @@ namespace P4R4_PokeMob_Creator
         /// <param name="toClear">Check if it's to clear the logs</param>
         public void CreationLogsActions(string textToAppend,bool toClear)
         {
+            //Check if we clear or append text
             if (toClear)
                 creationLogsRichTxtBox.Clear();
             else
                 creationLogsRichTxtBox.AppendText(textToAppend);
         }
+
+        #endregion   
     }
 }
