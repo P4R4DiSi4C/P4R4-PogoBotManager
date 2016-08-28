@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace P4R4_PokeMob_Creator
 {
     public class Logger
@@ -21,7 +23,15 @@ namespace P4R4_PokeMob_Creator
         /// <param name="logText"></param>
         public void AppendLog(string logText)
         {
-            _mainForm.CreationLogsActions(logText + "\n",false);
+            if (_mainForm._creationLogsRichTxtBox.InvokeRequired)
+            {
+                _mainForm._creationLogsRichTxtBox.BeginInvoke(new Action(delegate {
+                    AppendLog(logText);
+                }));
+                return;
+            }
+
+            _mainForm._creationLogsRichTxtBox.AppendText(logText + "\n");
         }
 
         /// <summary>
@@ -29,7 +39,7 @@ namespace P4R4_PokeMob_Creator
         /// </summary>
         public void ClearLogs()
         {
-            _mainForm.CreationLogsActions("", true);
+            _mainForm._creationLogsRichTxtBox.Clear();
         }
     }
 }

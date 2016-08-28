@@ -39,6 +39,8 @@ namespace P4R4_PokeMob_Creator
         /// </summary>
         internal RichTextBox _proxiesRichTxtBox { get { return proxiesRichTxtBox; } }
 
+        internal RichTextBox _creationLogsRichTxtBox { get { return creationLogsRichTxtBox; } }
+
         /// <summary>
         /// Store the nb of needed accounts
         /// </summary>
@@ -258,7 +260,6 @@ namespace P4R4_PokeMob_Creator
             creationLogsRichTxtBox.ScrollToCaret();
         }
 
-
         #region PUBLIC ACCESSOR METHODS
 
         /// <summary>
@@ -307,20 +308,6 @@ namespace P4R4_PokeMob_Creator
                 return true;
             else
                 return false;
-        }
-
-        /// <summary>
-        /// Method to append or clear logs
-        /// </summary>
-        /// <param name="textToAppend">Gets the textToAppend</param>
-        /// <param name="toClear">Check if it's to clear the logs</param>
-        public void CreationLogsActions(string textToAppend,bool toClear)
-        {
-            //Check if we clear or append text
-            if (toClear)
-                creationLogsRichTxtBox.Clear();
-            else
-                creationLogsRichTxtBox.AppendText(textToAppend);
         }
 
         #endregion   
