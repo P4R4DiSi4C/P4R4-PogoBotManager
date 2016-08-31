@@ -314,13 +314,21 @@ namespace P4R4_PokeMob_Creator
         /// </summary>
         /// <param name="textToAppend">Gets the textToAppend</param>
         /// <param name="toClear">Check if it's to clear the logs</param>
-        public void CreationLogsActions(string textToAppend,bool toClear)
+        public void CreationLogsActions(string textToAppend, bool toClear)
         {
             //Check if we clear or append text
             if (toClear)
+            {
                 creationLogsRichTxtBox.Clear();
+            }
             else
-                creationLogsRichTxtBox.AppendText(textToAppend);
+            {
+                MethodInvoker action = delegate
+                {
+                    creationLogsRichTxtBox.AppendText(textToAppend);
+                };
+                creationLogsRichTxtBox.BeginInvoke(action);
+            }
         }
 
         #endregion   

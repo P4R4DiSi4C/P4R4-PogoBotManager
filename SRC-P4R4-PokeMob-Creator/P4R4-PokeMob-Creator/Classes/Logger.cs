@@ -1,4 +1,6 @@
 ﻿
+using System.Windows.Forms;
+
 namespace P4R4_PokeMob_Creator
 {
     public class Logger
@@ -21,7 +23,7 @@ namespace P4R4_PokeMob_Creator
         /// <param name="logText"></param>
         public void AppendLog(string logText)
         {
-            _mainForm.CreationLogsActions(logText + "\n",false);
+            _mainForm.CreationLogsActions(logText + "\n", false);
         }
 
         /// <summary>
