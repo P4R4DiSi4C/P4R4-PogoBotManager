@@ -1,9 +1,5 @@
-﻿
-<<<<<<< HEAD
-using System;
-=======
+
 using System.Windows.Forms;
->>>>>>> refs/remotes/origin/master
 
 namespace P4R4_PokeMob_Creator
 {
@@ -27,19 +23,7 @@ namespace P4R4_PokeMob_Creator
         /// <param name="logText"></param>
         public void AppendLog(string logText)
         {
-<<<<<<< HEAD
-            if (_mainForm._creationLogsRichTxtBox.InvokeRequired)
-            {
-                _mainForm._creationLogsRichTxtBox.BeginInvoke(new Action(delegate {
-                    AppendLog(logText);
-                }));
-                return;
-            }
-
-            _mainForm._creationLogsRichTxtBox.AppendText(logText + "\n");
-=======
             _mainForm.CreationLogsActions(logText + "\n", false);
->>>>>>> refs/remotes/origin/master
         }
 
         /// <summary>
@@ -47,7 +31,7 @@ namespace P4R4_PokeMob_Creator
         /// </summary>
         public void ClearLogs()
         {
-            _mainForm._creationLogsRichTxtBox.Clear();
+            _mainForm.CreationLogsActions("", true);
         }
     }
 }
