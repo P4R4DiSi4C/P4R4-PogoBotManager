@@ -1,4 +1,4 @@
-﻿//*******ROBOT ICON MADE BY: iconsmind.com from the Noun Project*********************//
+//*******ROBOT ICON MADE BY: iconsmind.com from the Noun Project*********************//
 using P4R4_PokeMob_Creator.Classes;
 using System;
 using System.IO;
@@ -38,8 +38,6 @@ namespace P4R4_PokeMob_Creator
         /// Property for the proxies richtextbox
         /// </summary>
         internal RichTextBox _proxiesRichTxtBox { get { return proxiesRichTxtBox; } }
-
-        internal RichTextBox _creationLogsRichTxtBox { get { return creationLogsRichTxtBox; } }
 
         /// <summary>
         /// Store the nb of needed accounts
@@ -260,6 +258,7 @@ namespace P4R4_PokeMob_Creator
             creationLogsRichTxtBox.ScrollToCaret();
         }
 
+
         #region PUBLIC ACCESSOR METHODS
 
         /// <summary>
@@ -310,8 +309,6 @@ namespace P4R4_PokeMob_Creator
                 return false;
         }
 
-<<<<<<< HEAD
-=======
         /// <summary>
         /// Method to append or clear logs
         /// </summary>
@@ -334,7 +331,6 @@ namespace P4R4_PokeMob_Creator
             }
         }
 
->>>>>>> refs/remotes/origin/master
         #endregion   
     }
 }
