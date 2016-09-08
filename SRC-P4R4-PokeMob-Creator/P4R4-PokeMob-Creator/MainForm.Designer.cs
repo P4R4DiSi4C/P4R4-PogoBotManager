@@ -63,12 +63,17 @@
             this.creationLogsRichTxtBox = new System.Windows.Forms.RichTextBox();
             this.creationPageTitle = new System.Windows.Forms.Label();
             this.createFoldersBtn = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.statsPage = new System.Windows.Forms.TabPage();
+            this.statsTitleLab = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.startProcessesChkBox = new MaterialSkin.Controls.MaterialCheckBox();
             this.materialTabControl1.SuspendLayout();
             this.foldersPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbFoldersNum)).BeginInit();
             this.accsPage.SuspendLayout();
             this.proxiesTabPage.SuspendLayout();
             this.creationTabPage.SuspendLayout();
+            this.statsPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialTabSelector1
@@ -88,6 +93,7 @@
             this.materialTabControl1.Controls.Add(this.accsPage);
             this.materialTabControl1.Controls.Add(this.proxiesTabPage);
             this.materialTabControl1.Controls.Add(this.creationTabPage);
+            this.materialTabControl1.Controls.Add(this.statsPage);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Location = new System.Drawing.Point(0, 110);
             this.materialTabControl1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -160,22 +166,22 @@
             // folderToCreateTitleLab
             // 
             this.folderToCreateTitleLab.AutoSize = true;
-            this.folderToCreateTitleLab.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.folderToCreateTitleLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.folderToCreateTitleLab.ForeColor = System.Drawing.Color.Black;
             this.folderToCreateTitleLab.Location = new System.Drawing.Point(8, 258);
             this.folderToCreateTitleLab.Name = "folderToCreateTitleLab";
-            this.folderToCreateTitleLab.Size = new System.Drawing.Size(343, 29);
+            this.folderToCreateTitleLab.Size = new System.Drawing.Size(338, 29);
             this.folderToCreateTitleLab.TabIndex = 19;
             this.folderToCreateTitleLab.Text = "Set the nb. of folders to create:";
             // 
             // foldersTitleLab
             // 
             this.foldersTitleLab.AutoSize = true;
-            this.foldersTitleLab.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.foldersTitleLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.foldersTitleLab.ForeColor = System.Drawing.Color.Black;
             this.foldersTitleLab.Location = new System.Drawing.Point(8, 3);
             this.foldersTitleLab.Name = "foldersTitleLab";
-            this.foldersTitleLab.Size = new System.Drawing.Size(302, 29);
+            this.foldersTitleLab.Size = new System.Drawing.Size(303, 29);
             this.foldersTitleLab.TabIndex = 18;
             this.foldersTitleLab.Text = "Select the required folders:";
             // 
@@ -365,33 +371,33 @@
             // accsTitleLab
             // 
             this.accsTitleLab.AutoSize = true;
-            this.accsTitleLab.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accsTitleLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accsTitleLab.ForeColor = System.Drawing.Color.Black;
             this.accsTitleLab.Location = new System.Drawing.Point(3, 8);
             this.accsTitleLab.Name = "accsTitleLab";
-            this.accsTitleLab.Size = new System.Drawing.Size(223, 29);
+            this.accsTitleLab.Size = new System.Drawing.Size(216, 29);
             this.accsTitleLab.TabIndex = 17;
             this.accsTitleLab.Text = "Load/add accounts";
             // 
             // accFormatLab
             // 
             this.accFormatLab.AutoSize = true;
-            this.accFormatLab.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accFormatLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accFormatLab.ForeColor = System.Drawing.Color.Red;
             this.accFormatLab.Location = new System.Drawing.Point(4, 46);
             this.accFormatLab.Name = "accFormatLab";
-            this.accFormatLab.Size = new System.Drawing.Size(204, 38);
+            this.accFormatLab.Size = new System.Drawing.Size(201, 36);
             this.accFormatLab.TabIndex = 16;
             this.accFormatLab.Text = "Format is: account:password\r\nGoogle/PTC accounts\r\n";
             // 
             // accountsNeededLab
             // 
             this.accountsNeededLab.AutoSize = true;
-            this.accountsNeededLab.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accountsNeededLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accountsNeededLab.ForeColor = System.Drawing.Color.Red;
             this.accountsNeededLab.Location = new System.Drawing.Point(553, 337);
             this.accountsNeededLab.Name = "accountsNeededLab";
-            this.accountsNeededLab.Size = new System.Drawing.Size(141, 19);
+            this.accountsNeededLab.Size = new System.Drawing.Size(138, 18);
             this.accountsNeededLab.TabIndex = 2;
             this.accountsNeededLab.Text = "Accounts needed: 1";
             // 
@@ -420,11 +426,11 @@
             // formatProxyLab
             // 
             this.formatProxyLab.AutoSize = true;
-            this.formatProxyLab.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.formatProxyLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.formatProxyLab.ForeColor = System.Drawing.Color.Red;
             this.formatProxyLab.Location = new System.Drawing.Point(4, 45);
             this.formatProxyLab.Name = "formatProxyLab";
-            this.formatProxyLab.Size = new System.Drawing.Size(181, 38);
+            this.formatProxyLab.Size = new System.Drawing.Size(177, 36);
             this.formatProxyLab.TabIndex = 26;
             this.formatProxyLab.Text = "Format is: ip:port:user:pw\r\n(user:pw are not required)";
             // 
@@ -444,11 +450,11 @@
             // proxiesNeededLab
             // 
             this.proxiesNeededLab.AutoSize = true;
-            this.proxiesNeededLab.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.proxiesNeededLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.proxiesNeededLab.ForeColor = System.Drawing.Color.Red;
             this.proxiesNeededLab.Location = new System.Drawing.Point(555, 337);
             this.proxiesNeededLab.Name = "proxiesNeededLab";
-            this.proxiesNeededLab.Size = new System.Drawing.Size(127, 19);
+            this.proxiesNeededLab.Size = new System.Drawing.Size(126, 18);
             this.proxiesNeededLab.TabIndex = 22;
             this.proxiesNeededLab.Text = "Proxies needed: 1";
             // 
@@ -463,16 +469,18 @@
             // loadProxiesPageTitle
             // 
             this.loadProxiesPageTitle.AutoSize = true;
-            this.loadProxiesPageTitle.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loadProxiesPageTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loadProxiesPageTitle.ForeColor = System.Drawing.Color.Black;
             this.loadProxiesPageTitle.Location = new System.Drawing.Point(3, 8);
             this.loadProxiesPageTitle.Name = "loadProxiesPageTitle";
-            this.loadProxiesPageTitle.Size = new System.Drawing.Size(202, 29);
+            this.loadProxiesPageTitle.Size = new System.Drawing.Size(200, 29);
             this.loadProxiesPageTitle.TabIndex = 18;
             this.loadProxiesPageTitle.Text = "Load/add proxies";
             // 
             // creationTabPage
             // 
+            this.creationTabPage.BackColor = System.Drawing.Color.White;
+            this.creationTabPage.Controls.Add(this.startProcessesChkBox);
             this.creationTabPage.Controls.Add(this.creationLogsRichTxtBox);
             this.creationTabPage.Controls.Add(this.creationPageTitle);
             this.creationTabPage.Controls.Add(this.createFoldersBtn);
@@ -481,7 +489,6 @@
             this.creationTabPage.Size = new System.Drawing.Size(744, 368);
             this.creationTabPage.TabIndex = 3;
             this.creationTabPage.Text = "Creation";
-            this.creationTabPage.UseVisualStyleBackColor = true;
             // 
             // creationLogsRichTxtBox
             // 
@@ -496,11 +503,11 @@
             // creationPageTitle
             // 
             this.creationPageTitle.AutoSize = true;
-            this.creationPageTitle.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.creationPageTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.creationPageTitle.ForeColor = System.Drawing.Color.Black;
             this.creationPageTitle.Location = new System.Drawing.Point(3, 8);
             this.creationPageTitle.Name = "creationPageTitle";
-            this.creationPageTitle.Size = new System.Drawing.Size(164, 29);
+            this.creationPageTitle.Size = new System.Drawing.Size(160, 29);
             this.creationPageTitle.TabIndex = 20;
             this.creationPageTitle.Text = "Start creation:";
             // 
@@ -516,6 +523,54 @@
             this.createFoldersBtn.Text = "START CREATION";
             this.createFoldersBtn.UseVisualStyleBackColor = true;
             this.createFoldersBtn.Click += new System.EventHandler(this.createFoldersBtn_Click);
+            // 
+            // statsPage
+            // 
+            this.statsPage.Controls.Add(this.button1);
+            this.statsPage.Controls.Add(this.statsTitleLab);
+            this.statsPage.Location = new System.Drawing.Point(4, 22);
+            this.statsPage.Name = "statsPage";
+            this.statsPage.Size = new System.Drawing.Size(744, 368);
+            this.statsPage.TabIndex = 4;
+            this.statsPage.Text = "Stats";
+            this.statsPage.UseVisualStyleBackColor = true;
+            // 
+            // statsTitleLab
+            // 
+            this.statsTitleLab.AutoSize = true;
+            this.statsTitleLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statsTitleLab.ForeColor = System.Drawing.Color.Black;
+            this.statsTitleLab.Location = new System.Drawing.Point(8, 10);
+            this.statsTitleLab.Name = "statsTitleLab";
+            this.statsTitleLab.Size = new System.Drawing.Size(72, 29);
+            this.statsTitleLab.TabIndex = 21;
+            this.statsTitleLab.Text = "Stats:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(87, 15);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // startProcessesChkBox
+            // 
+            this.startProcessesChkBox.AutoSize = true;
+            this.startProcessesChkBox.Depth = 0;
+            this.startProcessesChkBox.Font = new System.Drawing.Font("Roboto", 10F);
+            this.startProcessesChkBox.Location = new System.Drawing.Point(513, 224);
+            this.startProcessesChkBox.Margin = new System.Windows.Forms.Padding(0);
+            this.startProcessesChkBox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.startProcessesChkBox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.startProcessesChkBox.Name = "startProcessesChkBox";
+            this.startProcessesChkBox.Ripple = true;
+            this.startProcessesChkBox.Size = new System.Drawing.Size(176, 30);
+            this.startProcessesChkBox.TabIndex = 22;
+            this.startProcessesChkBox.Text = "Start bots after creation";
+            this.startProcessesChkBox.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -539,6 +594,8 @@
             this.proxiesTabPage.PerformLayout();
             this.creationTabPage.ResumeLayout(false);
             this.creationTabPage.PerformLayout();
+            this.statsPage.ResumeLayout(false);
+            this.statsPage.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -579,6 +636,10 @@
         private System.Windows.Forms.Label creationPageTitle;
         private System.Windows.Forms.Label formatProxyLab;
         private System.Windows.Forms.RichTextBox creationLogsRichTxtBox;
+        private System.Windows.Forms.TabPage statsPage;
+        private System.Windows.Forms.Label statsTitleLab;
+        private System.Windows.Forms.Button button1;
+        private MaterialSkin.Controls.MaterialCheckBox startProcessesChkBox;
     }
 }
 

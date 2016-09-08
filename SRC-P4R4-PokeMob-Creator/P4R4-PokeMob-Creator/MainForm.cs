@@ -5,6 +5,7 @@ using System.IO;
 using System.Windows.Forms;
 
 
+
 namespace P4R4_PokeMob_Creator
 {
     public partial class MainForm : MaterialSkin.Controls.MaterialForm
@@ -331,6 +332,12 @@ namespace P4R4_PokeMob_Creator
             }
         }
 
-        #endregion   
+        #endregion
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Stats stats = new Stats();
+            stats.ListAllApplications();
+        }
     }
 }

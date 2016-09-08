@@ -63,8 +63,10 @@
     <Compile Include="Classes\Folders.cs" />
     <Compile Include="Classes\Logger.cs" />
     <Compile Include="Classes\DeviceSettings.cs" />
+    <Compile Include="Classes\ManagementClass.cs" />
     <Compile Include="Classes\PokeMobUtils.cs" />
     <Compile Include="Classes\Proxies.cs" />
+    <Compile Include="Classes\Stats.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
