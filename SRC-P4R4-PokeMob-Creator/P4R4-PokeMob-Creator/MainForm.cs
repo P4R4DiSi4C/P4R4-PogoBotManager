@@ -1,4 +1,4 @@
-﻿//*******ROBOT ICON MADE BY: iconsmind.com from the Noun Project*********************//
+//*******ROBOT ICON MADE BY: iconsmind.com from the Noun Project*********************//
 using P4R4_PokeMob_Creator.Classes;
 using System;
 using System.IO;
