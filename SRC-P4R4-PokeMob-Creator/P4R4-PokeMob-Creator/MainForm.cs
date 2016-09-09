@@ -249,6 +249,25 @@ namespace P4R4_PokeMob_Creator
         }
 
         /// <summary>
+        /// Method to check the checkbox if the user wants to start the bots when creation is finished
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void startProcessesChkBox_CheckedChanged(object sender, EventArgs e)
+        {
+            //If checked we set true to the boolean
+            if (startProcessesChkBox.Checked)
+            {
+                _pokeMobUtils.ToStart = true;
+            }
+            else
+            {
+                //Else we set false to the boolean
+                _pokeMobUtils.ToStart = false;
+            }
+        }
+
+        /// <summary>
         /// Method trigered when a new log is entered
         /// </summary>
         private void creationLogsRichTxtBox_TextChanged(object sender, EventArgs e)
@@ -339,5 +358,7 @@ namespace P4R4_PokeMob_Creator
             Stats stats = new Stats();
             stats.ListAllApplications();
         }
+
+
     }
 }
