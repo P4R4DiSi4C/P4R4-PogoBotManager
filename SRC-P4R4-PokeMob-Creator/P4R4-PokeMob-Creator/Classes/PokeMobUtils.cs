@@ -298,10 +298,19 @@ namespace P4R4_PokeMob_Creator
         /// </summary>
         public void StartBots()
         {
+            ProcessStartInfo process = new ProcessStartInfo();
+
             //Loop through each created folder and run the exe
             for(int i = 0; i < _folders.nameFolders.Count;i++)
             {
-                Process.Start(_folders.DirToPlaceFolders + _folders.nameFolders[i] + _folders.nameFolders[i] + ".exe");
+                //Set the folder of the bot exe
+                process.WorkingDirectory = _folders.DirToPlaceFolders + _folders.nameFolders[i];
+
+                //Set the name of the exe
+                process.FileName = _folders.nameFolders[i].Remove(0,1) + ".exe";
+
+                //Start the process
+                Process.Start(process);
             }
         }
     }

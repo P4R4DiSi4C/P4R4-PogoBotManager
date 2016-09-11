@@ -1,6 +1,7 @@
 //*******ROBOT ICON MADE BY: iconsmind.com from the Noun Project*********************//
 using P4R4_PokeMob_Creator.Classes;
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
 
@@ -351,14 +352,17 @@ namespace P4R4_PokeMob_Creator
             }
         }
 
+        public void AddProcessList(string windowTitle,string processName,string time)
+        {
+            statsList.Items.Add(new ListViewItem(new string[] { windowTitle, processName, time}));
+        }
+
         #endregion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Stats stats = new Stats();
+            Stats stats = new Stats(this);
             stats.ListAllApplications();
         }
-
-
     }
 }

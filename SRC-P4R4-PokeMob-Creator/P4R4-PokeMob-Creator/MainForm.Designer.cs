@@ -66,6 +66,10 @@
             this.createFoldersBtn = new MaterialSkin.Controls.MaterialRaisedButton();
             this.statsPage = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
+            this.statsList = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.statsTitleLab = new System.Windows.Forms.Label();
             this.materialTabControl1.SuspendLayout();
             this.foldersPage.SuspendLayout();
@@ -544,6 +548,7 @@
             // statsPage
             // 
             this.statsPage.Controls.Add(this.button1);
+            this.statsPage.Controls.Add(this.statsList);
             this.statsPage.Controls.Add(this.statsTitleLab);
             this.statsPage.Location = new System.Drawing.Point(4, 22);
             this.statsPage.Name = "statsPage";
@@ -554,13 +559,41 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(87, 15);
+            this.button1.Location = new System.Drawing.Point(86, 30);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 22;
+            this.button1.TabIndex = 24;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // statsList
+            // 
+            this.statsList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.statsList.Location = new System.Drawing.Point(13, 59);
+            this.statsList.Name = "statsList";
+            this.statsList.Size = new System.Drawing.Size(723, 294);
+            this.statsList.TabIndex = 23;
+            this.statsList.UseCompatibleStateImageBehavior = false;
+            this.statsList.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Title";
+            this.columnHeader1.Width = 171;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Process";
+            this.columnHeader2.Width = 131;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Running time";
+            this.columnHeader3.Width = 157;
             // 
             // statsTitleLab
             // 
@@ -639,8 +672,12 @@
         private System.Windows.Forms.RichTextBox creationLogsRichTxtBox;
         private System.Windows.Forms.TabPage statsPage;
         private System.Windows.Forms.Label statsTitleLab;
-        private System.Windows.Forms.Button button1;
         private MaterialSkin.Controls.MaterialCheckBox startProcessesChkBox;
+        private System.Windows.Forms.ListView statsList;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }
 

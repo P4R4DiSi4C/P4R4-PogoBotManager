@@ -10,43 +10,35 @@ namespace P4R4_PokeMob_Creator.Classes
 {
     public class Stats
     {
+        private MainForm _mainForm;
+
+
+        public Stats(MainForm mainForm)
+        {
+            _mainForm = mainForm;
+        }
+
         /// <span class="code-SummaryComment"><summary></span>
         /// Returns a string containing information on running processes
         /// <span class="code-SummaryComment"></summary></span>
         /// <span class="code-SummaryComment"><returns></returns></span>
-        public string ListAllApplications()
+        public void ListAllApplications()
         {
-            StringBuilder sb = new StringBuilder();
-
             foreach (Process p in Process.GetProcesses("."))
             {
                 try
                 {
                     if (p.MainWindowTitle.Length > 0 && p.ProcessName.Contains("PokeMobBot"))
                     {
-                        sb.Append("Window Title:\t" +
-                            p.MainWindowTitle.ToString()
-                            + Environment.NewLine);
 
-                        sb.Append("Process Name:\t" +
-                            p.ProcessName.ToString()
-                            + Environment.NewLine);
+                        TimeSpan runningTime = DateTime.Now - p.StartTime;
 
-                        sb.Append("Window Handle:\t" +
-                            p.MainWindowHandle.ToString()
-                            + Environment.NewLine);
+                        _mainForm.AddProcessList(p.MainWindowTitle.ToString(), p.ProcessName.ToString(), runningTime.ToString());
 
-                        sb.Append("Memory Allocation:\t" +
-                            p.PrivateMemorySize64.ToString()
-                            + Environment.NewLine);
-
-                        sb.Append(Environment.NewLine);
                     }
                 }
                 catch { }
             }
-
-            return sb.ToString();
         }
     }
 }
