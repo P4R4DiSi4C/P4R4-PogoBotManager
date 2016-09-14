@@ -67,10 +67,11 @@
             this.statsPage = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.statsList = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.processTitle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.processName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.processRunningTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.statsTitleLab = new System.Windows.Forms.Label();
+            this.processID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.materialTabControl1.SuspendLayout();
             this.foldersPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbFoldersNum)).BeginInit();
@@ -559,7 +560,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(86, 30);
+            this.button1.Location = new System.Drawing.Point(86, 10);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 24;
@@ -570,9 +571,10 @@
             // statsList
             // 
             this.statsList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
+            this.processID,
+            this.processTitle,
+            this.processName,
+            this.processRunningTime});
             this.statsList.Location = new System.Drawing.Point(13, 59);
             this.statsList.Name = "statsList";
             this.statsList.Size = new System.Drawing.Size(723, 294);
@@ -580,20 +582,20 @@
             this.statsList.UseCompatibleStateImageBehavior = false;
             this.statsList.View = System.Windows.Forms.View.Details;
             // 
-            // columnHeader1
+            // processTitle
             // 
-            this.columnHeader1.Text = "Title";
-            this.columnHeader1.Width = 171;
+            this.processTitle.Text = "Title";
+            this.processTitle.Width = 369;
             // 
-            // columnHeader2
+            // processName
             // 
-            this.columnHeader2.Text = "Process";
-            this.columnHeader2.Width = 131;
+            this.processName.Text = "Process";
+            this.processName.Width = 131;
             // 
-            // columnHeader3
+            // processRunningTime
             // 
-            this.columnHeader3.Text = "Running time";
-            this.columnHeader3.Width = 157;
+            this.processRunningTime.Text = "Running time";
+            this.processRunningTime.Width = 157;
             // 
             // statsTitleLab
             // 
@@ -605,6 +607,10 @@
             this.statsTitleLab.Size = new System.Drawing.Size(72, 29);
             this.statsTitleLab.TabIndex = 21;
             this.statsTitleLab.Text = "Stats:";
+            // 
+            // processID
+            // 
+            this.processID.Text = "ID";
             // 
             // MainForm
             // 
@@ -675,9 +681,10 @@
         private MaterialSkin.Controls.MaterialCheckBox startProcessesChkBox;
         private System.Windows.Forms.ListView statsList;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader processTitle;
+        private System.Windows.Forms.ColumnHeader processName;
+        private System.Windows.Forms.ColumnHeader processRunningTime;
+        private System.Windows.Forms.ColumnHeader processID;
     }
 }
 

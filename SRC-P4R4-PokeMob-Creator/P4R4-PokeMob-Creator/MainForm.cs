@@ -352,9 +352,9 @@ namespace P4R4_PokeMob_Creator
             }
         }
 
-        public void AddProcessList(string windowTitle,string processName,string time)
+        public void AddProcessList(int processID, string windowTitle,string processName,string time)
         {
-            statsList.Items.Add(new ListViewItem(new string[] { windowTitle, processName, time}));
+            statsList.Items.Add(new ListViewItem(new string[] { processID.ToString(), windowTitle, processName, time}));
         }
 
         #endregion
