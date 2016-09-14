@@ -1,6 +1,7 @@
 //*******ROBOT ICON MADE BY: iconsmind.com from the Noun Project*********************//
 using P4R4_PokeMob_Creator.Classes;
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
 
@@ -249,6 +250,25 @@ namespace P4R4_PokeMob_Creator
         }
 
         /// <summary>
+        /// Method to check the checkbox if the user wants to start the bots when creation is finished
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void startProcessesChkBox_CheckedChanged(object sender, EventArgs e)
+        {
+            //If checked we set true to the boolean
+            if (startProcessesChkBox.Checked)
+            {
+                _pokeMobUtils.ToStart = true;
+            }
+            else
+            {
+                //Else we set false to the boolean
+                _pokeMobUtils.ToStart = false;
+            }
+        }
+
+        /// <summary>
         /// Method trigered when a new log is entered
         /// </summary>
         private void creationLogsRichTxtBox_TextChanged(object sender, EventArgs e)
@@ -332,11 +352,16 @@ namespace P4R4_PokeMob_Creator
             }
         }
 
+        public void AddProcessList(int processID, string windowTitle,string processName,string time)
+        {
+            statsList.Items.Add(new ListViewItem(new string[] { processID.ToString(), windowTitle, processName, time}));
+        }
+
         #endregion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Stats stats = new Stats();
+            Stats stats = new Stats(this);
             stats.ListAllApplications();
         }
     }

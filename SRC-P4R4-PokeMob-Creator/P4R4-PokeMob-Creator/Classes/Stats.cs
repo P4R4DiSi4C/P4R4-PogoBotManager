@@ -10,43 +10,40 @@ namespace P4R4_PokeMob_Creator.Classes
 {
     public class Stats
     {
+        private MainForm _mainForm;
+
+
+        public Stats(MainForm mainForm)
+        {
+            _mainForm = mainForm;
+        }
+
         /// <span class="code-SummaryComment"><summary></span>
         /// Returns a string containing information on running processes
         /// <span class="code-SummaryComment"></summary></span>
         /// <span class="code-SummaryComment"><returns></returns></span>
-        public string ListAllApplications()
+        public void ListAllApplications()
         {
-            StringBuilder sb = new StringBuilder();
-
+            //Loop through each process
             foreach (Process p in Process.GetProcesses("."))
             {
                 try
                 {
+                    //Check if the process name contains PokeMobBot and it's bigger than 0 length.
                     if (p.MainWindowTitle.Length > 0 && p.ProcessName.Contains("PokeMobBot"))
                     {
-                        sb.Append("Window Title:\t" +
-                            p.MainWindowTitle.ToString()
-                            + Environment.NewLine);
+                        //Create a timespan var to time that the process is runnig
+                        //Substract current Time now to the start time
+                        TimeSpan runningTime = DateTime.Now - p.StartTime;
 
-                        sb.Append("Process Name:\t" +
-                            p.ProcessName.ToString()
-                            + Environment.NewLine);
+                        int processID = p.Id;
 
-                        sb.Append("Window Handle:\t" +
-                            p.MainWindowHandle.ToString()
-                            + Environment.NewLine);
-
-                        sb.Append("Memory Allocation:\t" +
-                            p.PrivateMemorySize64.ToString()
-                            + Environment.NewLine);
-
-                        sb.Append(Environment.NewLine);
+                        //Call the method to add a process to the list of processes
+                        _mainForm.AddProcessList(processID, p.MainWindowTitle.ToString(), p.ProcessName.ToString(), runningTime.ToString());
                     }
                 }
                 catch { }
             }
-
-            return sb.ToString();
         }
     }
 }

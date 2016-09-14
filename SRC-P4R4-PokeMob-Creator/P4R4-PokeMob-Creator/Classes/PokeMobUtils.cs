@@ -5,6 +5,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using P4R4_PokeMob_Creator.Classes;
+using System.Diagnostics;
 
 namespace P4R4_PokeMob_Creator
 {
@@ -34,6 +35,11 @@ namespace P4R4_PokeMob_Creator
         private Folders _folders;
 
         /// <summary>
+        /// Boolean to see if the user wants to start the bots when creation is finished
+        /// </summary>
+        public bool ToStart { get; set; }
+
+        /// <summary>
         /// Default constructor of the class
         /// </summary>
         /// <param name="folders">Get the folder class</param>
@@ -41,6 +47,9 @@ namespace P4R4_PokeMob_Creator
         {
             //Store the folders class
             _folders = folders;
+            
+            //Set a default value for the boolean
+            ToStart = false;
         }
 
         /// <summary>
@@ -133,6 +142,10 @@ namespace P4R4_PokeMob_Creator
 
             //Call the method to do the auth.json file for each bot folder with each of the accounts
             makeAuthAndRndCfg(accsPw, proxiesList);
+
+            //Start the bots if the user specified it
+            if (ToStart)
+                StartBots();
 
             //Clear the array with the names of the created folders for each bot
             _folders.nameFolders.Clear();
@@ -277,6 +290,27 @@ namespace P4R4_PokeMob_Creator
 
                 //Copy the file to a bot folder
                 File.WriteAllText(_folders.DirToPlaceFolders + _folders.nameFolders[i] + Folders.CONFIG_FOLDER_NAME, outputCfg);
+            }
+        }
+
+        /// <summary>
+        /// Method to start each bots
+        /// </summary>
+        public void StartBots()
+        {
+            ProcessStartInfo process = new ProcessStartInfo();
+
+            //Loop through each created folder and run the exe
+            for(int i = 0; i < _folders.nameFolders.Count;i++)
+            {
+                //Set the folder of the bot exe
+                process.WorkingDirectory = _folders.DirToPlaceFolders + _folders.nameFolders[i];
+
+                //Set the name of the exe
+                process.FileName = _folders.nameFolders[i].Remove(0,1) + ".exe";
+
+                //Start the process
+                Process.Start(process);
             }
         }
     }

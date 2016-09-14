@@ -60,13 +60,18 @@
             this.proxiesRichTxtBox = new System.Windows.Forms.RichTextBox();
             this.loadProxiesPageTitle = new System.Windows.Forms.Label();
             this.creationTabPage = new System.Windows.Forms.TabPage();
+            this.startProcessesChkBox = new MaterialSkin.Controls.MaterialCheckBox();
             this.creationLogsRichTxtBox = new System.Windows.Forms.RichTextBox();
             this.creationPageTitle = new System.Windows.Forms.Label();
             this.createFoldersBtn = new MaterialSkin.Controls.MaterialRaisedButton();
             this.statsPage = new System.Windows.Forms.TabPage();
-            this.statsTitleLab = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.startProcessesChkBox = new MaterialSkin.Controls.MaterialCheckBox();
+            this.statsList = new System.Windows.Forms.ListView();
+            this.processTitle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.processName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.processRunningTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.statsTitleLab = new System.Windows.Forms.Label();
+            this.processID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.materialTabControl1.SuspendLayout();
             this.foldersPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbFoldersNum)).BeginInit();
@@ -490,6 +495,23 @@
             this.creationTabPage.TabIndex = 3;
             this.creationTabPage.Text = "Creation";
             // 
+            // startProcessesChkBox
+            // 
+            this.startProcessesChkBox.AutoSize = true;
+            this.startProcessesChkBox.Depth = 0;
+            this.startProcessesChkBox.Font = new System.Drawing.Font("Roboto", 10F);
+            this.startProcessesChkBox.Location = new System.Drawing.Point(513, 224);
+            this.startProcessesChkBox.Margin = new System.Windows.Forms.Padding(0);
+            this.startProcessesChkBox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.startProcessesChkBox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.startProcessesChkBox.Name = "startProcessesChkBox";
+            this.startProcessesChkBox.Ripple = true;
+            this.startProcessesChkBox.Size = new System.Drawing.Size(176, 30);
+            this.startProcessesChkBox.TabIndex = 22;
+            this.startProcessesChkBox.Text = "Start bots after creation";
+            this.startProcessesChkBox.UseVisualStyleBackColor = true;
+            this.startProcessesChkBox.CheckedChanged += new System.EventHandler(this.startProcessesChkBox_CheckedChanged);
+            // 
             // creationLogsRichTxtBox
             // 
             this.creationLogsRichTxtBox.Enabled = false;
@@ -527,6 +549,7 @@
             // statsPage
             // 
             this.statsPage.Controls.Add(this.button1);
+            this.statsPage.Controls.Add(this.statsList);
             this.statsPage.Controls.Add(this.statsTitleLab);
             this.statsPage.Location = new System.Drawing.Point(4, 22);
             this.statsPage.Name = "statsPage";
@@ -534,6 +557,45 @@
             this.statsPage.TabIndex = 4;
             this.statsPage.Text = "Stats";
             this.statsPage.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(86, 10);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // statsList
+            // 
+            this.statsList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.processID,
+            this.processTitle,
+            this.processName,
+            this.processRunningTime});
+            this.statsList.Location = new System.Drawing.Point(13, 59);
+            this.statsList.Name = "statsList";
+            this.statsList.Size = new System.Drawing.Size(723, 294);
+            this.statsList.TabIndex = 23;
+            this.statsList.UseCompatibleStateImageBehavior = false;
+            this.statsList.View = System.Windows.Forms.View.Details;
+            // 
+            // processTitle
+            // 
+            this.processTitle.Text = "Title";
+            this.processTitle.Width = 369;
+            // 
+            // processName
+            // 
+            this.processName.Text = "Process";
+            this.processName.Width = 131;
+            // 
+            // processRunningTime
+            // 
+            this.processRunningTime.Text = "Running time";
+            this.processRunningTime.Width = 157;
             // 
             // statsTitleLab
             // 
@@ -546,31 +608,9 @@
             this.statsTitleLab.TabIndex = 21;
             this.statsTitleLab.Text = "Stats:";
             // 
-            // button1
+            // processID
             // 
-            this.button1.Location = new System.Drawing.Point(87, 15);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // startProcessesChkBox
-            // 
-            this.startProcessesChkBox.AutoSize = true;
-            this.startProcessesChkBox.Depth = 0;
-            this.startProcessesChkBox.Font = new System.Drawing.Font("Roboto", 10F);
-            this.startProcessesChkBox.Location = new System.Drawing.Point(513, 224);
-            this.startProcessesChkBox.Margin = new System.Windows.Forms.Padding(0);
-            this.startProcessesChkBox.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.startProcessesChkBox.MouseState = MaterialSkin.MouseState.HOVER;
-            this.startProcessesChkBox.Name = "startProcessesChkBox";
-            this.startProcessesChkBox.Ripple = true;
-            this.startProcessesChkBox.Size = new System.Drawing.Size(176, 30);
-            this.startProcessesChkBox.TabIndex = 22;
-            this.startProcessesChkBox.Text = "Start bots after creation";
-            this.startProcessesChkBox.UseVisualStyleBackColor = true;
+            this.processID.Text = "ID";
             // 
             // MainForm
             // 
@@ -638,8 +678,13 @@
         private System.Windows.Forms.RichTextBox creationLogsRichTxtBox;
         private System.Windows.Forms.TabPage statsPage;
         private System.Windows.Forms.Label statsTitleLab;
-        private System.Windows.Forms.Button button1;
         private MaterialSkin.Controls.MaterialCheckBox startProcessesChkBox;
+        private System.Windows.Forms.ListView statsList;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ColumnHeader processTitle;
+        private System.Windows.Forms.ColumnHeader processName;
+        private System.Windows.Forms.ColumnHeader processRunningTime;
+        private System.Windows.Forms.ColumnHeader processID;
     }
 }
 
