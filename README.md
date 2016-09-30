@@ -3,7 +3,7 @@
 Create multiple folders of PokeMobBot with different accounts and proxies to run multiple instances in your computer.
 Generate a random device fingerprint for each config.json files created.
 
-### Requirementes
+### Requirements
 PokeMobBot Folder from latest realase.
 
 ### Installing
