@@ -1,7 +1,15 @@
 # P4R4-PokeMob-Creator
+## Needed to run multiple Pokemon Go bots...
 
 Create multiple folders of PokeMobBot with different accounts and proxies to run multiple instances in your computer.
 Generate a random device fingerprint for each config.json files created.
+
+### Pics
+![alt text](https://i.imgur.com/KbHP9al.png)
+![alt text](https://i.imgur.com/NFFLoE0.png)
+![alt text](https://i.imgur.com/PsAFCwB.png)
+![alt text](https://i.imgur.com/ivq6L1u.png)
+![alt text](https://i.imgur.com/GckJYcw.png)
 
 ### Requirements
 PokeMobBot Folder from latest realase.
